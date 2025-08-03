@@ -419,3 +419,50 @@
     max_integrity = 110
     armor = list("blunt" = 35, "slash" = 25, "stab" = 20, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
     prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
+
+/obj/item/clothing/under/roguetown/sirwal
+	name = "sirwal"
+	desc = "Long, baggy trousers from Zybantine."
+	color = null
+	icon_state = "sirwal"
+	item_state = "sirwal"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+
+/obj/item/clothing/under/roguetown/sirwal/beige
+	color = "#edc6a5"
+
+/obj/item/clothing/under/roguetown/sirwal/brown
+	color = "#927351"
+
+/obj/item/clothing/under/roguetown/sirwal/black
+	color = CLOTHING_BLACK
+
+/obj/item/clothing/under/roguetown/sirwal/plainrandom
+
+/obj/item/clothing/under/roguetown/sirwal/plainrandom/Initialize()
+	color = pick("#FFFFFF", "#edc6a5", "#927351", CLOTHING_BLACK)
+	..()
+
+/obj/item/clothing/under/roguetown/sirwal/fancy
+	color = null
+	name = "fancy sirwal"
+	desc = "Long, baggy trousers from Zybantine dyed in expensive, exotic colours."
+
+/obj/item/clothing/under/roguetown/sirwal/fancy/red
+	color = CLOTHING_RED
+
+/obj/item/clothing/under/roguetown/sirwal/fancy/blue
+	color = CLOTHING_BLUE
+
+/obj/item/clothing/under/roguetown/sirwal/fancy/purple
+	color = CLOTHING_PURPLE
+
+/obj/item/clothing/under/roguetown/sirwal/fancy/yellow
+	color = CLOTHING_YELLOW
+
+/obj/item/clothing/under/roguetown/sirwal/fancy/random
+
+/obj/item/clothing/under/roguetown/sirwal/fancy/random/Initialize()
+	color = pick(CLOTHING_BLACK, CLOTHING_BLUE, CLOTHING_PURPLE, CLOTHING_RED, CLOTHING_YELLOW)
+	..()
+

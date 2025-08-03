@@ -518,3 +518,35 @@
 	new /obj/item/reagent_containers/food/snacks/grown/pickle(src)
 
 */
+
+/obj/item/storage/belt/rogue/leather/cloth/sash
+	name = "Zybantine sash"
+	desc = "A simple cloth sash."
+	color = null
+	icon_state = "sashgrey"
+	item_state = "sashgrey"
+	heldz_items = 1
+	salvage_result = /obj/item/natural/cloth
+	component_type = /datum/component/storage/concrete/grid/belt/cloth
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/yellow
+	color = CLOTHING_YELLOW
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/red
+	color = CLOTHING_RED
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/orange
+	color = CLOTHING_ORANGE
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/brown
+	color = CLOTHING_BROWN
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/purple
+	color = CLOTHING_PURPLE
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/random
+
+/obj/item/storage/belt/rogue/leather/cloth/sash/random/Initialize()
+	color = pick(CLOTHING_BROWN, CLOTHING_RED, CLOTHING_ORANGE, CLOTHING_YELLOW, CLOTHING_WHITE, CLOTHING_PURPLE)
+	..()
+	

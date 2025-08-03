@@ -119,6 +119,8 @@
 			return strings("mongolian_replacement.json", "syllable")
 		if("Drakian accent")
 			return strings("hissing_replacement.json", "syllable")
+		if("Old-World Drakian accent")
+			return strings("hissing_replacement_full.json", "syllable")
 
 #define REGEX_FULLWORD 1
 #define REGEX_STARTWORD 2

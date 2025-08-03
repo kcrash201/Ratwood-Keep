@@ -1,5 +1,6 @@
 /*
 Slings, just about 1:1 from AP.
+https://github.com/GeneralPantsuIsBadAtCoding/Azure-Peak/blob/0f3ae15c4c110bd6f36c32c7488915430caf96be/code/game/objects/items/rogueweapons/ranged/slings.dm
 Credit entirely to them, if that's where they originate from.
 Not really sure. Cheers!
 */

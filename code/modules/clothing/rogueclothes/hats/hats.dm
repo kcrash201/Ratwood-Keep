@@ -1941,3 +1941,54 @@
     desc = "A yellow iris, bright like defiance. Once worn by those who marched into oblivion, unafraid."
     icon_state = "dflower23"
     item_state = "dflower23"
+
+//Eastern Clothing by Infrared Baron
+
+/obj/item/clothing/head/roguetown/turban
+	name = "turban"
+	desc = "A long cloth, wound around the head."
+	color = null
+	body_parts_covered = HEAD|HAIR|EARS|NECK
+	flags_inv = HIDEHAIR|HIDEEARS
+	icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
+	icon_state = "turban"
+	item_state = "turban"
+
+/obj/item/clothing/head/roguetown/turban/tan
+	color = "#93714b"
+
+/obj/item/clothing/head/roguetown/turban/brown
+	color = "#684f41"
+	
+/obj/item/clothing/head/roguetown/turban/dark
+	color = "#414141"
+
+/obj/item/clothing/head/roguetown/turban/grey
+	color = "#848484"
+
+/obj/item/clothing/head/roguetown/turban/random
+
+/obj/item/clothing/head/roguetown/turban/random/Initialize()
+	color = pick("#414141", "#684f41", "#93714b", "#FFFFFF", "#848484")
+	..()
+
+/obj/item/clothing/head/roguetown/turban/fancypurple
+	name = "fancy purple turban"
+	desc = "A long, luxurious cloth, wound around the head."
+	icon = 'icons/roguetown/clothing/licensed-infraredbaron/easternclothes.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
+	icon_state = "purple_hood"
+	item_state = "purple_hood"
+	
+
+/obj/item/clothing/head/roguetown/tagelmust
+	name = "Tagelmust"
+	desc = "A long cloth, wound around the head, and a veil."
+	body_parts_covered = HEAD|EARS|HAIR|NECK|NOSE|MOUTH
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	icon = 'icons/roguetown/clothing/licensed-infraredbaron/easternclothes.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
+	icon_state = "blue_hood"
+	item_state = "blue_hood"
+
