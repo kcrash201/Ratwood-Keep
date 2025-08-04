@@ -466,3 +466,10 @@
 	color = pick(CLOTHING_BLACK, CLOTHING_BLUE, CLOTHING_PURPLE, CLOTHING_RED, CLOTHING_YELLOW)
 	..()
 
+/obj/item/clothing/under/roguetown/thong
+	name = "thong"
+	desc = "Underwear so thin it barely covers ones bits. Barely."
+	gender = PLURAL
+	icon_state = "thong"
+	item_state = "thong"
+	body_parts_covered = GROIN
