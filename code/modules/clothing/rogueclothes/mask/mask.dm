@@ -210,6 +210,14 @@
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	sewrepair = TRUE
 
+/obj/item/clothing/mask/rogue/exoticsilkmask/green
+	icon_state = "exoticsilkmaskg"
+	item_state = "exoticsilkmaskg"
+
+/obj/item/clothing/mask/rogue/exoticsilkmask/red
+	icon_state = "exoticsilkmaskr"
+	item_state = "exoticsilkmaskr"
+
 //---------------- NEW/MASK.DM ---------------------
 
 /obj/item/clothing/mask/rogue/pestra

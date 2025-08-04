@@ -403,6 +403,15 @@
 	body_parts_covered = CHEST|ARMS|VITALS
 	sewrepair = TRUE
 
+/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
+	icon_state = "exoticsilkbrag"
+	item_state = "exoticsilkbrag"
+
+/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red
+	desc = "Fanciful gold laced silks barely able to conceal what little it covers. Long, flowing sleeves droop from the upper arms to a ring on each hand, fluttering in the wind and with every movement."
+	icon_state = "exoticsilkbrar"
+	item_state = "exoticsilkbrar"
+
 //---------------- NEW/SHIRTS.DM--------------------
 
 /obj/item/clothing/suit/roguetown/shirt/steward

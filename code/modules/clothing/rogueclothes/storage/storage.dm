@@ -372,6 +372,18 @@
 	heldz_items = 1
 	sewrepair = TRUE
 
+/obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtgreen
+	name = "green exotic silk skirt"
+	desc = "A gold adorned belt with the softest of silk skirts barely concealing one's bits."
+	icon_state = "exoticsilkskirt2"
+	item_state = "exoticsilkskirt2"
+
+/obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtred
+	name = "red exotic silk skirt"
+	desc = "A gold adorned belt with the softest of silk skirts barely concealing one's bits."
+	icon_state = "exoticsilkskirt"
+	item_state = "exoticsilkskirt"
+
 /obj/item/storage/belt/rogue/leather/overseer
     name = "belt with pouches"
     desc = "Leather belt with some pouches attached."
