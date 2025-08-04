@@ -653,3 +653,45 @@
 	desc = "A dress woven from fine silks, with golden threads inlaid in it. Made for that special day."
 	icon_state = "weddingdress"
 	item_state = "weddingdress"
+
+
+//Easternclothes 
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "thawb"
+	desc = "A long, loose Zybantine robe."
+	body_parts_covered = CHEST|GROIN|LEGS|VITALS
+	icon_state = "thawb"
+	item_state = "thawb"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/black
+	color = CLOTHING_BLACK
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/blue
+	color = "#2f51b8"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/red
+	color = "#9c4744"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/beige
+	color = "#e9c792"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/brown
+	color = "#846145"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/grey
+	color = "#989898"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/random/Initialize()
+	color = pick("#989898", "#FFFFFF", "#9c4744", "#2f51b8", "#846145", "#e9c792", CLOTHING_BLACK)
+	..()
+
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "gold-trimmed thawb"
+	desc = "A long, loose Zybantine robe. This one is trimmed with gold-silk thread."
+	body_parts_covered = CHEST|GROIN|LEGS|VITALS
+	icon_state = "thawbgold"
+	item_state = "thawbgold"

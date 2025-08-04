@@ -296,6 +296,12 @@
 	dynamic_hair_suffix = "+generic"
 	flags_inv = HIDEEARS
 
+/obj/item/clothing/head/roguetown/sultan/merchant
+	name = "merchant's turban"
+	desc = "A turban, large and elaborate, made of the finest silk money can buy."
+	icon_state = "merchant"
+	item_state = "merchant"
+
 /obj/item/clothing/head/roguetown/sultana
 	name = "sultans headdress"
 	desc = "Silky smooth Zybantine silk headress!."
@@ -1991,4 +1997,5 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
 	icon_state = "blue_hood"
 	item_state = "blue_hood"
+
 
