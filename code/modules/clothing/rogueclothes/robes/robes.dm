@@ -278,3 +278,64 @@
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	ignore_sleeves_code = TRUE // No sleeves, otherwise arms will be over the sprite
+
+
+//Eastern style clothing by Infrared Baron
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "bisht"
+	desc = "A long robe typical in Zybantine."
+	icon = 'icons/roguetown/clothing/licensed-infraredbaron/easternclothes.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
+	icon_state = "greythawb"
+	item_state = "greythawb"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|VITALS
+	break_sound = 'sound/foley/cloth_rip.ogg'
+	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
+	sewrepair = TRUE
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/grey
+	color = "#989898"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/red
+	color = "#9c4744"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/blue
+	color = "#2f51b8"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/brown
+	color = "#846145"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/beige
+	color = "#e9c792"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/black
+	color = CLOTHING_BLACK
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/random
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/random/Initialize()
+	color = pick("#989898", "#FFFFFF", "#9c4744", "#2f51b8", "#846145", "#e9c792", CLOTHING_BLACK)
+	..()
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/bluegrey
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "grey bisht"
+	icon_state = "bluethawb"
+	item_state = "bluethawb"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/purple
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "purple bisht"
+	icon_state = "purplethawb"
+	item_state = "purplethawb"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/bisht/merchantbisht
+	slot_flags = ITEM_SLOT_ARMOR
+	body_parts_covered = CHEST|VITALS
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	name = "guild bisht"
+	desc = "An open robe, made from luxurious silks."
+	icon_state = "merbisht"
+	item_state = "merbisht"
