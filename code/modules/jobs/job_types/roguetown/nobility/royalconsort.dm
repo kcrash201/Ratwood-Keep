@@ -45,7 +45,7 @@
 /datum/job/roguetown/royalconsort/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
 	if(GLOB.lordsurname && H)
-		give_lord_surname(H, preserve_original = TRUE)
+		give_lord_surnamedt(H, preserve_original = TRUE)
 	if(ishuman(H))
 		var/index = findtext(H.real_name, " ")
 		if(index)
