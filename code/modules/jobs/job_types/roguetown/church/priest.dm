@@ -18,6 +18,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals and you will preach their wisdom to any who still heed their will. The faithless are growing in number, it is up to you to shepard them to a Gods-fearing future."
 	whitelist_req = FALSE
 	can_leave_round = FALSE
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	spells = list(SPELL_CONVERT_ROLE_TEMPLAR, SPELL_CONVERT_ROLE_MONK)
 	outfit = /datum/outfit/job/roguetown/priest
@@ -66,7 +67,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
@@ -110,35 +110,35 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	for(var/mob/living/carbon/human/HU in get_step(src, src.dir))
 		if(!HU.mind)
 			continue
-		if(HU.mind.assigned_role == "Sultan")
+		if(HU.mind.assigned_role == "Duke")
 			continue
 		if(!HU.head)
 			continue
 		if(!istype(HU.head, /obj/item/clothing/head/roguetown/crown/serpcrown))
 			continue
 
-		//Abdicate previous Sultan
+		//Abdicate previous Duke
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
-				if(HL.mind.assigned_role == "Sultan" || HL.mind.assigned_role == "Sultan Consort")
+				if(HL.mind.assigned_role == "Duke" || HL.mind.assigned_role == "Duke Consort")
 					HL.mind.assigned_role = "Towner" //So they don't get the innate traits of the lord
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
-			if(HL.job == "Sultan")
-				HL.job = "Sultan Emeritus"
-			if(HL.job == "Sultan Consort")
+			if(HL.job == "Duke")
+				HL.job = "Duke Emeritus"
+			if(HL.job == "Duke Consort")
 				HL.job = "Consort Dowager"
 			SSjob.type_occupations[/datum/job/roguetown/ruler].remove_spells(HL)
 
 		//Coronate new Lord (or Lady)
-		HU.mind.assigned_role = "Sultan"
-		HU.job = "Sultan"
+		HU.mind.assigned_role = "Duke"
+		HU.job = "Duke"
 		SSjob.type_occupations[/datum/job/roguetown/ruler].add_spells(HU)
 
 		switch(HU.gender)
 			if("male")
-				SSticker.rulertype = "Sultan"
+				SSticker.rulertype = "Duke"
 			if("female")
-				SSticker.rulertype = "Sultana"
+				SSticker.rulertype = "Duchess"
 		SSticker.rulermob = HU
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)

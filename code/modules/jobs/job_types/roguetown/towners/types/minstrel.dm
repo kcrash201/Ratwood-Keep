@@ -10,7 +10,6 @@
 
 /datum/outfit/job/roguetown/towner/minstrel/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.grant_language(/datum/language/zybantine)
 	H.mind.adjust_skillrank(/datum/skill/misc/music, 5, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)

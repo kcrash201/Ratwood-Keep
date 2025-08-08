@@ -1,18 +1,16 @@
 /datum/job/roguetown/manorguard
-	title = "Mamluk"
-//	map_specific_title = list("Mamluk", "Mamluk") //0 = rockhill, 1 = zybantium, 2 = etc.
-
+	title = "Man at Arms"
 	flag = MANATARMS
 	department_flag = GARRISON
 	faction = "Station"
-	total_positions = 11
-	spawn_positions = 11
+	total_positions = 4
+	spawn_positions = 4
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the Royal Family and their Court, \
-				trained regularly in combat and siege warfare you stand a small chance of surviving the Sultan's reign. \
+				trained regularly in combat and siege warfare you stand a small chance of surviving the Duke's reign. \
 				It's an honor to die as part of His Highness' retinue, the Marshal reminds you every night."
 	display_order = JDO_CASTLEGUARD
 	whitelist_req = TRUE
@@ -24,6 +22,7 @@
 	subclass_cat_rolls = list(CTAG_MAA = 4)
 
 	cmode_music = 'sound/music/combat_guard2.ogg'
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/job/roguetown/manorguard/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -43,13 +42,13 @@
 
 /datum/outfit/job/roguetown/manorguard/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/mamalukehelm
+	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	pants = /obj/item/clothing/under/roguetown/chainlegs
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	armor = /obj/item/clothing/suit/roguetown/armor/mamaluke
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	shoes = /obj/item/clothing/shoes/roguetown/armor
-	belt = /obj/item/storage/belt/rogue/leather/noblesash
+	belt = /obj/item/storage/belt/rogue/leather/black
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	ADD_TRAIT(H, TRAIT_BOGVULNERABLE, TRAIT_GENERIC)	//applies debuff of -2end -2 spd when in the bog

@@ -1,16 +1,16 @@
 /datum/job/roguetown/knight
-	title = "Cataphract"
+	title = "Knight"
 	flag = KNIGHT
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 2
 	allowed_races = RACES_TOLERATED_UP
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	allowed_patrons = ALL_NON_INHUMEN_PATRONS
 	subclass_cat_rolls = list(CTAG_KNIGHT = 3)
-	tutorial = "A Cataphract with expert training; \
+	tutorial = "A Knight with expert training; \
 	Born into petty nobility and raised as a squire from a young age, now you guard the ducal family, answer to their commands, and act as a last beacon of chivalry in these dark times. \
 	You're wholly dedicated to the standing Regent and their safety. Do not fail."
 	display_order = JDO_KNIGHT
@@ -19,7 +19,8 @@
 	give_bank_account = 22
 	min_pq = 10
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 	cmode_music = 'sound/music/combat_guard2.ogg'
 
 /datum/job/roguetown/knight/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
@@ -47,13 +48,11 @@
 
 /datum/outfit/job/roguetown/knight/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/cataphract
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/cataphract
 	gloves = /obj/item/clothing/gloves/roguetown/plate
-	cloak = /obj/item/clothing/cloak/catcloak
 	pants = /obj/item/clothing/under/roguetown/platelegs
+	cloak = /obj/item/clothing/cloak/tabard/knight/guard
 	shoes = /obj/item/clothing/shoes/roguetown/armor/steel
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/steel
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 /datum/subclass/knight/sentinel
@@ -65,12 +64,13 @@
 
 /datum/outfit/job/roguetown/knight/sentinel/pre_equip(mob/living/carbon/human/H)
 	..()
+	head = /obj/item/clothing/head/roguetown/helmet/heavy/knight
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/full
 	neck = /obj/item/clothing/neck/roguetown/gorget/steel
 	beltl = /obj/item/storage/keyring/knight
 	backl = /obj/item/gwstrap
 	backpack_contents = list(/obj/item/rope/chain = 1, /obj/item/natural/feather = 1)
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
@@ -98,15 +98,15 @@
 	ADD_TRAIT(H, TRAIT_NOSEGRAB, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 
-	var/weapons = list("Lucerne", "Royal Glaive")
+	var/weapons = list("Lucerne", "Bardiche")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Lucerne")
 			r_hand = /obj/item/rogueweapon/eaglebeak/lucerne
 
-		if("Royal Glaive")
-			r_hand = /obj/item/rogueweapon/royalglaive
+		if("Bardiche")
+			r_hand = /obj/item/rogueweapon/halberd/bardiche
 
 	var/sidearms = list("Arming Sword", "Rondel Dagger")
 	var/sidearm_choice = input("Choose your sidearm.", "TAKE UP ARMS") as anything in sidearms
@@ -127,13 +127,14 @@
 
 /datum/outfit/job/roguetown/knight/champion/pre_equip(mob/living/carbon/human/H)
 	..()
+	armor = /obj/item/clothing/suit/roguetown/armor/plate
+	head = /obj/item/clothing/head/roguetown/helmet/heavy/pigface
 	neck = /obj/item/clothing/neck/roguetown/bervor
 	beltl = /obj/item/storage/keyring/knight
 	backpack_contents = list(/obj/item/rope/chain = 1, /obj/item/natural/feather = 1)
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	backl = /obj/item/gwstrap
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
@@ -190,10 +191,11 @@
 
 /datum/outfit/job/roguetown/knight/juggernaut/pre_equip(mob/living/carbon/human/H)
 	..()
+	head = /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/full
 	backpack_contents = list(/obj/item/rope/chain = 1, /obj/item/natural/cloth = 1, /obj/item/storage/keyring/knight = 1)
 	beltl = /obj/item/rogueweapon/flail/sflail
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)

@@ -26,7 +26,6 @@
 		pants = /obj/item/clothing/under/roguetown/trou
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
 
-	H.grant_language(/datum/language/zybantine)
 	H.mind.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE) // AXE MEN! GIVE ME SPLINTERS!
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE) 
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

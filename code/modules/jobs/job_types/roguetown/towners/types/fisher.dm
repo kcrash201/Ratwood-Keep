@@ -10,7 +10,6 @@
 /datum/outfit/job/roguetown/towner/fisher/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE) //idk why the fisher gets bows
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

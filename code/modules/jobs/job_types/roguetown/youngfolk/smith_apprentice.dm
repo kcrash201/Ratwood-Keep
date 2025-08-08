@@ -16,7 +16,8 @@
 	give_bank_account = TRUE
 	min_pq = -10
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/bapprentice/pre_equip(mob/living/carbon/human/H)
 	..()
 	gloves = /obj/item/clothing/gloves/roguetown/leather

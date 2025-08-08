@@ -17,6 +17,7 @@
 	give_bank_account = TRUE
 	min_pq = 0
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/outfit/job/roguetown/druid
 	name = "Druid"
@@ -36,7 +37,6 @@
 	r_hand = /obj/item/rogueweapon/woodstaff
 	backpack_contents = list(/obj/item/ritualfeather = 1)
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)

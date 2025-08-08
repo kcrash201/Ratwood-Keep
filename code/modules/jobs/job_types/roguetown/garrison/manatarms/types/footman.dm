@@ -1,19 +1,19 @@
 /datum/subclass/manorguard/footman
-	name = "Mamluk Footman"
+	name = "Retinue Footman"
 	tutorial = "You are a member of the Ducal Retinue. Ensure the safety of the Duchy and their people, defend the powers that be from the horrors of the outside world, and keep the Duchy of Rockhill alive."
 	outfit = /datum/outfit/job/roguetown/manorguard/footman
 	category_tags = list(CTAG_MAA)
 
 /datum/outfit/job/roguetown/manorguard/footman/pre_equip(mob/living/carbon/human/H)
 	..()
+	head = /obj/item/clothing/head/roguetown/helmet/sallet
 	if(prob(50))
-		beltl = /obj/item/rogueweapon/sword/long/rider
+		beltl = /obj/item/rogueweapon/sword
 	else
 		beltl = /obj/item/rogueweapon/stoneaxe/woodcut/steel
 	backl = /obj/item/rogueweapon/shield/wood
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/storage/keyring/town_watch, /obj/item/rope/chain = 1, /obj/item/storage/keyring/man_at_arms = 1, /obj/item/natural/cloth = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/man_at_arms = 1, /obj/item/natural/cloth = 1)
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)

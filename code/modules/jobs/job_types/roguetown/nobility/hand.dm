@@ -1,5 +1,5 @@
 /datum/job/roguetown/hand
-	title = "Vizier"
+	title = "Hand"
 	flag = HAND
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -16,7 +16,8 @@
 	give_bank_account = 44
 	min_pq = 3
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
@@ -41,7 +42,7 @@
 	if(!player.ckey)
 		return
 	for(var/mob/dead/new_player/duke in GLOB.player_list)
-		if(duke.mind.assigned_role == "Sultan")
+		if(duke.mind.assigned_role == "Duke")
 			if(duke.brohand == player.ckey)
 				return TRUE
 */
@@ -59,7 +60,6 @@
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/lockpick = 1)
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -80,8 +80,8 @@
 			H.change_stat("intelligence", 3)
 		else 
 			H.mind.AddSpell(new SPELL_PUSH_SPELL) //Repulse, good for getting people away from the King
-			H.mind.AddSpell(new SPELL_ROUSTAME) //Rous taming still makes sense for a Vizier, a 'master of words' vibe. Summoning rats however does not - its undignified
-			H.mind.AddSpell(new SPELL_SLOWDOWN_SPELL_AOE) //Immobilizes for 3 seconds in a 3x3, seems fitting for a Vizier to be able to calm the court room when theres chaos
+			H.mind.AddSpell(new SPELL_ROUSTAME) //Rous taming still makes sense for a Hand, a 'master of words' vibe. Summoning rats however does not - its undignified
+			H.mind.AddSpell(new SPELL_SLOWDOWN_SPELL_AOE) //Immobilizes for 3 seconds in a 3x3, seems fitting for a Hand to be able to calm the court room when theres chaos
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	if(!isseelie(H)) //Only give heavy armor trait for non-seelie hands
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)

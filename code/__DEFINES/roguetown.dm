@@ -315,6 +315,7 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 
 //City
 #define CTAG_TOWNER			"CAT_TOWNER"		// Villager class - Villagers can use it
+#define CTAG_TOWNERDT		"CAT_TOWNERDT"
 #define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercs
 #define CTAG_HENCH			"CAT_HENCH"			// Whitevein Guards
 #define CTAG_WENCH			"CAT_WENCH"			// Whitevein workers
@@ -327,6 +328,7 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define CTAG_BOG			"CAT_BOG"			// Vanguard
 #define CTAG_SQUIRE			"CAT_SQUIRE"		// Squires
 #define CTAG_MAA			"CAT_MAA"			// Man-At-Arms
+#define CTAG_MAM			"CAT_MAM"			// Mamluk
 
 //Nobles			Eventually all of them will get their subclasses
 #define CTAG_HEIR			"CAT_HEIR"			// Heirs

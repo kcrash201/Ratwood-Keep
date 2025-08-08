@@ -8,7 +8,6 @@
 
 /datum/outfit/job/roguetown/towner/cheesemaker/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.grant_language(/datum/language/zybantine)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)

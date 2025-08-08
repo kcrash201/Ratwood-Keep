@@ -19,7 +19,8 @@
 
 	min_pq = 0
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/wapprentice/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt

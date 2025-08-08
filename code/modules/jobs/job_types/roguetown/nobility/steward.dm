@@ -14,6 +14,7 @@
 	give_bank_account = 17
 	min_pq = 2
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/job/roguetown/steward/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -48,7 +49,6 @@
 
 
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)

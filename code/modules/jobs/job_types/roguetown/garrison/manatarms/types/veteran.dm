@@ -1,5 +1,5 @@
 /datum/subclass/manorguard/veteran
-	name = "Mamluk Veteran"
+	name = "Retinue Veteran"
 	tutorial = "You are a veteran of the Retinue, and have shed many years and much blood for the Kingdom of Enigma. The engraved sword on your belt is a testament to your service and a gift from the Guard Captain himself. Protect the Duchy, protect your comrades, and maybe one day you’ll be able to retire.."
 	outfit = /datum/outfit/job/roguetown/manorguard/veteran
 	min_pq = 8
@@ -9,9 +9,10 @@
 
 /datum/outfit/job/roguetown/manorguard/veteran/pre_equip(mob/living/carbon/human/H)
 	..()
+	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored
 	beltl = /obj/item/rogueweapon/sword/decorated
-	r_hand = /obj/item/rogueweapon/royalglaive
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/misericorde = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/man_at_arms = 1, /obj/item/storage/keyring/town_watch, /obj/item/signal_horn = 1, /obj/item/natural/cloth = 1)
+	r_hand = /obj/item/rogueweapon/halberd
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/misericorde = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/man_at_arms = 1, /obj/item/signal_horn = 1, /obj/item/natural/cloth = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)

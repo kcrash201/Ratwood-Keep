@@ -22,6 +22,7 @@
 	can_random = FALSE
 	min_pq = 2
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/job/roguetown/nightmaiden/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -56,7 +57,6 @@
 
 	beltr = /obj/item/storage/keyring/nightman
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
