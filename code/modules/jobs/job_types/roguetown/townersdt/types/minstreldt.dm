@@ -24,7 +24,7 @@
 	H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
 	pants = /obj/item/clothing/under/roguetown/sirwal/fancy/random
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 	backl = /obj/item/storage/backpack/rogue/satchel
 	//beltl = /obj/item/ammo_holder/bomb/smokebombs
 	beltr = /obj/item/rogueweapon/huntingknife/idagger

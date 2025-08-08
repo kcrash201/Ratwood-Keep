@@ -1359,6 +1359,6 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random/Initialize()
-	color = pick("#514339", "#2f51b8", CLOTHING_RED, CLOTHING_ORANGE, CLOTHING_GREEN, CLOTHING_PURPLE)
+	color = pick("#2f51b8", CLOTHING_RED, CLOTHING_ORANGE, CLOTHING_GREEN, CLOTHING_PURPLE)
 	..()
 
