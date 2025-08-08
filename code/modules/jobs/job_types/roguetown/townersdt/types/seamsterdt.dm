@@ -8,19 +8,30 @@
 /datum/outfit/job/roguetown/towner/seamstressdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	cloak = /obj/item/clothing/cloak/raincloak
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/white
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	beltr = /obj/item/rogueweapon/huntingknife/scissors/steel
 	backl = /obj/item/storage/backpack/rogue/satchel
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 	backpack_contents = list(/obj/item/natural/cloth = 2, /obj/item/recipe_book/sewing = 1, /obj/item/natural/bundle/fibers/full = 1, /obj/item/needle = 1)
 	if(H.gender == MALE) // We're givign males male specific clothes so they don't walk around in a dress
-		belt = /obj/item/storage/belt/rogue/leather/cloth
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/purple
+		head = /obj/item/clothing/head/roguetown/turban/fancypurple
 	else
-		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
-		armor = /obj/item/clothing/suit/roguetown/armor/armordress
+		if(prob(33))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask
+			pants = /obj/item/clothing/under/roguetown/skirt/random
+		if(prob(33))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
+			pants = /obj/item/clothing/under/roguetown/skirt/random
+		else
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/green
+			pants = /obj/item/clothing/under/roguetown/skirt/random
+
+
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
