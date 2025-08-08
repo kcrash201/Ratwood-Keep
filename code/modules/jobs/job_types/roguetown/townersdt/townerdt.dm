@@ -24,7 +24,7 @@
 
 
 
-/datum/job/roguetown/towner/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/townerdt/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
