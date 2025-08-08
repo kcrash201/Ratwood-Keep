@@ -2,10 +2,10 @@
 	name = "Seamster"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/towner/seamstressdt
+	outfit = /datum/outfit/job/roguetown/townerdt/seamstressdt
 	category_tags = list(CTAG_TOWNERDT)
 
-/datum/outfit/job/roguetown/towner/seamstressdt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/townerdt/seamstressdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	shoes = /obj/item/clothing/shoes/roguetown/sandals

@@ -4,11 +4,11 @@
 	you have always been there to provide such songs to soothe sore ears."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/towner/minstreldt
+	outfit = /datum/outfit/job/roguetown/townerdt/minstreldt
 
 	category_tags = list(CTAG_TOWNERDT)
 
-/datum/outfit/job/roguetown/towner/minstreldt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/townerdt/minstreldt/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.grant_language(/datum/language/zybantine)
 	H.mind.adjust_skillrank(/datum/skill/misc/music, 5, TRUE)

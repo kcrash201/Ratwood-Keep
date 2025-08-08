@@ -4,10 +4,10 @@
 	in the ways of bending wood to your will. With enough time, your only limit is your imagination."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/towner/woodcutterdt
+	outfit = /datum/outfit/job/roguetown/townerdt/woodcutterdt
 	category_tags = list(CTAG_TOWNERDT)
 
-/datum/outfit/job/roguetown/towner/woodcutterdt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/townerdt/woodcutterdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor

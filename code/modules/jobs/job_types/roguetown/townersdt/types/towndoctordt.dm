@@ -3,12 +3,12 @@
 	tutorial = "You are a freelance physician and alchemist, taking jobs patching those up when you can for whatever they can or are willing to pay. It is thankless and most of the time it ends up being for free with you swearing to yourself 'next one will appreciate it'"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/towner/doctordt
+	outfit = /datum/outfit/job/roguetown/townerdt/doctordt
 	category_tags = list(CTAG_TOWNERDT)
 	traits_applied = list(TRAIT_EMPATH, TRAIT_NOSTINK)
 	cmode_music = 'sound/music/combat_physician.ogg'
 
-/datum/outfit/job/roguetown/towner/doctordt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/townerdt/doctordt/pre_equip(mob/living/carbon/human/H)
 	..()
 	mask = /obj/item/clothing/mask/rogue/spectacles
 	belt = /obj/item/storage/belt/rogue/leather

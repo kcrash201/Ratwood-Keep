@@ -4,11 +4,11 @@
 	cooking any meat left over, your role is one that is not done by many, but important in the circulation of clothing and light armor."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/towner/hunterdt
+	outfit = /datum/outfit/job/roguetown/townerdt/hunterdt
 
 	category_tags = list(CTAG_TOWNERDT)
 
-/datum/outfit/job/roguetown/towner/hunterdt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/townerdt/hunterdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
 	shoes = /obj/item/clothing/shoes/roguetown/sandals

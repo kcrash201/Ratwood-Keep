@@ -3,10 +3,10 @@
 	tutorial = "As a cheesemaker you work alongside the local farm, purchasing milk to make batches of your infamous cheeses and cheese-full recipes. Beware of rouses."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/towner/cheesemakerdt
+	outfit = /datum/outfit/job/roguetown/townerdt/cheesemakerdt
 	category_tags = list(CTAG_TOWNERDT)
 
-/datum/outfit/job/roguetown/towner/cheesemakerdt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/townerdt/cheesemakerdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.grant_language(/datum/language/zybantine)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
