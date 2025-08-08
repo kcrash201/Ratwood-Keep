@@ -18,7 +18,7 @@ map rockhill
 	votable
 endmap
 
-map deserttowb
+map deserttown
 	default
 	#voteweight 1.5
 	votable
