@@ -19,16 +19,32 @@
 	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/labor/fishing, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	pants = /obj/item/clothing/under/roguetown/trou
-	head = /obj/item/clothing/head/roguetown/chef
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	backl = /obj/item/storage/backpack/rogue/backpack
 	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltr = /obj/item/flint
 	beltl = /obj/item/rogueweapon/huntingknife
 	backpack_contents = list(/obj/item/cooking/pan = 1, /obj/item/reagent_containers/food/snacks/rogue/cheddar = 1, /obj/item/reagent_containers/glass/bottle/rogue/milk = 3, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/powder/salt = 4)
+	if(H.gender == MALE)
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+		head = /obj/item/clothing/head/roguetown/turban/random
+	else
+		if(prob(25))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+			if(prob(50))
+				pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+			else
+				pants = /obj/item/clothing/under/roguetown/skirt/random
+		if(prob(25))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
+			if(prob(50))
+				pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+			else
+				pants = /obj/item/clothing/under/roguetown/skirt/random
+		else
+			shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", 2)
 	H.change_stat("endurance", 1)

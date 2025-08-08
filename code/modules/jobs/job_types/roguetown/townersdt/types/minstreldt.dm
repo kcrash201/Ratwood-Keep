@@ -22,19 +22,30 @@
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
-	head = /obj/item/clothing/head/roguetown/bardhat
-	pants = /obj/item/clothing/under/roguetown/tights/random
+	pants = /obj/item/clothing/under/roguetown/sirwal/fancy/random
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	belt = /obj/item/storage/belt/rogue/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-	cloak = /obj/item/clothing/cloak/half/red
 	backl = /obj/item/storage/backpack/rogue/satchel
 	//beltl = /obj/item/ammo_holder/bomb/smokebombs
 	beltr = /obj/item/rogueweapon/huntingknife/idagger
-	head = /obj/item/clothing/head/roguetown/bardhat //with this hat, they will get all the pussy(or dick depending on preference(or both ig))
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/white
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
+	if(H.gender == MALE)
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
+		head = /obj/item/clothing/head/roguetown/turban/fancypurple
+	else
+		if(prob(33))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask
+		if(prob(33))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/green
+		else
+			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
+
 	backpack_contents = list(/obj/item/natural/feather = 1, /obj/item/paper/scroll = 1)
 	var/instrument = pick(0,1,2,3,4,5)
 	switch(instrument)

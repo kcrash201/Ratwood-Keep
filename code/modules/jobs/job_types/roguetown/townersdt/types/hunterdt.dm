@@ -10,16 +10,16 @@
 
 /datum/outfit/job/roguetown/towner/hunterdt/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-	shoes = /obj/item/clothing/shoes/roguetown/armor/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
 	backr = /obj/item/storage/backpack/rogue/satchel
 	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/ammo_holder/quiver/arrows
 	beltl = /obj/item/flashlight/flare/torch/lantern
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/bluegrey
+	head = /obj/item/clothing/head/roguetown/tagelmust
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/recipe_book/survival = 1, /obj/item/rogueweapon/huntingknife = 1)
 	gloves = /obj/item/clothing/gloves/roguetown/leather
 	if(H.mind)

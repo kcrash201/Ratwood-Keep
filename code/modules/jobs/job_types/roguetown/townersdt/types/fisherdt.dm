@@ -37,28 +37,18 @@
 		else
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 4, TRUE)
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-		shoes = /obj/item/clothing/shoes/roguetown/armor/leather
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+		shoes = /obj/item/clothing/shoes/roguetown/sandals
 		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-		head = /obj/item/clothing/head/roguetown/fisherhat
 		mouth = /obj/item/rogueweapon/huntingknife
-		armor = /obj/item/clothing/suit/roguetown/armor/workervest
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/random
 		backl = /obj/item/storage/backpack/rogue/satchel
-		belt = /obj/item/storage/belt/rogue/leather
+		belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 		backr = /obj/item/fishingrod
 		beltr = /obj/item/cooking/pan
 		beltl = /obj/item/flint
 		backpack_contents = list(/obj/item/natural/worms = 2,/obj/item/rogueweapon/shovel/small=1)
+	if(H.gender == MALE)
+		head = /obj/item/clothing/head/roguetown/turban/random
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shoes = /obj/item/clothing/shoes/roguetown/armor/leather
-		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-		head = /obj/item/clothing/head/roguetown/fisherhat
-		mouth = /obj/item/rogueweapon/huntingknife
-		backl = /obj/item/storage/backpack/rogue/satchel
-		belt = /obj/item/storage/belt/rogue/leather
-		backr = /obj/item/fishingrod
-		beltr = /obj/item/cooking/pan
-		beltl = /obj/item/flint
-		backpack_contents = list(/obj/item/natural/worms = 2,/obj/item/rogueweapon/shovel/small=1)
+		head = /obj/item/clothing/head/roguetown/tagelmust

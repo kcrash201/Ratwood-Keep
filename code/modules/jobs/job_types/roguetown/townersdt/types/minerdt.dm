@@ -10,21 +10,17 @@
 
 /datum/outfit/job/roguetown/towner/minerdt/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/armingcap
-	shoes = /obj/item/clothing/shoes/roguetown/armor/leather
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/bluegrey
+	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+	head = /obj/item/clothing/head/roguetown/tagelmust
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltl = /obj/item/rogueweapon/pick
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/rogueweapon/chisel = 1, /obj/item/rogueweapon/hammer/wood,)
-	if(H.gender == FEMALE)
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/brown
-	if(H.gender == MALE)
-		armor = /obj/item/clothing/suit/roguetown/armor/workervest
-		pants = /obj/item/clothing/under/roguetown/trou
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
+
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)

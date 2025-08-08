@@ -14,6 +14,11 @@ Format:
 endmap
 
 map rockhill
+	#voteweight 1.5
+	votable
+endmap
+
+map deserttowb
 	default
 	#voteweight 1.5
 	votable

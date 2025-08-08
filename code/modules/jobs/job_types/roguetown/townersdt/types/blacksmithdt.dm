@@ -17,14 +17,19 @@
 	beltr = /obj/item/rogueweapon/hammer/iron
 	beltl = /obj/item/rogueweapon/tongs
 	backl = /obj/item/storage/backpack/rogue/satchel
-	pants = /obj/item/clothing/under/roguetown/trou
+	pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/recipe_book/blacksmithing = 1, /obj/item/rogueore/coal=1, /obj/item/rogueore/iron=1, /obj/item/rogueweapon/huntingknife = 1)
 	if(H.gender == MALE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-		shoes = /obj/item/clothing/shoes/roguetown/armor/leather
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
+		head = /obj/item/clothing/head/roguetown/turban/random
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
+		if(prob(50))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+		else
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
+	
 
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)

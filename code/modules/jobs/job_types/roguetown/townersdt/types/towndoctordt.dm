@@ -14,18 +14,18 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltr = /obj/item/rogueweapon/huntingknife/idagger
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	backl = /obj/item/storage/backpack/rogue/backpack
+	head = /obj/item/clothing/head/roguetown/tagelmust
 	backpack_contents = list(/obj/item/storage/fancy/skit = 1, /obj/item/storage/fancy/ifak = 1, /obj/item/reagent_containers/glass/mortar = 1, /obj/item/reagent_containers/glass/alembic = 1, /obj/item/sleepingbag = 1,)
-	if(H.gender == MALE)
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-		pants = /obj/item/clothing/under/roguetown/trou
-		shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
-		head = /obj/item/clothing/head/roguetown/nightman
+	if(prob(33))
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht
+	if(prob(33))
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/grey
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		head = /obj/item/clothing/head/roguetown/armingcap
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/black
+	
 
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
