@@ -20,6 +20,8 @@
 	give_bank_account = TRUE
 	min_pq = -4 //stupid jesters are funny so low PQ requirement
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+
 
 /datum/outfit/job/roguetown/jester/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -33,7 +35,6 @@
 	neck = /obj/item/clothing/neck/roguetown/coif
 
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)

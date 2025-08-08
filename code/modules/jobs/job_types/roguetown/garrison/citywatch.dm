@@ -3,8 +3,8 @@
 	flag = GUARDSMAN
 	department_flag = GARRISON
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 7
+	spawn_positions = 7
 	selection_color = JCOLOR_SOLDIER
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
@@ -21,6 +21,7 @@
 	max_pq = null
 
 	cmode_music = 'sound/music/combat_guard.ogg'
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/outfit/job/roguetown/citywatch/pre_equip(mob/living/carbon/human/H)
 	. = ..()

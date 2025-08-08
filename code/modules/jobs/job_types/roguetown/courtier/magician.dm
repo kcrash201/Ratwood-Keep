@@ -18,6 +18,7 @@
 	give_bank_account = 47
 	min_pq = 2
 	max_pq = null
+	allowed_maps = list("Rockhill, Build Your Settlement")
 
 /datum/outfit/job/roguetown/magician
 	allowed_patrons = list(/datum/patron/divine/noc, /datum/patron/zizo)
@@ -42,21 +43,19 @@
 /datum/outfit/job/roguetown/magician/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/clothing/neck/roguetown/talkstone
-	head = /obj/item/clothing/head/roguetown/jafar
-	armor = /obj/item/clothing/suit/roguetown/shirt/jafar
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/magos
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	belt = /obj/item/storage/belt/rogue/leather/jafar
+	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/storage/magebag/apprentice
 	beltl = /obj/item/storage/keyring/mage
 	id = /obj/item/clothing/ring/gold
-	r_hand = /obj/item/rogueweapon/woodstaff/snakestaff
+	r_hand = /obj/item/rogueweapon/woodstaff
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/lovepotion,/obj/item/reagent_containers/glass/bottle/rogue/poison,/obj/item/book/granter/spellbook/master, /obj/item/rogueweapon/huntingknife/idagger/silver/arcyne)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
 	ADD_TRAIT(H, TRAIT_NOBLE, "[type]")
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
@@ -78,7 +77,7 @@
 		H.mind.adjust_spellpoints(10)
 		if(H.age == AGE_OLD)
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
-			belt = /obj/item/storage/belt/rogue/leather/jafar //golden belt to show how valuable they are to the duke plaquegold
+			belt = /obj/item/storage/belt/rogue/leather/plaquegold //golden belt to show how valuable they are to the duke
 			H.change_stat("speed", -1)
 			H.change_stat("intelligence", 1)
 			H.change_stat("perception", 1)

@@ -20,6 +20,7 @@
 	advjob_examine = TRUE
 	always_show_on_latechoices = TRUE
 	same_job_respawn_delay = 0
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 
 

@@ -1,7 +1,5 @@
 /datum/job/roguetown/councillor
-	title = "Sheikh"
-//	map_specific_title = list("Sheikh", "Sheikh") //0 = rockhill, 1 = zybantium, 2 = etc.
-
+	title = "Councillor"
 	flag = COUNCILLOR
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -14,13 +12,14 @@
 	tutorial = "You may have inherited this role, bought your way into it, or were appointed by the Marshal themselves; \
 			Regardless of origin, you now serve as an assistant, planner, and juror for the Marshal. \
 			You help him oversee the taxation, construction, and planning of new laws. \
-			You only answer to the Sultan, Marshal, Sultana, Heir, or Heiress. However, your main focus is to assist the Marshal with their duties."
+			You only answer to the Duke, Marshal, Duchess, Heir, or Heiress. However, your main focus is to assist the Marshal with their duties."
 	whitelist_req = FALSE
 	outfit = /datum/outfit/job/roguetown/councillor
 	
 	give_bank_account = 40
 	min_pq = 2
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/job/roguetown/councillor/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -51,7 +50,6 @@
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1)
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)

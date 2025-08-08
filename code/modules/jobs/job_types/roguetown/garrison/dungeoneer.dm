@@ -23,7 +23,7 @@
 	max_pq = null
 
 	cmode_music = 'sound/music/combat_weird.ogg'
-
+	
 /datum/outfit/job/roguetown/dungeoneer/pre_equip(mob/living/carbon/human/H)
 	..()
 	head = /obj/item/clothing/head/roguetown/menacing

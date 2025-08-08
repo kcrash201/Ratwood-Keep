@@ -13,7 +13,8 @@
 	display_order = JDO_ARCHITECT
 	min_pq = 12
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/architect/pre_equip(mob/living/carbon/human/H)         ///////////// fuck being a dumb virgin
 	..()
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
@@ -31,7 +32,6 @@
 	shoes = /obj/item/clothing/shoes/roguetown/armor
 
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/labor/mining, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/firearms, 2, TRUE)

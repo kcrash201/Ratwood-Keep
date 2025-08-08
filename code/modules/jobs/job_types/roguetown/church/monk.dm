@@ -16,7 +16,8 @@
 	give_bank_account = TRUE
 	min_pq = 0
 	max_pq = null
-	
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+
 	cmode_music = 'sound/music/combat_clergy.ogg'
 
 /datum/job/roguetown/monk/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
@@ -92,7 +93,6 @@
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
