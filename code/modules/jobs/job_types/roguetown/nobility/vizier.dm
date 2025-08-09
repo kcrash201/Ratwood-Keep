@@ -52,11 +52,11 @@
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 	shoes = /obj/item/clothing/shoes/roguetown/armor/nobleboot
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltr = /obj/item/storage/keyring/hand
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	backl = /obj/item/clothing/suit/roguetown/armor/leather/hand
+	armor = /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/lockpick = 1)
 	if(H.mind)

@@ -9,10 +9,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
-	tutorial = "An experienced soldier of the Sultan's retinue, you have been tasked with overseeing the newly constructed Bastion. \
-				You report to the Royal Marshal and their Councillors, \
-				and your job is to keep the vanguard in line and to ensure the routes to the town remain safe.\
-				The Bastion must not fall."
+	tutorial = "An experienced soldier of the Sultan's Janissary Corp you have been tasked with overseeing the newly constructed border. \
+				You report to the Royal Family and their Councillors, \
+				and your job is to keep the younger Janissaries in line and to ensure the routes to the city remain safe.\
+				The Border must not fall."
 	display_order = JDO_BOGMASTER
 	whitelist_req = TRUE
 
@@ -44,7 +44,7 @@
 	. = ..()
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	cloak = /obj/item/clothing/cloak/shadow
+	cloak = /obj/item/clothing/cloak/catcloak
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half
 	neck = /obj/item/clothing/neck/roguetown/bervor
@@ -52,10 +52,10 @@
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	shoes = /obj/item/clothing/shoes/roguetown/armor
 	beltl = /obj/item/storage/keyring/bog_master
-	beltr = /obj/item/rogueweapon/sword
+	beltr = /obj/item/rogueweapon/sword/long/rider
 	belt = /obj/item/storage/belt/rogue/leather
 	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/rogueweapon/shield/tower
+	backl = /obj/item/rogueweapon/shield/tower/zybantine
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/signal_horn = 1)
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
@@ -84,16 +84,16 @@
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_WANTED_POSTER_READ, TRAIT_GENERIC)
 
-/obj/effect/proc_holder/spell/self/convertrole/bog
-	name = "Recruit Vanguard"
-	new_role = "Vanguard"
-	overlay_state = "recruit_bog"
-	recruitment_faction = "Vanguard"
-	recruitment_message = "Serve the vanguard, %RECRUIT!"
-	accept_message = "FOR THE VANGUARDs!"
+/obj/effect/proc_holder/spell/self/convertrole/janissary
+	name = "Recruit Janissary"
+	new_role = "Janissary"
+	overlay_state = "recruit_Janissary"
+	recruitment_faction = "Sultanate"
+	recruitment_message = "Serve the Sultanate, %RECRUIT!"
+	accept_message = "FOR THE SULTANATE!"
 	refuse_message = "I refuse."
 
-/obj/effect/proc_holder/spell/self/convertrole/bog/convert(mob/living/carbon/human/recruit, mob/living/carbon/human/recruiter)
+/obj/effect/proc_holder/spell/self/convertrole/Janissary/convert(mob/living/carbon/human/recruit, mob/living/carbon/human/recruiter)
 	. = ..()
 	if(!.)
 		return

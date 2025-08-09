@@ -1,6 +1,6 @@
 /datum/subclass/mamluk/footman
 	name = "Mamluk Footman"
-	tutorial = "You are a member of the Ducal Retinue. Ensure the safety of the Duchy and their people, defend the powers that be from the horrors of the outside world, and keep the Duchy of Rockhill alive."
+	tutorial = "You are a member of the Sultans Retinue. Ensure the safety of the Sultan and their subjects, defend the powers that be from the horrors of the outside world, and keep the Sultanate alive."
 	outfit = /datum/outfit/job/roguetown/mamluk/footman
 	category_tags = list(CTAG_MAM)
 
@@ -10,7 +10,7 @@
 		beltl = /obj/item/rogueweapon/sword/long/rider
 	else
 		beltl = /obj/item/rogueweapon/stoneaxe/woodcut/steel
-	backl = /obj/item/rogueweapon/shield/wood
+	backl = /obj/item/rogueweapon/shield/tower/zybantine
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/storage/keyring/town_watch, /obj/item/rope/chain = 1, /obj/item/storage/keyring/man_at_arms = 1, /obj/item/natural/cloth = 1)
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)

@@ -65,6 +65,21 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/janissary
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "Janissary Mail"
+	desc = "A longer steel maille also known as coat of mail, composed of interwoven metal rings that absorb arrow impacts decently enough while being also comfortable enough to sleep in covering the torso, arms and legs."
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
+	icon_state = "atgervi_raider_mail"
+	item_state = "atgervi_raider_mail"
+	max_integrity = 220
+	armor = list("blunt" = 60, "slash" = 100, "stab" = 80, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	anvilrepair = /datum/skill/craft/blacksmithing
+	smeltresult = /obj/item/ingot/steel
+	do_sound_chain = TRUE
+	armor_class = ARMOR_CLASS_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
+
 /obj/item/clothing/suit/roguetown/armor/mamaluke
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "mamaluke chainmail"

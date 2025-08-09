@@ -13,7 +13,7 @@
 	tutorial = "Your creed is one dedicated to the conquering of the arcane arts and the constant thrill of knowledge. \
 		You owe your life to the Lord, for it was his coin that allowed you to continue your studies in these dark times. \
 		In return, you have proven time and time again as justicar and trusted advisor to their reign."
-	outfit = /datum/outfit/job/roguetown/magician
+	outfit = /datum/outfit/job/roguetown/magiciandt
 	whitelist_req = TRUE
 	give_bank_account = 47
 	min_pq = 2
@@ -23,7 +23,7 @@
 /datum/outfit/job/roguetown/magiciandt
 	allowed_patrons = list(/datum/patron/divine/noc, /datum/patron/zizo)
 
-/datum/job/roguetown/magician/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/magiciandt/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L

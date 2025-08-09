@@ -9,9 +9,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
 	allowed_ages = ALL_AGES_LIST
-	tutorial = "Either a fresh lowborn recruit or a veteran of the now defunct bog guard, you have been assigned to the newly established Vanguard. \
-	You have a roof over your head, coin in your pocket, and a thankless job protecting the outskirts of town against what lurks beyond.\
-	The Bastion must not fall."
+	tutorial = "Beholden to the royal family as property, you where raised from birth as a slave soldier. Sent to guard the border and keep the city safe as your more esteemed counterparts live lavishly within the city walls yours is a thankless duty but one that must be upheld."
 	display_order = JDO_TOWNGUARD
 	whitelist_req = TRUE
 	outfit = /datum/outfit/job/roguetown/janissary
@@ -48,10 +46,10 @@
 /datum/outfit/job/roguetown/janissary
 	name = "Vanguard footman"
 
-/datum/outfit/job/roguetown/ranger
+/datum/outfit/job/roguetown/janissarygunner
 	name = "Vanguard archer"
 
-/datum/subclass/janissaryfoot
+/datum/subclass/janissary
 	name = "Vanguard footman"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
@@ -61,7 +59,7 @@
 	category_tags = list(CTAG_BOG)
 
 /datum/subclass/janissarygunner
-	name = "Vanguard archer"
+	name = "Janissary Gunner"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
 	outfit = /datum/outfit/job/roguetown/ranger
@@ -71,8 +69,8 @@
 	maximum_possible_slots = 3
 
 /datum/outfit/job/roguetown/janissary/pre_equip(mob/living/carbon/human/H)
-	head = /obj/item/clothing/head/roguetown/helmet/skullcap
-	armor = /obj/item/clothing/suit/roguetown/shirt/shadow
+	head = /obj/item/clothing/head/roguetown/helmet/janissary
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/janissary
 	cloak = /obj/item/clothing/cloak/shadow
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -86,8 +84,9 @@
 /datum/outfit/job/roguetown/janissarygunner/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-	beltr = /obj/item/ammo_holder/quiver/arrows //replaces sword
+	backl = /obj/item/gun/ballistic/firearm/flintgonne
+	beltr = /obj/item/ammo_holder/bullet/lead //replaces sword
+	beltl = /obj/item/powderflask
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/clothing/cloak/raincloak/brown = 1 )
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
@@ -98,7 +97,8 @@
 
 /datum/outfit/job/roguetown/janissary/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	beltr = /obj/item/rogueweapon/sword
+	beltr = /obj/item/rogueweapon/sword/sabre
+	backl = /obj/item/rogueweapon/shield/tower/zybantine
 	backr = /obj/item/storage/backpack/rogue/satchel
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1)
@@ -130,11 +130,11 @@
 	bogger.change_stat("speed", 1)
 
 /datum/outfit/job/roguetown/janissarygunner
-	name = "Bog Ranger"
+	name = "Janissary Gunner"
 
 /datum/outfit/job/roguetown/janissarygunner/proc/assign_skills(mob/living/carbon/human/bogger)
 	bogger.mind.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
-	bogger.mind.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
 	bogger.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	bogger.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	bogger.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)

@@ -331,7 +331,7 @@
 	item_state = "purplethawb"
 
 /obj/item/clothing/suit/roguetown/shirt/robe/bisht/merchantbisht
-	slot_flags = ITEM_SLOT_ARMOR
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	body_parts_covered = CHEST|VITALS
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'

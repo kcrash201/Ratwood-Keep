@@ -574,6 +574,16 @@
 	body_parts_covered = HEAD|HAIR|EARS
 	flags_inv = HIDEEARS|HIDEHAIR
 
+/obj/item/clothing/head/roguetown/helmet/janissary
+	name = "Janissaries Helm"
+	desc = "A helmet with too much style."
+	icon_state = "atgervi_raider"
+	item_state = "atgervi_raider"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/head.dmi'
+	max_integrity = 250
+	body_parts_covered = HEAD|HAIR|EARS|NOSE
+	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACE|HIDEFACIALHAIR
+
 /obj/item/clothing/head/roguetown/helmet/kettle/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
@@ -812,7 +822,7 @@
 	icon = 'icons/roguetown/clothing/32x48.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/head.dmi'
 	emote_environment = 3
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	block2add = FOV_BEHIND
 	smeltresult = /obj/item/ingot/steel
 

@@ -48,7 +48,7 @@
 	pants = /obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/armor/steel
 	belt = /obj/item/storage/belt/rogue/leather/black
-	beltl = /obj/item/rogueweapon/sword/sabre
+	beltl = /obj/item/rogueweapon/sword/long/rider
 	beltr = /obj/item/storage/keyring/veteran
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/misericorde = 1, /obj/item/signal_horn = 1)

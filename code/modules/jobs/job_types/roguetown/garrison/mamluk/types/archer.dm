@@ -1,6 +1,6 @@
 /datum/subclass/mamluk/archer
 	name = "Mamluk Archer"
-	tutorial = "You are a member of the Ducal Retinue. Ensure the safety of the Duchy and their people, defend the powers that be from the horrors of the outside world, and keep the Duchy of Rockhill alive."
+	tutorial = "You are a member of the Sultans Retinue. Ensure the safety of the Sultan and their subjects, defend the powers that be from the horrors of the outside world, and keep the Sultanate alive."
 	outfit = /datum/outfit/job/roguetown/mamluk/archer
 	category_tags = list(CTAG_MAM)
 	maximum_possible_slots = 2
@@ -39,13 +39,13 @@
 	switch(weapon_choice)
 		if("Arquebus & Sword") //Gunner
 			beltl = /obj/item/ammo_holder/bullet/lead
-			beltr = /obj/item/rogueweapon/sword
+			beltr = /obj/item/rogueweapon/sword/sabre
 			backl = /obj/item/gun/ballistic/firearm/arquebus
 			backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/town_watch, /obj/item/storage/keyring/man_at_arms = 1, /obj/item/powderflask = 1)
 			H.mind.adjust_skillrank(/datum/skill/combat/firearms, 1, TRUE)
 		if("Bow & Sword") //Archer
 			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-			beltr = /obj/item/rogueweapon/sword
+			beltr = /obj/item/rogueweapon/sword/sabre
 			beltl = /obj/item/ammo_holder/quiver/arrows
 			backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/town_watch, /obj/item/storage/keyring/man_at_arms = 1)
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)

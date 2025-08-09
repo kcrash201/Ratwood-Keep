@@ -11,7 +11,7 @@
 	allowed_patrons = ALL_NON_INHUMEN_PATRONS
 	subclass_cat_rolls = list(CTAG_KNIGHT = 3)
 	tutorial = "A Cataphract with expert training; \
-	Born into petty nobility and raised as a squire from a young age, now you guard the ducal family, answer to their commands, and act as a last beacon of chivalry in these dark times. \
+	Born into petty nobility and raised as a squire from a young age, now you guard the royal family, answer to their commands, and act as a last beacon of chivalry in these dark times. \
 	You're wholly dedicated to the standing Regent and their safety. Do not fail."
 	display_order = JDO_KNIGHT
 	whitelist_req = TRUE
@@ -162,21 +162,21 @@
 	ADD_TRAIT(H, TRAIT_NOSEGRAB, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 
-	var/weapons = list("Greatsword", "Estoc")
+	var/weapons = list("Executioners Blade", "Estoc")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
-		if("Greatsword")
-			r_hand = /obj/item/rogueweapon/greatsword
+		if("Executioners Blade")
+			r_hand = /obj/item/rogueweapon/sword/long/exe
 
 		if("Estoc")
 			r_hand = /obj/item/rogueweapon/estoc
 
-	var/sidearms = list("Bastard Sword", "Rondel Dagger")
+	var/sidearms = list("Sabre", "Rondel Dagger")
 	var/sidearm_choice = input("Choose your sidearm.", "TAKE UP ARMS") as anything in sidearms
 	switch(sidearm_choice)
-		if("Bastard Sword")
-			beltr = /obj/item/rogueweapon/sword/long
+		if("Sabre")
+			beltr = /obj/item/rogueweapon/sword/sabre
 
 		if("Rondel Dagger")
 			beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/rondel
@@ -211,9 +211,9 @@
 		H.change_stat("strength", 4)
 		H.change_stat("perception", 1)
 		H.change_stat("intelligence", 2)
-		H.change_stat("constitution", 3)
+		H.change_stat("constitution", 5)
 		H.change_stat("endurance", 3)
-		H.change_stat("speed", -2)
+		H.change_stat("speed", -3)
 
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 
@@ -226,7 +226,7 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Tower Shield and Iron Mace")
-			l_hand = /obj/item/rogueweapon/shield/tower/metal
+			l_hand = /obj/item/rogueweapon/shield/tower/zybantine
 			beltr = /obj/item/rogueweapon/mace
 
 		if("Buckler and Steel Mace")

@@ -43,12 +43,12 @@
 	ADD_TRAIT(H, TRAIT_SEEPRICES, type)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC)
 
-	head = /obj/item/clothing/head/roguetown/chaperon
+	head = /obj/item/clothing/head/roguetown/sultan/merchant
 	neck = /obj/item/clothing/neck/roguetown/horus
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/merchant
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/merchantbisht
+	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold
 	pants = /obj/item/clothing/under/roguetown/tights/sailor
-	belt = /obj/item/storage/belt/rogue/leather/rope
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/yellow
 	beltl = /obj/item/gun/ballistic/firearm/arquebus_pistol //merchant usually gets his pistol from the map, but it's currently broken and doesn't appear, and also gets stolen often when latejoining
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	backl = /obj/item/storage/backpack/rogue/satchel

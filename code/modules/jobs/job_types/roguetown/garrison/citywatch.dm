@@ -19,9 +19,9 @@
 	give_bank_account = 16
 	min_pq = 1
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	cmode_music = 'sound/music/combat_guard.ogg'
-	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/outfit/job/roguetown/citywatch/pre_equip(mob/living/carbon/human/H)
 	. = ..()

@@ -11,10 +11,10 @@
 	allowed_races = RACES_TOLERATED_UP
 	allowed_sexes = list(MALE, FEMALE)
 	display_order = JDO_COUNCILLOR
-	tutorial = "You may have inherited this role, bought your way into it, or were appointed by the Marshal themselves; \
-			Regardless of origin, you now serve as an assistant, planner, and juror for the Marshal. \
+	tutorial = "You may have inherited this role, bought your way into it, or were appointed by the Royal Family themselves; \
+			Regardless of origin, you now serve as an assistant, planner, and juror for the Vizier. \
 			You help him oversee the taxation, construction, and planning of new laws. \
-			You only answer to the Sultan, Marshal, Sultana, Heir, or Heiress. However, your main focus is to assist the Marshal with their duties."
+			You only answer to the Sultan, Sultana, Heir, or Heiress. However, your main focus is to assist the Vizier with their duties."
 	whitelist_req = FALSE
 	outfit = /datum/outfit/job/roguetown/sheikh
 	
@@ -43,7 +43,7 @@
 
 /datum/outfit/job/roguetown/sheikh/pre_equip(mob/living/carbon/human/H)
 	..()
-	armor = /obj/item/clothing/suit/roguetown/armor/councillor
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/hierophant
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/armor

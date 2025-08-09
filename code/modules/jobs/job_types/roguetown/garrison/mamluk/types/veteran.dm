@@ -1,6 +1,6 @@
 /datum/subclass/mamluk/veteran
 	name = "Mamluk Veteran"
-	tutorial = "You are a veteran of the Retinue, and have shed many years and much blood for the Kingdom of Enigma. The engraved sword on your belt is a testament to your service and a gift from the Guard Captain himself. Protect the Duchy, protect your comrades, and maybe one day you’ll be able to retire.."
+	tutorial = "You are a veteran of the Retinue, and have shed many years and much blood for the Zybantian Empire. The engraved sword on your belt is a testament to your service and a gift from the Guard Captain himself. Protect the Duchy, protect your comrades, and maybe one day you’ll be able to retire.."
 	outfit = /datum/outfit/job/roguetown/manorguard/veteran
 	min_pq = 8
 	category_tags = list(CTAG_MAM)

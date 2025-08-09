@@ -1,6 +1,6 @@
 /datum/subclass/mamluk/halberdier
 	name = "Mamluk Glaive Wielder"
-	tutorial = "You are a member of the Ducal Retinue. Ensure the safety of the Duchy and their people, defend the powers that be from the horrors of the outside world, and keep the Duchy of Rockhill alive."
+	tutorial = "You are a member of the Sultans Retinue. Ensure the safety of the Sultan and their subjects, defend the powers that be from the horrors of the outside world, and keep the Sultanate alive."
 	outfit = /datum/outfit/job/roguetown/mamluk/halberdier
 	category_tags = list(CTAG_MAM)
 
