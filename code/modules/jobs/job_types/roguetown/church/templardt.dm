@@ -1,6 +1,6 @@
 //shield flail or longsword, tief can be this with red cross
 
-/datum/job/roguetown/templar
+/datum/job/roguetown/templardt
 	title = "Templar"
 	department_flag = CHURCHMEN
 	faction = "Station"
@@ -8,7 +8,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
 	allowed_patrons = ALL_CLERIC_PATRONS
-	outfit = /datum/outfit/job/roguetown/templar
+	outfit = /datum/outfit/job/roguetown/templardt
 	min_pq = 2
 	max_pq = null
 	total_positions = 3
@@ -19,10 +19,10 @@
 	
 	cmode_music = 'sound/music/combat_clergy.ogg'
 
-/datum/outfit/job/roguetown/templar
+/datum/outfit/job/roguetown/templardt
 	allowed_patrons = ALL_CLERIC_PATRONS
 
-/datum/job/roguetown/templar/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/templardt/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -34,9 +34,9 @@
 		H.real_name = "[title] [prev_real_name]"
 		H.name = "[title] [prev_name]"
 		
-		addtimer(CALLBACK(src, PROC_REF(templar_helmet_choice), H), 50)
+		addtimer(CALLBACK(src, PROC_REF(templar_helmet_choicedt), H), 50)
 
-/datum/outfit/job/roguetown/templar/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/templadtr/pre_equip(mob/living/carbon/human/H)
 	..()
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron.name)
@@ -127,11 +127,11 @@
 	C.grant_spells_templar(H)
 	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
 
-/datum/outfit/job/roguetown/templar/post_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/templardt/post_equip(mob/living/carbon/human/H)
 	..()
 	H.virginity = TRUE
 
-/datum/job/roguetown/templar/proc/templar_helmet_choicedt(mob/living/carbon/human/H)
+/datum/job/roguetown/templardt/proc/templar_helmet_choicedt(mob/living/carbon/human/H)
 	if(!H.client)
 		addtimer(CALLBACK(src, PROC_REF(templar_helmet_choicedt), H))
 		return

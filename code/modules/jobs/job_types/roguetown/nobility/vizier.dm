@@ -7,7 +7,7 @@
 	spawn_positions = 1
 	allowed_races = RACES_SHUNNED_UP_PLUS_SEELIE
 	allowed_sexes = list(MALE, FEMALE)
-	outfit = /datum/outfit/job/roguetown/hand
+	outfit = /datum/outfit/job/roguetown/vizier
 	display_order = JDO_HAND
 	tutorial = "You owe everything to your liege. Once, you were just a humble friend- now you are one of the most important men within the realm itself. You have played spymaster and confidant to the Noble-Family for so long that you are a vault of intrigue, something you exploit with potent conviction. Let no man ever forget whose ear you whisper into. You've killed more men with those lips than any blademaster could ever claim to."
 	seelie_tutorial = "It wasn't easy for a fae, but your liege saw great potential in you. Once, you were just an adventuring companion; now, you are one of the highest-status fae within the entire realm. It's come at a cost, you've lost your more mischievous spells and nature over time, but gained ones more useful to dealing with the chaos of court."
@@ -18,7 +18,7 @@
 	max_pq = null
 	allowed_maps = list("Desert Town")
 
-/datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/vizier/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -36,7 +36,7 @@
 		H.name = "[honorary] [prev_name]"
 
 /*
-/datum/job/roguetown/hand/special_job_check(mob/dead/new_player/player)
+/datum/job/roguetown/vizier/special_job_check(mob/dead/new_player/player)
 	if(!player)
 		return
 	if(!player.ckey)
@@ -47,7 +47,7 @@
 				return TRUE
 */
 
-/datum/outfit/job/roguetown/hand/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/vizier/pre_equip(mob/living/carbon/human/H)
 	..()
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord

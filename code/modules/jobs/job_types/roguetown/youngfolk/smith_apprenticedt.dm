@@ -1,4 +1,4 @@
-/datum/job/roguetown/bapprenticedt
+/datum/job/roguetown/sapprenticedt
 	title = "Smithy Apprentice"
 	flag = APPRENTICE
 	department_flag = YOUNGFOLK
