@@ -113,6 +113,7 @@
 	r_hand = /obj/item/soap/bath
 	l_hand = /obj/item/rogue/instrument/harp
 	pants = /obj/item/clothing/under/roguetown/sirwal/fancy/random
+	belt = /obj/item/storage/belt/rogue/leather/cloth/bandit
 	if(H.gender == MALE)
 		belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 		if(prob(33))

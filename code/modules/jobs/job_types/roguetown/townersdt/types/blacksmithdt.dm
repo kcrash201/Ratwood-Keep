@@ -12,7 +12,6 @@
 	..()
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	gloves = /obj/item/clothing/gloves/roguetown/leather
-	cloak = /obj/item/clothing/cloak/apron/blacksmith
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/rogueweapon/hammer/iron
 	beltl = /obj/item/rogueweapon/tongs
@@ -22,7 +21,7 @@
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/recipe_book/blacksmithing = 1, /obj/item/rogueore/coal=1, /obj/item/rogueore/iron=1, /obj/item/rogueweapon/huntingknife = 1)
 	if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
+		cloak = /obj/item/clothing/cloak/apron/blacksmith
 		head = /obj/item/clothing/head/roguetown/turban/random
 	else
 		if(prob(50))
