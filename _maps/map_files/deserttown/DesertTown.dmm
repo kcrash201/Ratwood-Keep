@@ -1724,6 +1724,17 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
+"bGo" = (
+/mob/living/carbon/human/species/skeleton/npc/ambush{
+	inertia_move_delay = 0;
+	STACON = 13;
+	STAEND = 13;
+	STASPD = 13;
+	STASTR = 13;
+	wander = 0
+	},
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/outdoors/bog)
 "bGv" = (
 /obj/structure/table/wood{
 	dir = 5;
@@ -2659,14 +2670,15 @@
 /turf/open/floor/rogue/lightpath,
 /area/rogue/outdoors/rtfield)
 "cyS" = (
+/obj/effect/decal/cleanable/cobweb,
 /mob/living/carbon/human/species/skeleton/npc/ambush{
-	inertia_move_delay = 0;
 	STACON = 13;
 	STAEND = 13;
 	STASPD = 13;
-	STASTR = 13
+	STASTR = 13;
+	inertia_move_delay = 0;
+	wander = 0
 	},
-/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/rogue/sandbrick,
 /area/rogue/outdoors/rtfield)
 "czl" = (
@@ -4326,7 +4338,8 @@
 	STAEND = 13;
 	STASPD = 13;
 	STASTR = 13;
-	inertia_move_delay = 0
+	inertia_move_delay = 0;
+	wander = 0
 	},
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/bog)
@@ -4462,11 +4475,12 @@
 /area/rogue/indoors/town/church/chapel)
 "ebE" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush{
-	inertia_move_delay = 0;
 	STACON = 13;
 	STAEND = 13;
 	STASPD = 13;
-	STASTR = 13
+	STASTR = 13;
+	inertia_move_delay = 0;
+	wander = 0
 	},
 /turf/open/floor/rogue/sandbrick,
 /area/rogue/outdoors/rtfield)
@@ -7460,14 +7474,10 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/tavern)
 "gNF" = (
-/mob/living/carbon/human/species/skeleton/npc/ambush{
-	inertia_move_delay = 0;
-	STACON = 13;
-	STAEND = 13;
-	STASPD = 13;
-	STASTR = 13
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
 	},
-/turf/open/floor/rogue/lightpath,
+/turf/open/floor/rogue/sandbrick,
 /area/rogue/outdoors/bog)
 "gNR" = (
 /obj/structure/bookcase/random,
@@ -8177,15 +8187,11 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/magician)
 "hpW" = (
-/mob/living/carbon/human/species/skeleton/npc/ambush{
-	inertia_move_delay = 0;
-	STACON = 13;
-	STAEND = 13;
-	STASPD = 13;
-	STASTR = 13
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
 	},
 /turf/open/floor/rogue/sandbrick,
-/area/rogue/outdoors/bog)
+/area/rogue/outdoors/rtfield)
 "hqX" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush{
 	inertia_move_delay = 0;
@@ -8539,7 +8545,9 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/garrison)
 "hKG" = (
-/mob/living/carbon/human/species/deadite/npc/ambush,
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
+	},
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/bog)
 "hLw" = (
@@ -9630,7 +9638,9 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/town/basement)
 "iOO" = (
-/mob/living/carbon/human/species/deadite/npc/ambush,
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
+	},
 /turf/open/floor/rogue/lightpath,
 /area/rogue/under/cave)
 "iPm" = (
@@ -11088,14 +11098,15 @@
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "jYg" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /mob/living/carbon/human/species/skeleton/npc/ambush{
-	inertia_move_delay = 0;
 	STACON = 13;
 	STAEND = 13;
 	STASPD = 13;
-	STASTR = 13
+	STASTR = 13;
+	inertia_move_delay = 0;
+	wander = 0
 	},
-/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/rogue/lightpath,
 /area/rogue/outdoors/rtfield)
 "jZd" = (
@@ -11282,11 +11293,12 @@
 /area/rogue/indoors/town/academy)
 "kgY" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush{
-	inertia_move_delay = 0;
 	STACON = 13;
 	STAEND = 13;
 	STASPD = 13;
-	STASTR = 13
+	STASTR = 13;
+	inertia_move_delay = 0;
+	wander = 0
 	},
 /turf/open/floor/rogue/lightpath,
 /area/rogue/outdoors/rtfield)
@@ -11484,7 +11496,9 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town)
 "krK" = (
-/mob/living/carbon/human/species/deadite/npc/ambush,
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
+	},
 /turf/open/floor/rogue/dunes,
 /area/rogue/outdoors/bog)
 "ksx" = (
@@ -12098,7 +12112,8 @@
 "kUB" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur{
 	faction = list("undead");
-	STASTR = 20
+	STASTR = 20;
+	wander = 0
 	},
 /turf/open/floor/rogue/dunes,
 /area/rogue/outdoors/bog)
@@ -13614,14 +13629,15 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town/roofs)
 "mxf" = (
+/obj/effect/decal/cleanable/cobweb,
 /mob/living/carbon/human/species/skeleton/npc/ambush{
 	inertia_move_delay = 0;
 	STACON = 13;
 	STAEND = 13;
 	STASPD = 13;
-	STASTR = 13
+	STASTR = 13;
+	wander = 0
 	},
-/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/rogue/lightpath,
 /area/rogue/outdoors/rtfield)
 "mxm" = (
@@ -14561,6 +14577,17 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors)
+"nsL" = (
+/mob/living/carbon/human/species/skeleton/npc/ambush{
+	inertia_move_delay = 0;
+	STACON = 13;
+	STAEND = 13;
+	STASPD = 13;
+	STASTR = 13;
+	wander = 0
+	},
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/outdoors/rtfield)
 "nsT" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -18654,6 +18681,13 @@
 /obj/structure/ladder,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/rtfield)
+"qVv" = (
+/obj/structure/bed/rogue/shit,
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
+	},
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/outdoors/rtfield)
 "qWr" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -19414,7 +19448,9 @@
 /turf/open/floor/rogue/darkpath,
 /area/rogue/indoors/town/academy)
 "rEz" = (
-/mob/living/carbon/human/species/deadite/npc/ambush,
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
+	},
 /turf/open/floor/rogue/lightpath,
 /area/rogue/outdoors/bog)
 "rEE" = (
@@ -20513,7 +20549,9 @@
 /area/rogue/indoors/town/tavern)
 "sDp" = (
 /obj/structure/bed/rogue/shit,
-/mob/living/carbon/human/species/deadite/npc/ambush,
+/mob/living/carbon/human/species/deadite/npc/ambush{
+	wander = 0
+	},
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/bog)
 "sDK" = (
@@ -21134,6 +21172,17 @@
 /obj/item/rogueweapon/sword/sabre,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
+"tjx" = (
+/mob/living/carbon/human/species/skeleton/npc/ambush{
+	inertia_move_delay = 0;
+	STACON = 13;
+	STAEND = 13;
+	STASPD = 13;
+	STASTR = 13;
+	wander = 0
+	},
+/turf/open/floor/rogue/lightpath,
+/area/rogue/outdoors/bog)
 "tjy" = (
 /obj/structure/chair/zybantine_sofa/right,
 /turf/open/floor/carpet/red,
@@ -24490,14 +24539,15 @@
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "wfv" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /mob/living/carbon/human/species/skeleton/npc/ambush{
 	inertia_move_delay = 0;
 	STACON = 13;
 	STAEND = 13;
 	STASPD = 13;
-	STASTR = 13
+	STASTR = 13;
+	wander = 0
 	},
-/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/rogue/sandbrick,
 /area/rogue/outdoors/rtfield)
 "wfA" = (
@@ -25465,7 +25515,9 @@
 /turf/closed/wall/mineral/rogue/wooddark/slitted,
 /area/rogue/indoors)
 "wXp" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/hyena,
+/mob/living/simple_animal/hostile/retaliate/rogue/hyena{
+	wander = 0
+	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/bog)
 "wYc" = (
@@ -288461,7 +288513,7 @@ pmY
 pmY
 gUs
 jVZ
-ebE
+pmY
 pmY
 toI
 jVZ
@@ -289371,7 +289423,7 @@ gUs
 gUs
 pmY
 pmY
-xVV
+qVv
 jVZ
 gUs
 gUs
@@ -291789,7 +291841,7 @@ gUs
 gUs
 gUs
 pmY
-pmY
+hpW
 jVZ
 gUs
 gUs
@@ -292392,7 +292444,7 @@ gUs
 gUs
 gUs
 jVZ
-ebE
+nsL
 pmY
 jVZ
 mxf
@@ -367138,7 +367190,7 @@ mfq
 ntv
 mgo
 xBa
-hpW
+bGo
 xSo
 ntv
 mfq
@@ -367730,7 +367782,7 @@ mfq
 mfq
 ntv
 ntv
-gNF
+tjx
 rPO
 ntv
 mfq
@@ -371086,7 +371138,7 @@ eGX
 ntv
 geS
 geS
-hpW
+bGo
 eGX
 eGX
 eGX
@@ -371355,7 +371407,7 @@ mfq
 mfq
 ntv
 ntv
-hpW
+bGo
 mfq
 mfq
 mfq
@@ -372276,7 +372328,7 @@ ntv
 ntv
 eGX
 eGX
-hpW
+bGo
 ntv
 ltz
 geS
@@ -372899,7 +372951,7 @@ eGX
 eGX
 eGX
 eGX
-hpW
+bGo
 eGX
 eGX
 ntv
@@ -373202,7 +373254,7 @@ eGX
 eGX
 eGX
 eGX
-hpW
+bGo
 mfq
 mfq
 mfq
@@ -374090,7 +374142,7 @@ eGX
 qES
 bEz
 eGX
-hpW
+bGo
 eGX
 eGX
 eGX
@@ -375322,7 +375374,7 @@ eGX
 geS
 ntv
 eGX
-hpW
+bGo
 eGX
 eGX
 qES
@@ -375582,7 +375634,7 @@ eIw
 eGX
 eGX
 jxO
-hpW
+bGo
 eGX
 mfq
 mfq
@@ -375595,7 +375647,7 @@ mfq
 mfq
 ntv
 eGX
-gNF
+tjx
 ntv
 eGX
 eGX
@@ -377373,7 +377425,7 @@ mfq
 mfq
 eGX
 eGX
-hpW
+bGo
 eGX
 eGX
 eGX
@@ -377413,7 +377465,7 @@ ntv
 eGX
 eGX
 eGX
-hpW
+bGo
 geS
 geS
 mct
@@ -378018,7 +378070,7 @@ lBr
 mfq
 mfq
 eGX
-hpW
+bGo
 geS
 geS
 geS
@@ -378634,7 +378686,7 @@ eGX
 eGX
 eGX
 eGX
-hpW
+bGo
 eGX
 eGX
 eGX
@@ -379491,7 +379543,7 @@ mfq
 geS
 mfq
 eGX
-hpW
+bGo
 eGX
 ebc
 mfq
@@ -379504,7 +379556,7 @@ mfq
 mfq
 ntv
 geS
-hpW
+bGo
 mfq
 mfq
 ntv
@@ -379544,7 +379596,7 @@ ntv
 ntv
 ntv
 eGX
-hpW
+bGo
 eGX
 sYB
 ntv
@@ -379830,7 +379882,7 @@ ntv
 gZL
 eGX
 eGX
-hpW
+bGo
 eGX
 eGX
 ntv
@@ -380080,7 +380132,7 @@ mfq
 ntv
 vhK
 eGX
-eGX
+bGo
 mfq
 mfq
 mfq
@@ -380380,8 +380432,8 @@ mfq
 mfq
 mfq
 eGX
+gNF
 eGX
-hpW
 eGX
 eGX
 mfq
@@ -381326,7 +381378,7 @@ mfq
 eGX
 eGX
 eGX
-hpW
+bGo
 ntv
 ntv
 mfq
@@ -382494,7 +382546,7 @@ ntv
 eGX
 geS
 lzJ
-hpW
+bGo
 eGX
 mfq
 mfq
@@ -491577,7 +491629,7 @@ geS
 geS
 geS
 geS
-gNF
+tjx
 geS
 geS
 geS
@@ -491883,7 +491935,7 @@ geS
 geS
 geS
 geS
-gNF
+tjx
 geS
 geS
 geS
@@ -492253,7 +492305,7 @@ gUs
 gUs
 gUs
 pmY
-pmY
+ebE
 toI
 hQx
 jVZ
@@ -492556,7 +492608,7 @@ gUs
 gUs
 gUs
 pmY
-ebE
+pmY
 pmY
 gUs
 gUs
@@ -493160,7 +493212,7 @@ gUs
 jVZ
 pmY
 eYD
-pmY
+hpW
 pmY
 jVZ
 gUs
@@ -495520,7 +495572,7 @@ ntv
 sjG
 geS
 geS
-gNF
+tjx
 geS
 geS
 qdj
@@ -497029,7 +497081,7 @@ qdj
 bvI
 geS
 geS
-gNF
+tjx
 geS
 geS
 qdj
@@ -497906,7 +497958,7 @@ qdj
 qdj
 geS
 geS
-gNF
+tjx
 geS
 eGX
 uPz
@@ -498899,7 +498951,7 @@ hQx
 pmY
 gUs
 pmY
-pmY
+hpW
 jVZ
 pmY
 pmY
@@ -500940,8 +500992,8 @@ geS
 geS
 geS
 geS
-gNF
-gNF
+tjx
+tjx
 geS
 geS
 geS
