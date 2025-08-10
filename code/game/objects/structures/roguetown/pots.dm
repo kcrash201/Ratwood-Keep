@@ -33,62 +33,50 @@
 // Subtypes for sandpots
 /obj/structure/fermenting_barrel/sandpot/random/water/Initialize()
 	. = ..()
-	icon_state = "barrel3"
 	reagents.add_reagent(/datum/reagent/water, rand(0,900))
 
 /obj/structure/fermenting_barrel/sandpot/random/beer/Initialize()
 	. = ..()
-	icon_state = "barrel2"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer, rand(0,900))
 
 /obj/structure/fermenting_barrel/sandpot/random/wine/Initialize()
 	. = ..()
-	icon_state = "barrel1"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/wine, rand(0,900))
 
 /obj/structure/fermenting_barrel/sandpot/water/Initialize()
 	. = ..()
-	icon_state = "barrel3"
 	reagents.add_reagent(/datum/reagent/water,900)
 
 /obj/structure/fermenting_barrel/sandpot/beer/Initialize()
 	. = ..()
-	icon_state = "barrel2"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer,900)
 
 /obj/structure/fermenting_barrel/sandpot/wine/Initialize()
 	. = ..()
-	icon_state = "barrel1"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/wine,900)	
 
 
 // Subtypes for fancypots
 /obj/structure/fermenting_barrel/fancypot/random/water/Initialize()
 	. = ..()
-	icon_state = "barrel3"
 	reagents.add_reagent(/datum/reagent/water, rand(0,900))
 
 /obj/structure/fermenting_barrel/fancypot/random/beer/Initialize()
 	. = ..()
-	icon_state = "barrel2"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer, rand(0,900))
 
 /obj/structure/fermenting_barrel/fancypot/random/wine/Initialize()
 	. = ..()
-	icon_state = "barrel1"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/wine, rand(0,900))
 
 /obj/structure/fermenting_barrel/fancypot/water/Initialize()
 	. = ..()
-	icon_state = "barrel3"
 	reagents.add_reagent(/datum/reagent/water,900)
 
 /obj/structure/fermenting_barrel/fancypot/beer/Initialize()
 	. = ..()
-	icon_state = "barrel2"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer,900)
 
 /obj/structure/fermenting_barrel/fancypot/wine/Initialize()
 	. = ..()
-	icon_state = "barrel1"
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/wine,900)	
