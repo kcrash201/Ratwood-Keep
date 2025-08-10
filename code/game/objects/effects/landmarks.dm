@@ -359,7 +359,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/lady
-	name = "lady"
+	name = "Consort"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prince
@@ -450,23 +450,19 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 //Desert Town
 /obj/effect/landmark/start/butlerdt
-	name = "Butlerdt"
+	name = "Task Master"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/magiciandt
-	name = "MagicianDT"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/magiciandt
-	name = "MagicianDT"
+	name = "Court Magos"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/jesterdt
-	name = "JesterDT"
+	name = "Jester"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/physiciandt
-	name = "PhysicianDT"
+	name = "Court Physician"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/sheikh
@@ -474,27 +470,27 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/druiddt
-	name = "DruidDT"
+	name = "Druid"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/hospitallerdt
-	name = "HospitallerDT"
+	name = "Hospitaller"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/monkdt
-	name = "MonkDT"
+	name = "Acolyte"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/undertakerdt
-	name = "MorticianDT"
+	name = "Mortician"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/priestdt
-	name = "PriestDT"
+	name = "Priest"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/templardt
-	name = "Templardt"
+	name = "Templar"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/mamluk
@@ -514,7 +510,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/veterandt
-	name = "VeteranDT"
+	name = "Veteran"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/cataphract
@@ -526,7 +522,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/stewarddt
-	name = "StewardDT"
+	name = "Steward"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/sultan
@@ -538,99 +534,99 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/nightmaidendt
-	name = "NightmaidenDT"
+	name = "Nightswain"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerbdt
-	name = "Border Prisoner"
+	name = "Prisoner (Border)"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/butcherdt
-	name = "ButcherDT"
+	name = "Butcher"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/cookdt
-	name = "CookDT"
+	name = "Cook"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/hostagedt
-	name = "HostageDT"
+	name = "Hostage"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/nightmandt
-	name = "NightmanDT"
+	name = "Nightmaster"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerrDT
-	name = "Prisoner Al Ashur"
+	name = "Prisoner (Al Ashur)"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/farmerdt
-	name = "SoilsonDT"
+	name = "Soilson"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/townerdt
-	name = "TownerDT"
+	name = "Towner"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/architectdt
-	name = "ArchitectDT"
+	name = "Architect"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/archivistdt
-	name = "ArchivistDT"
+	name = "Scholar"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/barkeepdt
-	name = "BarkeepDT"
+	name = "Barkeep"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/guildsmithdt
-	name = "Guild SmithDT"
+	name = "Guild Smith"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/merchantdt
-	name = "MerchantDT"
+	name = "Merchant"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/seamsterdt
-	name = "SeamsterDT"
+	name = "Seamster"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/clerkdt
-	name = "ClerkDT"
+	name = "Clerk"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/wapprenticedt
-	name = "Mage ApprenticeDT"
+	name = "Magicians Apprentice"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/novitiatedt
-	name = "NoviateDT"
+	name = "Noviate"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/princedt
-	name = "PrinceDT"
+	name = "Heir"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/servantdt
-	name = "ServantDT"
+	name = "Palace Slave"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/shophanddt
-	name = "ShophandDT"
+	name = "Shophand"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/sapprenticedt
-	name = "Smith ApprenticeDT"
+	name = "Smithy Apprentice"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/grabberdt
-	name = "GrabberDT"
+	name = "Henchman"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/squiredt
-	name = "SquireDT"
+	name = "Squire"
 	icon_state = "arrow"
 //goblin
 

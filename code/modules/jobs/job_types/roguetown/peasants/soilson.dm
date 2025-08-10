@@ -19,7 +19,8 @@
 	give_bank_account = 17
 	min_pq = -10
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/farmer/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)

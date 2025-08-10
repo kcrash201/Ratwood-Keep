@@ -19,7 +19,8 @@
 	give_bank_account = 17
 	min_pq = -10
 	max_pq = null
-
+	allowed_maps = list("Desert Town")
+	
 /datum/outfit/job/roguetown/farmerdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)

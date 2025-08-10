@@ -1415,7 +1415,7 @@
 	lockid = "walls";
 	max_integrity = 5000
 	},
-/turf/closed/wall/mineral/rogue/sandstone,
+/turf/open/floor/rogue/darkpath,
 /area/rogue/indoors/town/manor)
 "bpI" = (
 /obj/structure/closet/crate/chest{
@@ -9463,7 +9463,7 @@
 	locked = 1;
 	lockid = "walls"
 	},
-/turf/open/floor/rogue/blocks,
+/turf/open/floor/rogue/darkpath,
 /area/rogue/indoors/town/manor)
 "iIw" = (
 /obj/structure/table/vtable,
