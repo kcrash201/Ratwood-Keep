@@ -66,8 +66,9 @@
 		pants = /obj/item/clothing/under/roguetown/thong
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/amiradress
 		mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
-		belt = /obj/item/storage/belt/rogue/leather/cloth/bandit
+		belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtred
 		head = /obj/item/clothing/head/roguetown/circlet
+		backpack_contents = list(/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red)
 	
 
 /datum/subclass/princedt/sheltered
