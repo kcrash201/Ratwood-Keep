@@ -6223,9 +6223,13 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold,
 /obj/item/clothing/shoes/roguetown/anklets,
 /obj/item/clothing/under/roguetown/thong,
-/obj/item/clothing/mask/rogue/exoticsilkmask,
-/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra,
-/obj/item/storage/belt/rogue/leather/exoticsilkbelt,
+/obj/item/clothing/cloak/raincloak/amir,
+/obj/item/clothing/head/hooded/rainhood/amirhood,
+/obj/item/clothing/suit/roguetown/shirt/dress/amiradress,
+/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red,
+/obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtred,
+/obj/item/perfume/random,
+/obj/item/clothing/shoes/roguetown/sandals,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town/manor)
 "fxG" = (
@@ -23597,10 +23601,13 @@
 /area/rogue/under/town/basement)
 "vtr" = (
 /obj/structure/closet/crate/roguecloset,
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold,
 /obj/item/clothing/shoes/roguetown/shortboots,
 /obj/item/perfume/random,
-/obj/item/clothing/suit/roguetown/shirt/robe/bisht/purple,
-/obj/item/clothing/head/roguetown/turban/fancypurple,
+/obj/item/clothing/cloak/raincloak/amir,
+/obj/item/clothing/head/roguetown/sultan/amir,
+/obj/item/clothing/under/roguetown/sirwal/fancy/red,
+/obj/item/storage/belt/rogue/leather/cloth/sash/yellow,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town/manor)
 "vtC" = (
