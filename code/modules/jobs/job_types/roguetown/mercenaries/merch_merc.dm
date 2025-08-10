@@ -19,7 +19,8 @@
 	give_bank_account = TRUE
 	min_pq = 0
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 	subclass_cat_rolls = list(CTAG_HENCH = 20)
 
 	cmode_music = 'sound/music/combat_giza.ogg'
