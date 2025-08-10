@@ -288,7 +288,7 @@
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/roguetown/sultan
-	name = "sultans turban"
+	name = "sultan's turban"
 	desc = "Bask in its noble size and granduer!."
 	icon_state = "sultan"
 	item_state = "sultan"
@@ -302,9 +302,15 @@
 	icon_state = "merchant"
 	item_state = "merchant"
 
+/obj/item/clothing/head/roguetown/sultan/amir
+	name = "amir's turban"
+	desc = "Soft, decadent, grandiouse, but above all - princely."
+	icon_state = "amir"
+	item_state = "amir"
+
 /obj/item/clothing/head/roguetown/sultana
-	name = "sultans headdress"
-	desc = "Silky smooth Zybantine silk headress!."
+	name = "sultana's headdress"
+	desc = "Silky smooth Zybantine silk headress!"
 	icon_state = "sultana"
 	item_state = "sultana"
 	dynamic_hair_suffix = "+generic"
@@ -312,7 +318,7 @@
 
 /obj/item/clothing/head/roguetown/jafar
 	name = "zybantine magos hat"
-	desc = "Bask in its noble size and granduer!."
+	desc = "Bask in its noble size and granduer!"
 	icon_state = "jafar"
 	item_state = "jafar"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/head.dmi'

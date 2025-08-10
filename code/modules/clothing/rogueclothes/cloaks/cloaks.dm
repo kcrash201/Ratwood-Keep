@@ -1448,3 +1448,23 @@
 	inhand_mod = FALSE
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
+
+
+/obj/item/clothing/cloak/raincloak/amir
+	name = "amir's cloak"
+	desc = "A silky red cloak as light as a feather, embroidened with gold patterns. Fit for a prince of Zybantine."
+	icon_state = "dprince"
+	item_state = "dprince"
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	inhand_mod = FALSE
+	hoodtype = /obj/item/clothing/head/hooded/rainhood/amirhood
+	salvage_result = /obj/item/natural/silk
+
+/obj/item/clothing/head/hooded/rainhood/amirhood
+	name = "amir's hood"
+	desc = "A silky red hood as light as a feather, embroidened with gold patterns. Fit for a prince of Zybantine."
+	icon_state = "dprince"
+	item_state = "dprince"
+	block2add = FOV_BEHIND
+	flags_inv = HIDEHAIR

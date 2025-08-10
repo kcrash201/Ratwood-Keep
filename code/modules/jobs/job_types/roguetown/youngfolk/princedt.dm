@@ -49,19 +49,26 @@
 
 /datum/outfit/job/roguetown/princedt/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(H.gender == MALE)
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/heir
-		belt = /obj/item/storage/belt/rogue/leather
-		pants = /obj/item/clothing/under/roguetown/tights
-	if(H.gender == FEMALE)
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/heiress
-		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
-		pants = /obj/item/clothing/under/roguetown/tights/stockings/white
+	cloak = /obj/item/clothing/cloak/raincloak/amir
 	beltl = /obj/item/storage/keyring/royal
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	backr = /obj/item/storage/backpack/rogue/satchel
-	shoes = /obj/item/clothing/shoes/roguetown/armor/nobleboot
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	head = /obj/item/clothing/head/roguetown/circlet
+	if(H.gender == MALE)
+		head = /obj/item/clothing/head/roguetown/sultan/amir
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		belt = /obj/item/storage/belt/rogue/leather/cloth/sash/yellow
+		pants = /obj/item/clothing/under/roguetown/sirwal/fancy/red
+		backpack_contents = list(/obj/item/clothing/head/roguetown/circlet)
+
+	if(H.gender == FEMALE)
+		pants = /obj/item/clothing/under/roguetown/thong
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/amiradress
+		mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
+		belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtred
+		head = /obj/item/clothing/head/roguetown/circlet
+	
 
 /datum/subclass/princedt/sheltered
 	name = "Sheltered Successor"
