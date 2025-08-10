@@ -33,17 +33,18 @@
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_NECK
 	max_storage = 10
 	ammo_type = list(/obj/item/ammo_casing) //common denominator type for runelock and arquebus bullets
-	grid_width = 32
+	grid_width = 64
 	grid_height = 64
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/ammo_holder/quiver/attack_turf(turf/T, mob/living/user)
 	if(ammo.len >= max_storage)
 		to_chat(user, span_warning("Your [src.name] is full!"))
 		return
 	to_chat(user, span_notice("You begin to gather the ammunition..."))
-	for(var/obj/item/ammo_casing/caseless/rogue/arrow in T.contents)
+	for(var/obj/item/ammo_casing/caseless/rogue/ammo_casing in T.contents)
 		if(do_after(user, 5))
-			if(!eatarrow(arrow))
+			if(!eatarrow(ammo_casing))
 				break
 
 /obj/item/ammo_holder/quiver/proc/eatarrow(obj/A)
@@ -174,7 +175,7 @@
 	max_storage = 20
 	w_class = WEIGHT_CLASS_NORMAL
 	grid_height = 64
-	grid_width = 32
+	grid_width = 64
 
 /obj/item/ammo_holder/quiver/sling/attack_turf(turf/T, mob/living/user)
 	if(ammo.len >= max_storage)

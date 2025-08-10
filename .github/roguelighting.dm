@@ -397,17 +397,6 @@
 	crossfire = FALSE
 	cookonme = TRUE
 
-// This doesnt have a spent sprite variant, decorative purpose only.
-/obj/machinery/light/rogue/wallfire/desert
-	name = "desert fireplace"
-	icon = 'icons/desert_town/fireplace.dmi'
-	icon_state = "fireplace1"
-	base_state = "fireplace"
-	fueluse = 0
-	density = FALSE
-	anchored = TRUE
-	cookonme = FALSE
-
 /obj/machinery/light/rogue/wallfire/candle
 	name = "candles"
 	icon_state = "wallcandle1"
@@ -794,8 +783,10 @@
 	climb_offset = FALSE
 	layer = TABLE_LAYER
 	on = FALSE
+	no_refuel = TRUE
 	status = LIGHT_BURNED
 	crossfire = FALSE
+	soundloop = /datum/looping_sound/blank  //datum path is a blank.ogg
 
 /obj/machinery/light/rogue/hearth/mobilestove/MiddleClick(mob/user, params)
 	. = ..()
@@ -820,6 +811,7 @@
 				attachment.forceMove(user.loc)
 			attachment = null
 			update_icon()
+			boilloop.stop()
 	else
 		if(!on)
 			user.visible_message(span_notice("[user] begins packing up \the [src]."))
@@ -874,7 +866,7 @@
 		var/obj/machinery/light/rogue/hearth/mobilestove/new_mobilestove = new /obj/machinery/light/rogue/hearth/mobilestove(get_turf(src))
 		new_mobilestove.color = src.color
 		qdel(src)
-
+		
 /obj/machinery/light/rogue/campfire
 	name = "campfire"
 	icon_state = "badfire1"

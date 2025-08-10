@@ -39,6 +39,13 @@
 
 	if(prob(proab))
 		moveup = 0
+
+//You're not a SMITH. Stop it, wretch!!!!!
+	if(HAS_TRAIT(user, TRAIT_SQUIRE) && user.mind.get_skill_level(appro_skill) < SKILL_LEVEL_MASTER)
+		to_chat(user, span_info("The technique learned in a knight's service isn't appropriate for this. Perhaps, if you were more skilled..."))
+		moveup = 0
+		proab = 80
+
 	progress = min(progress + moveup, 100)
 	if(progress == 100 && additional_items.len)
 		needed_item = pick(additional_items)

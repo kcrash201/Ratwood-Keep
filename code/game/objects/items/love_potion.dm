@@ -4,9 +4,9 @@
 	desc = "A pink potion with a faintly sweet and fruity aroma emanating from the bottle. The label reads \"Love Potion\" and says it will make nearly anyone desire you."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "lovebottle"
-	grid_width = 64
+	grid_width = 32
 	grid_height = 64
-
+	w_class = WEIGHT_CLASS_TINY
 /obj/item/lovepotion/attack(mob/living/carbon/human/M, mob/user)
 	if(!isliving(M) || M.stat == DEAD)
 		to_chat(user, span_warning("A love potion can only be metabolized by living beings. I'd best not waste it!"))

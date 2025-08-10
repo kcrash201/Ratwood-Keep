@@ -98,11 +98,26 @@
 	contains = list(
 					/obj/item/clothing/mask/rogue/spectacles,
 				)
+
+/datum/supply_pack/rogue/wardrobe/spectaclesgold
+	name = "Golden Spectacles"
+	cost = 100
+	contains = list(
+					/obj/item/clothing/mask/rogue/spectacles/golden,
+				)
+
 /datum/supply_pack/rogue/wardrobe/spectaclesDelf
 	name = "Dark Elf Sunshields"
-	cost = 150
+	cost = 100
 	contains = list(
 					/obj/item/clothing/mask/rogue/spectacles/delf,
+				)
+
+/datum/supply_pack/rogue/wardrobe/fancybelt
+	name = "Fancy Belt"
+	cost = 100
+	contains = list(
+/obj/item/storage/belt/rogue/leather/plaquegold,
 				)
 
 /datum/supply_pack/rogue/wardrobe/shoes/shalal

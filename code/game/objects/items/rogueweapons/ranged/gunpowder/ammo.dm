@@ -50,6 +50,22 @@
 	armor_penetration = 75 
 	speed = 0.1		
 
+/obj/projectile/bullet/lead/on_hit(atom/target)
+	. = ..()
+
+	var/mob/living/L = firer
+	if(!L || !L.mind) return
+
+	var/skill_multiplier = 0
+
+	if(isliving(target)) // If the target theyre shooting at is a mob/living
+		var/mob/living/T = target
+		if(T.stat != DEAD) // If theyre alive
+			skill_multiplier = 5
+
+	if(skill_multiplier && can_train_combat_skill(L, /datum/skill/combat/firearms, SKILL_LEVEL_LEGENDARY))
+		L.mind.add_sleep_experience(/datum/skill/combat/firearms, L.STAINT * skill_multiplier)
+
 /obj/projectile/bullet/grapeshot
 	name = "grapeshot"
 	damage = 15
@@ -64,6 +80,22 @@
 	flag = "bullet"
 	armor_penetration = 75 
 	speed = 0.1		
+
+/obj/projectile/bullet/grapeshot/on_hit(atom/target)
+	. = ..()
+
+	var/mob/living/L = firer
+	if(!L || !L.mind) return
+
+	var/skill_multiplier = 0
+
+	if(isliving(target)) // If the target theyre shooting at is a mob/living
+		var/mob/living/T = target
+		if(T.stat != DEAD) // If theyre alive
+			skill_multiplier = 5
+
+	if(skill_multiplier && can_train_combat_skill(L, /datum/skill/combat/firearms, SKILL_LEVEL_LEGENDARY))
+		L.mind.add_sleep_experience(/datum/skill/combat/firearms, L.STAINT * skill_multiplier)
 
 /obj/projectile/bullet/rogue/on_hit(atom/target, blocked = FALSE)
 	. = ..()

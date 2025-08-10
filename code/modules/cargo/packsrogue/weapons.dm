@@ -189,6 +189,11 @@
 	cost = 90
 	contains = list(/obj/item/gun/ballistic/firearm/arquebus)
 
+/datum/supply_pack/rogue/weapons/blunderbus
+	name = "Blunderbus"
+	cost = 90
+/obj/item/gun/ballistic/firearm/blunderbuss
+
 /datum/supply_pack/rogue/weapons/handgonne
 	name = "Handgonne"
 	cost = 50

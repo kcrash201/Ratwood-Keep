@@ -26,6 +26,21 @@
 	flag = "bullet"
 	speed = 0.3
 
+/obj/projectile/bullet/reusable/bolt/on_hit(atom/target)
+	. = ..()
+
+	var/mob/living/L = firer
+	if(!L || !L.mind) return
+
+	var/skill_multiplier = 0
+
+	if(isliving(target)) // If the target theyre shooting at is a mob/living
+		var/mob/living/T = target
+		if(T.stat != DEAD) // If theyre alive
+			skill_multiplier = 4
+
+	if(skill_multiplier && can_train_combat_skill(L, /datum/skill/combat/crossbows, SKILL_LEVEL_LEGENDARY))
+		L.mind.add_sleep_experience(/datum/skill/combat/crossbows, L.STAINT * skill_multiplier)
 
 //................ Pyro Bolt ............... //
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
@@ -102,6 +117,22 @@
 	woundclass = BCLASS_STAB
 	flag = "bullet"
 	speed = 0.4
+
+obj/projectile/bullet/reusable/arrow/on_hit(atom/target)
+	. = ..()
+
+	var/mob/living/L = firer
+	if(!L || !L.mind) return
+
+	var/skill_multiplier = 0
+
+	if(isliving(target)) // If the target theyre shooting at is a mob/living
+		var/mob/living/T = target
+		if(T.stat != DEAD) // If theyre alive
+			skill_multiplier = 4
+
+	if(skill_multiplier && can_train_combat_skill(L, /datum/skill/combat/bows, SKILL_LEVEL_LEGENDARY))
+		L.mind.add_sleep_experience(/datum/skill/combat/bows, L.STAINT * skill_multiplier)
 
 /obj/projectile/bullet/reusable/arrow/iron
 	name = "iron arrow"

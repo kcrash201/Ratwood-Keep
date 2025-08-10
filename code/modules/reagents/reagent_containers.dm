@@ -4,7 +4,6 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = null
 	w_class = WEIGHT_CLASS_TINY
-
 	grid_height = 64
 	grid_width = 32
 	var/amount_per_transfer_from_this = 5

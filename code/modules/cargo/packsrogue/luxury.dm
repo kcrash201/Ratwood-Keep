@@ -138,7 +138,7 @@
 /datum/supply_pack/rogue/luxury/obsidianfragment
 	name = "Obsidian Fragments"
 	cost = 55
-	contains = list(	
+	contains = list(
 			/obj/item/natural/obsidian,
 			/obj/item/natural/obsidian,
 			/obj/item/natural/obsidian,
@@ -147,7 +147,7 @@
 /datum/supply_pack/rogue/luxury/manaflower
 	name = "Manabloom Flowers"
 	cost = 55
-	contains = list(	
+	contains = list(
 			/obj/item/reagent_containers/food/snacks/grown/rogue/manabloom,
 			/obj/item/reagent_containers/food/snacks/grown/rogue/manabloom,
 			/obj/item/reagent_containers/food/snacks/grown/rogue/manabloom,
@@ -156,7 +156,7 @@
 /datum/supply_pack/rogue/luxury/manacrystal
 	name = "Mana Crystals"
 	cost = 55
-	contains = list(	
+	contains = list(
 			/obj/item/natural/manacrystal,
 			/obj/item/natural/manacrystal,
 			/obj/item/natural/manacrystal,
@@ -166,3 +166,21 @@
 	name = "Emberwine"
 	cost = 160
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/emberwine)
+
+/datum/supply_pack/rogue/luxury/polish_kit
+	name = "Brush and Cream kit"
+	cost = 150
+	contains = list(
+			/obj/item/polishing_cream,
+			/obj/item/armor_brush,
+			)
+
+/datum/supply_pack/rogue/luxury/polish_brush
+	name = "Fine Brush"
+	cost = 50
+	contains = list(/obj/item/armor_brush)
+
+/datum/supply_pack/rogue/luxury/polish_cream
+	name = "Polishing Cream"
+	cost = 100
+	contains = list(/obj/item/polishing_cream)

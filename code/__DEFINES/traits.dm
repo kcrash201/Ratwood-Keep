@@ -107,6 +107,7 @@
 #define TRAIT_SLEUTH "Sleuth"
 #define TRAIT_PERFECT_TRACKER "Perfect Tracker" //Will always find any tracks and analyzes them perfectly.
 #define TRAIT_KEENEARS "Keen Ears"
+#define TRAIT_SQUIRE "Squire"//Can repair or sew without the skill requirements, and use the polish/brush kit.
 
 // PATRON CURSE TRAITS
 #define TRAIT_CURSE "Curse" //source
@@ -204,7 +205,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_PERFECT_TRACKER = span_info("I am the perfect tracker. No tracks will deceive my eyes, nor will they hide their secrets from me."),
 	TRAIT_KEENEARS = span_info("I've a good pair of ears, and can tell who is speaking, even when they're out of sight. I can also hear whispers from further away."),
 	TRAIT_PERMAMUTE = span_notice("I am a mute. I cannot speak."),
-	TRAIT_SIMPLESPEECH = span_info("I can not say hard words.")
+	TRAIT_SIMPLESPEECH = span_info("I can not say hard words."),
+	TRAIT_SQUIRE = span_info("I've learned how to repair or sew without the prerequisite skills, and how to service armour with a fine brush and cream.")
 ))
 
 // trait accessor defines

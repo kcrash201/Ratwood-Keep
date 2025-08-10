@@ -102,7 +102,7 @@
 			var/sewtime = (60 - skill_multiplied)
 			if(!do_after(user, sewtime, target = I))
 				return
-			if((armor_value == 0 && skill_level > 0) || (armor_value > 0 && skill_level > 1)) //If not armor but skill level at least 1 or Armor and skill level at least 2
+			if((armor_value == 0 && skill_level > 0) || (armor_value > 0 && skill_level > 1) || HAS_TRAIT(user, TRAIT_SQUIRE)) //If not armor but skill level at least 1 or Armor and skill level at least 2
 				user.visible_message(span_info("[user] repairs [I]!"))
 				I.mend_damage(skill_multiplied, TRUE)
 			else

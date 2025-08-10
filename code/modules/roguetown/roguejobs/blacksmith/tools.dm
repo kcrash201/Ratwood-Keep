@@ -110,10 +110,16 @@
 		if(!attacked_item.ontable())
 			to_chat(user, span_warning("I should put this on a table or an anvil first."))
 			return
-			
+
 
 		if(blacksmith_mind.get_skill_level(attacked_item.anvilrepair) <= SKILL_LEVEL_NONE)
-			if(prob(30))
+			if(HAS_TRAIT(user, TRAIT_SQUIRE))
+				if(locate(/obj/machinery/anvil) in attacked_object.loc)
+					repair_percent = 0.035
+				//Squires can repair on tables, but less efficiently
+				else if(attacked_item.ontable())
+					repair_percent = 0.015
+			else if(prob(30))
 				repair_percent = 0.01
 			else
 				repair_percent = 0

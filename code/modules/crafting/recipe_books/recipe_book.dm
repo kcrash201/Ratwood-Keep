@@ -2,8 +2,9 @@
 
 /obj/item/recipe_book
 	icon = 'icons/roguetown/items/books.dmi'
-	//grid_width = 32
-	//grid_height = 32
+	grid_width = 32
+	grid_height = 32
+	w_class = WEIGHT_CLASS_TINY
 	var/list/types = list()
 	var/mob/current_reader
 	var/open
