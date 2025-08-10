@@ -24,7 +24,7 @@
 	jobtype = /datum/job/roguetown/archivistdt
 	allowed_patrons = list(/datum/patron/divine/noc, /datum/patron/zizo)
 
-/datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/archivistdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.gender == MALE)
 		head = /obj/item/clothing/head/roguetown/turban/random

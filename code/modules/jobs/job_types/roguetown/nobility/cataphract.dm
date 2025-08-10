@@ -57,6 +57,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
+	
 /datum/subclass/cataphract/sentinel
 	name = "Sentinel"
 	tutorial = "Proud defender of your ducal house. You are a master of the spear, and prefer to don yourself in the heaviest of armors."

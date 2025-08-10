@@ -72,6 +72,7 @@ GLOBAL_LIST_INIT(noble_positions, list(
 ))
 
 GLOBAL_LIST_INIT(courtier_positions, list(
+	"Task Master",
 	"Head Butler",
 	"Task Master",
 	"Court Magos",
@@ -81,6 +82,7 @@ GLOBAL_LIST_INIT(courtier_positions, list(
 ))
 
 GLOBAL_LIST_INIT(garrison_positions, list(
+	"Mamluk",
 	"Town Sheriff",
 	"Watchman",
 	"Warden",
@@ -88,7 +90,6 @@ GLOBAL_LIST_INIT(garrison_positions, list(
 	"Vanguard",
 	"Janissary",
 	"Veteran",
-	"Mamluk",
 	"Dungeoneer",
 ))
 
@@ -149,6 +150,7 @@ GLOBAL_LIST_INIT(mercenary_positions, list(
 GLOBAL_LIST_INIT(youngfolk_positions, list(
 	"Squire",
 	"Clerk",
+	"Palace Slave",
 	"Servant",
 	"Magicians Apprentice",
 	"Smithy Apprentice",
