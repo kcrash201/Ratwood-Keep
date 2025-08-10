@@ -66,7 +66,7 @@
 		pants = /obj/item/clothing/under/roguetown/thong
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/amiradress
 		mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
-		belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtred
+		belt = /obj/item/storage/belt/rogue/leather/cloth/bandit
 		head = /obj/item/clothing/head/roguetown/circlet
 	
 
