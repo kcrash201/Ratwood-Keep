@@ -19,23 +19,21 @@
 	
 /datum/outfit/job/roguetown/guildsmithdt/pre_equip(mob/living/carbon/human/H)
 	..()
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	gloves = /obj/item/clothing/gloves/roguetown/leather
-	head = /obj/item/clothing/head/roguetown/hatfur
 	cloak = /obj/item/clothing/cloak/apron/blacksmith
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/rogueweapon/hammer/iron = 1, /obj/item/rogueweapon/tongs = 1)
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltr = /obj/item/key/blacksmith
-	pants = /obj/item/clothing/under/roguetown/trou
-	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/hatblu
+	head = /obj/item/clothing/head/roguetown/tagelmust
 	if(H.gender == MALE)
-		shoes = /obj/item/clothing/shoes/roguetown/armor/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+		if(prob(50))
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/bluegrey
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
+		pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
 
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)

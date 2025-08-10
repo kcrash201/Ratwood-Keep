@@ -179,3 +179,7 @@
 	desc = "An extremely well maintained whip, with a polished steel tip and gilded handle. It clearly needs to see more use."
 	minstr = 8
 	icon_state = "gwhip"
+
+/obj/item/rogueweapon/whip/antique/slaver
+	name = "Sultan's Kiss"
+	desc = "An extremely well maintained whip, with a polished steel tip and gilded handle. Slaves crave its caress."

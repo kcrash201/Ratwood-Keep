@@ -26,16 +26,11 @@
 
 /datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(H.gender == FEMALE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/nobledress/green
-		pants = /obj/item/clothing/under/roguetown/tights/stockings/white
-		head  = /obj/item/clothing/head/roguetown/roguehood/black
-	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		head = /obj/item/clothing/head/roguetown/nightman
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	if(H.gender == MALE)
+		head = /obj/item/clothing/head/roguetown/turban/random
+
+	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/storage/fancy/ifak = 1, /obj/item/rogueweapon/huntingknife/idagger)

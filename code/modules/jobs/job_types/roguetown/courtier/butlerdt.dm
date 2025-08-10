@@ -41,7 +41,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 	beltr = /obj/item/storage/keyring/servant
-	beltl = /obj/item/rogueweapon/whip/antique
+	beltl = /obj/item/rogueweapon/whip/antique/slaver
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/bluegrey
 	if(H.gender == MALE)

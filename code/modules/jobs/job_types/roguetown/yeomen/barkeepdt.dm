@@ -27,9 +27,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	cloak = /obj/item/clothing/cloak/apron/waist
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/natural/cloth/)
 	H.change_stat("strength", 1)
@@ -38,13 +36,15 @@
 	ADD_TRAIT(H, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC)
 	if(H.gender == MALE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-		belt = /obj/item/storage/belt/rogue/leather
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb
+		belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 		neck = /obj/item/storage/keyring/innkeep
-		cloak = /obj/item/clothing/cloak/apron/waist
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
+		head = /obj/item/clothing/head/roguetown/turban/fancypurple
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress
+		pants = /obj/item/clothing/under/roguetown/skirt/random
+		shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
 		neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 		belt = /obj/item/storage/belt/rogue/leather/rope
 		beltl = /obj/item/storage/keyring/innkeep
