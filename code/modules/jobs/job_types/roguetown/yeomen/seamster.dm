@@ -15,7 +15,8 @@
 	selection_color = JCOLOR_MERCENARY
 	give_bank_account = 2
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/seamster/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
@@ -34,7 +35,6 @@
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		armor = /obj/item/clothing/suit/roguetown/armor/armordress
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)

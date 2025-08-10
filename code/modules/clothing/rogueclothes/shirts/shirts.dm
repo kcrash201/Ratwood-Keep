@@ -704,3 +704,11 @@
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "thawbgold"
 	item_state = "thawbgold"
+
+/obj/item/clothing/suit/roguetown/shirt/dress/amiradress
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "amira's dress"
+	desc = "A red skirt and binder, embroidened with infinitely intricate gold-thread patterns, and made of silk as light as air. Fit for a princess of Zybantine."
+	body_parts_covered = CHEST|GROIN|LEGS|VITALS
+	icon_state = "dprince"
+	item_state = "dprince"

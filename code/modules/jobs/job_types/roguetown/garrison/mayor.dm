@@ -18,6 +18,7 @@
 	max_pq = null
 	give_bank_account = 100
 	can_leave_round = FALSE
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	//cmode_music = 'sound/music/combat_bog.ogg'
 

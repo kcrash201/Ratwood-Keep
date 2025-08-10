@@ -1,0 +1,152 @@
+/datum/job/roguetown/janissary
+	title = "Janissary"
+	flag = BOGGUARD
+	department_flag = GARRISON
+	faction = "Station"
+	total_positions = 10
+	spawn_positions = 10
+	selection_color = JCOLOR_SOLDIER
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_VERY_SHUNNED_UP
+	allowed_ages = ALL_AGES_LIST
+	tutorial = "Beholden to the royal family as property, you where raised from birth as a slave soldier. Sent to guard the border and keep the city safe as your more esteemed counterparts live lavishly within the city walls yours is a thankless duty but one that must be upheld."
+	display_order = JDO_TOWNGUARD
+	whitelist_req = TRUE
+	outfit = /datum/outfit/job/roguetown/janissary
+	give_bank_account = 16
+	min_pq = 1
+	max_pq = null
+	subclass_cat_rolls = list(CTAG_BOG = 20)
+	advjob_examine = TRUE
+	always_show_on_latechoices = TRUE
+	allowed_maps = list("Desert Town")
+
+	cmode_music = 'sound/music/combat_bog.ogg'
+
+/datum/job/roguetown/janissary/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+	..()
+	if(L)
+		var/mob/living/carbon/human/H = L
+		H.advsetup = 1
+		H.invisibility = INVISIBILITY_MAXIMUM
+		H.become_blind("advsetup")
+
+/datum/job/roguetown/janissary/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+	. = ..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		if(istype(H.cloak, /obj/item/clothing/cloak/shadow))
+			var/obj/item/clothing/S = H.cloak
+			var/index = findtext(H.real_name, " ")
+			if(index)
+				index = copytext(H.real_name, 1,index)
+			if(!index)
+				index = H.real_name
+			S.name = "vanguard cloak ([index])"
+/datum/outfit/job/roguetown/janissary
+	name = "Vanguard footman"
+
+/datum/outfit/job/roguetown/janissarygunner
+	name = "Vanguard archer"
+
+/datum/subclass/janissary
+	name = "Vanguard footman"
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_VERY_SHUNNED_UP
+	outfit = /datum/outfit/job/roguetown/bogguardsman
+	tutorial = "You are well versed in the ways of handling a sword. \
+	You will stand in the front, and protect."
+	category_tags = list(CTAG_BOG)
+
+/datum/subclass/janissarygunner
+	name = "Janissary Gunner"
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_VERY_SHUNNED_UP
+	outfit = /datum/outfit/job/roguetown/ranger
+	tutorial = "You are well versed in the ways of handling a bow. \
+	You will stand in the back, and protect the front with arrows."
+	category_tags = list(CTAG_BOG)
+	maximum_possible_slots = 3
+
+/datum/outfit/job/roguetown/janissary/pre_equip(mob/living/carbon/human/H)
+	head = /obj/item/clothing/head/roguetown/helmet/janissary
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/janissary
+	cloak = /obj/item/clothing/cloak/shadow
+	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shoes = /obj/item/clothing/shoes/roguetown/armor
+	beltl = /obj/item/storage/keyring/bog_guard
+	belt = /obj/item/storage/belt/rogue/leather
+
+/datum/outfit/job/roguetown/janissarygunner/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	backr = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/gun/ballistic/firearm/flintgonne
+	beltr = /obj/item/ammo_holder/bullet/lead //replaces sword
+	beltl = /obj/item/powderflask
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/clothing/cloak/raincloak/brown = 1 )
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	if(H.mind)
+		H.grant_language(/datum/language/zybantine)
+		assign_skills(H)
+		
+
+/datum/outfit/job/roguetown/janissary/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	beltr = /obj/item/rogueweapon/sword/sabre
+	backl = /obj/item/rogueweapon/shield/tower/zybantine
+	backr = /obj/item/storage/backpack/rogue/satchel
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1)
+	if(H.mind)
+		H.grant_language(/datum/language/zybantine)
+		assign_skills(H)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+
+/datum/outfit/job/roguetown/janissary/proc/assign_skills(mob/living/carbon/human/bogger)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	bogger.change_stat("strength", 2)
+	bogger.change_stat("constitution", 1)
+	bogger.change_stat("endurance", 2)
+	bogger.change_stat("speed", 1)
+
+/datum/outfit/job/roguetown/janissarygunner
+	name = "Janissary Gunner"
+
+/datum/outfit/job/roguetown/janissarygunner/proc/assign_skills(mob/living/carbon/human/bogger)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
+	bogger.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	bogger.change_stat("perception", 3)
+	bogger.change_stat("speed", 2)
+	bogger.change_stat("endurance", 2)

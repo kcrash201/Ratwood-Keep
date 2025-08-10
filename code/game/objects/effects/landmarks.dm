@@ -158,11 +158,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/lord
-	name = "Sultan"
+	name = "Duke"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/knight
-	name = "Cataphract"
+	name = "Knight"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/sheriff
@@ -198,7 +198,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/manorguardsman
-	name = "Mamluk"
+	name = "Man at Arms"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/bogmaster
@@ -214,7 +214,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/councillor
-	name = "Sheikh"
+	name = "Councillor"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/veteran
@@ -359,7 +359,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/lady
-	name = "Sultan Consort"
+	name = "Consort"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prince
@@ -387,7 +387,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/hand
-	name = "Vizier"
+	name = "Hand"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/hunter
@@ -448,7 +448,186 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/longshoreman
 	name = "Longshoreman"
 	icon_state = "arrow"
+//Desert Town
+/obj/effect/landmark/start/butlerdt
+	name = "Task Master"
+	icon_state = "arrow"
 
+/obj/effect/landmark/start/magiciandt
+	name = "Court Magos"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/jesterdt
+	name = "Jester"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/physiciandt
+	name = "Court Physician"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/sheikh
+	name = "Sheikh"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/druiddt
+	name = "Druid"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/hospitallerdt
+	name = "Hospitaller"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/monkdt
+	name = "Acolyte"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/undertakerdt
+	name = "Mortician"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/priestdt
+	name = "Priest"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/templardt
+	name = "Templar"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/mamluk
+	name = "Mamluk"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/sheikh
+	name = "Sheikh"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/bogmasterdt
+	name = "Janissary Agha"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/janissary
+	name = "Janissary"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/veterandt
+	name = "Veteran"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/cataphract
+	name = "Cataphract"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/royalconsort
+	name = "Royal Consort"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/stewarddt
+	name = "Steward"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/sultan
+	name = "Sultan"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/vizier
+	name = "vizier"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/nightmaidendt
+	name = "Nightswain"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/prisonerbdt
+	name = "Prisoner (Border)"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/butcherdt
+	name = "Butcher"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/cookdt
+	name = "Cook"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/hostagedt
+	name = "Hostage"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/nightmandt
+	name = "Nightmaster"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/prisonerrDT
+	name = "Prisoner (Al Ashur)"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/farmerdt
+	name = "Soilson"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/townerdt
+	name = "Towner"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/architectdt
+	name = "Architect"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/archivistdt
+	name = "Scholar"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/barkeepdt
+	name = "Barkeep"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/guildsmithdt
+	name = "Guild Smith"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/merchantdt
+	name = "Merchant"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/seamsterdt
+	name = "Seamster"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/clerkdt
+	name = "Clerk"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/wapprenticedt
+	name = "Magicians Apprentice"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/novitiatedt
+	name = "Noviate"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/princedt
+	name = "Heir"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/servantdt
+	name = "Palace Slave"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/shophanddt
+	name = "Shophand"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/sapprenticedt
+	name = "Smithy Apprentice"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/grabberdt
+	name = "Henchman"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/squiredt
+	name = "Squire"
+	icon_state = "arrow"
 //goblin
 
 /obj/effect/landmark/start/goblinchief

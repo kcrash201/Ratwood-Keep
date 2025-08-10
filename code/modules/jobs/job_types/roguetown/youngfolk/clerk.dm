@@ -19,7 +19,8 @@
 	give_bank_account = TRUE
 	min_pq = 0 // increased from -10 since do we really want to allow shitters and griefers to control all the money in the town?
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/job/roguetown/clerk/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)

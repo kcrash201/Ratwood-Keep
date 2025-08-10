@@ -65,6 +65,21 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/janissary
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "Janissary Mail"
+	desc = "A longer steel maille also known as coat of mail, composed of interwoven metal rings that absorb arrow impacts decently enough while being also comfortable enough to sleep in covering the torso, arms and legs."
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
+	icon_state = "atgervi_raider_mail"
+	item_state = "atgervi_raider_mail"
+	max_integrity = 220
+	armor = list("blunt" = 60, "slash" = 100, "stab" = 80, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	anvilrepair = /datum/skill/craft/blacksmithing
+	smeltresult = /obj/item/ingot/steel
+	do_sound_chain = TRUE
+	armor_class = ARMOR_CLASS_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
+
 /obj/item/clothing/suit/roguetown/armor/mamaluke
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "mamaluke chainmail"
@@ -1359,67 +1374,6 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random/Initialize()
-	color = pick("#514339", "#2f51b8", CLOTHING_RED, CLOTHING_ORANGE, CLOTHING_GREEN, CLOTHING_PURPLE)
+	color = pick("#2f51b8", CLOTHING_RED, CLOTHING_ORANGE, CLOTHING_GREEN, CLOTHING_PURPLE)
 	..()
 
-//Eastern style clothing by Infrared Baron
-/obj/item/clothing/suit/roguetown/armor/leather/bisht
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "bisht"
-	desc = "A long robe typical in Zybantine."
-	icon = 'icons/roguetown/clothing/licensed-infraredbaron/easternclothes.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
-	icon_state = "greythawb"
-	item_state = "greythawb"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS|VITALS
-	blocksound = SOFTUNDERHIT
-	blade_dulling = DULLING_BASHCHOP
-	break_sound = 'sound/foley/cloth_rip.ogg'
-	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
-	sewrepair = TRUE
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/grey
-	color = "#989898"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/red
-	color = "#9c4744"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/blue
-	color = "#2f51b8"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/brown
-	color = "#846145"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/beige
-	color = "#e9c792"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/black
-	color = CLOTHING_BLACK
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/random
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/random/Initialize()
-	color = pick("#989898", "#FFFFFF", "#9c4744", "#2f51b8", "#846145", "#e9c792", CLOTHING_BLACK)
-	..()
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/bluegrey
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "grey bisht"
-	icon_state = "bluethawb"
-	item_state = "bluethawb"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/purple
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "purple bisht"
-	icon_state = "purplethawb"
-	item_state = "purplethawb"
-
-/obj/item/clothing/suit/roguetown/armor/leather/bisht/merchantbisht
-	slot_flags = ITEM_SLOT_ARMOR
-	body_parts_covered = CHEST|VITALS
-	icon = 'icons/roguetown/clothing/armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
-	name = "guild bisht"
-	desc = "An open robe, made from luxurious silks."
-	icon_state = "merbisht"
-	item_state = "merbisht"

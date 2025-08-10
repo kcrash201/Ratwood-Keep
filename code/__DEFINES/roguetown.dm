@@ -327,6 +327,7 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define CTAG_BOG			"CAT_BOG"			// Vanguard
 #define CTAG_SQUIRE			"CAT_SQUIRE"		// Squires
 #define CTAG_MAA			"CAT_MAA"			// Man-At-Arms
+#define CTAG_MAM			"CAT_MAM"			// Mamluk
 
 //Nobles			Eventually all of them will get their subclasses
 #define CTAG_HEIR			"CAT_HEIR"			// Heirs
@@ -341,6 +342,11 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 //Other
 #define CTAG_REFUGEE		"CAT_REFUGEE"		// Refugee classes
 #define CTAG_ADVENTURER		"CAT_ADVENTURER"		// Adventurer classes
+
+//Desert Town Ctags
+#define CTAG_TOWNERDT			"CAT_TOWNERDT"	
+#define CTAG_WENCHDT			"CAT_WENCHDT"	
+
 /*
 	Defines for the triumph buy datum categories
 */

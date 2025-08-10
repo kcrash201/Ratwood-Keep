@@ -4,8 +4,8 @@
 	department_flag = NOBLEMEN
 	faction = "Station"
 	allowed_patrons = ALL_NON_INHUMEN_PATRONS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 
 	allowed_races = RACES_TOLERATED_UP
 	allowed_sexes = list(MALE, FEMALE)
@@ -25,6 +25,7 @@
 	min_pq = 8
 	max_pq = null
 	can_leave_round = FALSE
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	cmode_music = 'sound/music/combat_guard2.ogg'
 

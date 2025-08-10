@@ -9,7 +9,6 @@
 
 /datum/outfit/job/roguetown/towner/farmer/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.grant_language(/datum/language/zybantine)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)

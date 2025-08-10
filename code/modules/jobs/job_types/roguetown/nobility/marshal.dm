@@ -24,7 +24,8 @@
 	give_bank_account = 40
 	min_pq = 4
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 	cmode_music = 'sound/music/combat_guard.ogg'
 
 /datum/outfit/job/roguetown/marshal/pre_equip(mob/living/carbon/human/H)

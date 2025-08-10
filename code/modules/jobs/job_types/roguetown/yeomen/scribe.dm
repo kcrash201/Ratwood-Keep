@@ -11,7 +11,8 @@
 	display_order = 6
 	min_pq = 0
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/scribe
 	name = "Scribe"
 	jobtype = /datum/job/roguetown/scribe

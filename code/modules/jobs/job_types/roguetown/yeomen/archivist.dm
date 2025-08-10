@@ -17,7 +17,8 @@
 	give_bank_account = 25
 	min_pq = 5 //the player should actually have some experience to properly play the role
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/archivist
 	name = "Scholar"
 	jobtype = /datum/job/roguetown/archivist
@@ -43,7 +44,6 @@
 	mask = /obj/item/clothing/mask/rogue/spectacles
 
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 3, TRUE)

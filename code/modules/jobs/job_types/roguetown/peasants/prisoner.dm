@@ -3,7 +3,7 @@
 	flag = PRISONERR
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 0
+	total_positions = 4
 	spawn_positions = 4
 
 	allowed_sexes = list(MALE, FEMALE)
@@ -18,7 +18,8 @@
 	min_pq = -14
 	max_pq = null
 	can_random = FALSE
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 	cmode_music = 'sound/music/combat_bum.ogg'
 
 /datum/outfit/job/roguetown/prisonerr/pre_equip(mob/living/carbon/human/H)

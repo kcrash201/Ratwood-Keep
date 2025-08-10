@@ -16,6 +16,7 @@
 	give_bank_account = TRUE
 	min_pq = 0
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 /datum/outfit/job/roguetown/hospitaller
 	name = "Hospitaller"
@@ -38,7 +39,6 @@
 	backr = /obj/item/rogueweapon/woodstaff
 	backpack_contents = list(/obj/item/clothing/mask/rogue/pestra, /obj/item/needle/pestra, /obj/item/natural/worms/leech/cheele, /obj/item/reagent_containers/lux, /obj/item/ritualfeather = 1 )
 	if(H.mind)
-		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)	//average wrestling, for wrestling down deadites
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)	//More treatment then acolytes
 		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 3, TRUE)

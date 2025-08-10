@@ -139,9 +139,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 50,
 				/mob/living/carbon/human/species/deadite/npc/ambush = 50)
 	first_time_text = "DESERT BASIN"
-	droning_sound = 'sound/music/area/field.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/music/area/TheRoad.ogg'
+	droning_sound_dusk = 'sound/music/area/Dune.ogg'
+	droning_sound_night = 'sound/music/area/Dunerise.ogg'
 	converted_type = /area/rogue/indoors/shelter/rtfield
 /area/rogue/indoors/shelter/rtfield
 	icon_state = "rtfield"
@@ -413,14 +413,13 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	icon_state = "town"
 	droning_sound = 'sound/music/area/TheRoad.ogg'
 	droning_sound_dusk = 'sound/music/area/NightPrayer.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound_night = 'sound/music/area/Moonrise.ogg'
 	converted_type = /area/rogue/outdoors/exposed/town
 /area/rogue/outdoors/exposed/town
 	icon_state = "town"
 	droning_sound = 'sound/music/area/TheRoad.ogg'
 	droning_sound_dusk = 'sound/music/area/NightPrayer.ogg'
 	droning_sound_night = 'sound/music/area/Moonrise.ogg'
-	first_time_text = "THE CITY OF AL ASHUR"
 /area/rogue/indoors/town/manor
 	name = "Manor"
 	icon_state = "manor"
@@ -453,6 +452,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 /area/rogue/indoors/town/shop
 	name = "Shop"
 	icon_state = "shop"
+	first_time_text = "GRAND BAZAAR"
 	droning_sound = 'sound/music/area/Caravan.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
@@ -583,16 +583,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	name = "outdoors"
 	icon_state = "town"
 	soundenv = 16
-	droning_sound = 'sound/music/area/townstreets.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/music/area/TheRoad.ogg'
+	droning_sound_dusk = 'sound/music/area/NightPrayer.ogg'
+	droning_sound_night = 'sound/music/area/Moonrise.ogg'
 	converted_type = /area/rogue/indoors/shelter/town
-	first_time_text = "THE TOWN OF ROCKHILL"
+	first_time_text = "THE CITY OF AL ASHUR"
 /area/rogue/indoors/shelter/town
 	icon_state = "town"
-	droning_sound = 'sound/music/area/townstreets.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/music/area/TheRoad.ogg'
+	droning_sound_dusk = 'sound/music/area/NightPrayer.ogg'
+	droning_sound_night = 'sound/music/area/Moonrise.ogg'
 
 /area/rogue/outdoors/town/sargoth
 	name = "outdoors"

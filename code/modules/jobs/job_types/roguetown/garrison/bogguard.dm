@@ -21,6 +21,7 @@
 	subclass_cat_rolls = list(CTAG_BOG = 20)
 	advjob_examine = TRUE
 	always_show_on_latechoices = TRUE
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	cmode_music = 'sound/music/combat_bog.ogg'
 

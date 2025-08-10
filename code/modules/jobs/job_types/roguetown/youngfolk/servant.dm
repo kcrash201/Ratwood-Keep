@@ -19,7 +19,8 @@
 	give_bank_account = TRUE
 	min_pq = -10
 	max_pq = null
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/job/roguetown/servant/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)

@@ -3,8 +3,8 @@
 	flag = GUARDSMAN
 	department_flag = GARRISON
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 7
+	spawn_positions = 7
 	selection_color = JCOLOR_SOLDIER
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
@@ -19,6 +19,7 @@
 	give_bank_account = 16
 	min_pq = 1
 	max_pq = null
+	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	cmode_music = 'sound/music/combat_guard.ogg'
 

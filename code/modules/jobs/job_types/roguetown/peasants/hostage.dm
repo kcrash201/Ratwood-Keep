@@ -17,7 +17,8 @@
 	min_pq = -14
 	max_pq = null
 	can_random = FALSE
-
+	allowed_maps = list("Rockhill", "Build Your Settlement")
+	
 /datum/outfit/job/roguetown/hostage/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/clothing/neck/roguetown/collar/leather/cursed
