@@ -1392,13 +1392,13 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/town/basement)
 "bpc" = (
-/obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/suit/roguetown/shirt/dress/gen/purple,
-/obj/item/clothing/head/roguetown/headdress,
-/obj/item/clothing/head/roguetown/headdress/alt,
-/obj/item/clothing/suit/roguetown/shirt/dress/silkdress/random,
-/obj/item/clothing/under/roguetown/tights/stockings/silk/random,
-/obj/item/clothing/suit/roguetown/shirt/dress/gen/strapless/random,
+/obj/structure/closet/crate/roguecloset/dark,
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold,
+/obj/item/clothing/shoes/roguetown/anklets,
+/obj/item/storage/belt/rogue/leather/exoticsilkbelt/skirtred,
+/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red,
+/obj/item/clothing/mask/rogue/exoticsilkmask/red,
+/obj/item/clothing/under/roguetown/thong,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town/manor)
 "bpj" = (
@@ -2604,6 +2604,8 @@
 /area/rogue/indoors/town/tavern)
 "cwV" = (
 /obj/structure/mannequin/male,
+/obj/item/clothing/suit/roguetown/shirt/sultan,
+/obj/item/clothing/head/roguetown/sultan,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town/manor)
 "cxo" = (
@@ -2724,8 +2726,8 @@
 /area/rogue/indoors/town/church/chapel)
 "cDK" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/head/roguetown/helmet,
-/obj/item/clothing/head/roguetown/helmet,
+/obj/item/clothing/head/roguetown/helmet/kettle,
+/obj/item/clothing/head/roguetown/helmet/kettle,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "cDQ" = (
@@ -4053,12 +4055,11 @@
 /area/rogue/indoors/town/church)
 "dMa" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/flail/sflail,
-/obj/item/rogueweapon/flail/sflail,
-/obj/item/rogueweapon/flail/sflail,
 /obj/machinery/light/rogue/torchholder{
 	dir = 1
 	},
+/obj/item/rogueweapon/sword/long/rider,
+/obj/item/rogueweapon/sword/long/rider,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "dMc" = (
@@ -4588,6 +4589,17 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/shop)
+"ens" = (
+/obj/structure/closet/crate/chest{
+	locked = 1;
+	lockid = "keep_barracks"
+	},
+/obj/item/clothing/shoes/roguetown/armor/shalal,
+/obj/item/clothing/neck/roguetown/gorget,
+/obj/item/flashlight/flare/torch/metal,
+/obj/item/flashlight/flare/torch/metal,
+/turf/open/floor/rogue/woodturned,
+/area/rogue/indoors/town/manor)
 "enz" = (
 /obj/structure/mineral_door/wood/fancywood{
 	lockid = "manor";
@@ -6687,6 +6699,12 @@
 /obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town/church)
+"ggB" = (
+/obj/structure/closet/crate/roguecloset/dark,
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold,
+/obj/item/clothing/head/roguetown/turban/fancypurple,
+/turf/open/floor/rogue/carpet/lord/center,
+/area/rogue/indoors/town/manor)
 "ggD" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -7311,8 +7329,8 @@
 "gOQ" = (
 /obj/structure/closet/crate/roguecloset/lord,
 /obj/item/scomstone,
-/obj/item/clothing/shoes/roguetown/armor/nobleboot,
-/obj/item/rogueweapon/greatsword,
+/obj/item/clothing/mask/rogue/facemask/goldmask,
+/obj/item/rogueweapon/sword/long/rider,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town/manor)
 "gPe" = (
@@ -8220,7 +8238,7 @@
 /obj/structure/rack/rogue,
 /obj/item/ammo_holder/quiver/bolts,
 /obj/item/ammo_holder/quiver/bolts,
-/turf/open/floor/rogue/darkpath,
+/turf/open/floor/rogue/sandbrick,
 /area/rogue/under/town/basement)
 "hBK" = (
 /obj/structure/stairs{
@@ -8680,6 +8698,7 @@
 	dir = 1;
 	icon_state = "longtable"
 	},
+/obj/item/reagent_containers/glass/cup/silver,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/manor)
 "ifN" = (
@@ -9946,6 +9965,11 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
+"jql" = (
+/obj/structure/closet/crate/roguecloset,
+/obj/item/clothing/suit/roguetown/shirt/dress/thawb/gold,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/manor)
 "jqo" = (
 /obj/structure/gate/bars{
 	gid = "townin1";
@@ -10273,8 +10297,8 @@
 /area/rogue/outdoors/town/roofs)
 "jCB" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/halberd/bardiche,
-/obj/item/rogueweapon/halberd/bardiche,
+/obj/item/rogueweapon/royalglaive,
+/obj/item/rogueweapon/royalglaive,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "jCF" = (
@@ -12481,6 +12505,12 @@
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/tavern)
+"lIg" = (
+/obj/structure/mannequin/male/female,
+/obj/item/clothing/suit/roguetown/shirt/sultana,
+/obj/item/clothing/head/roguetown/sultana,
+/turf/open/floor/rogue/carpet/lord/center,
+/area/rogue/indoors/town/manor)
 "lIF" = (
 /obj/item/reagent_containers/food/snacks/crow{
 	dir = 1
@@ -14969,6 +14999,7 @@
 /area/rogue/outdoors/town)
 "oiH" = (
 /obj/machinery/light/rogue/wallfire/candle/blue,
+/obj/structure/mannequin/male/decorative,
 /turf/open/floor/rogue/cobble,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/shop)
@@ -15218,8 +15249,8 @@
 /area/rogue/indoors/town/manor)
 "ovz" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword/gladius,
-/obj/item/rogueweapon/sword/gladius,
+/obj/item/rogueweapon/flail/sflail,
+/obj/item/rogueweapon/flail/sflail,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "owc" = (
@@ -16374,9 +16405,10 @@
 /area/rogue/indoors/town/church)
 "ptA" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/head/roguetown/helmet/kettle,
-/obj/item/clothing/head/roguetown/helmet/kettle,
 /obj/machinery/light/rogue/torchholder/c,
+/obj/item/clothing/head/roguetown/helmet/mamalukehelm,
+/obj/item/clothing/head/roguetown/helmet/mamalukehelm,
+/obj/item/clothing/head/roguetown/helmet/mamalukehelm,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "ptC" = (
@@ -17610,8 +17642,9 @@
 /area/rogue/indoors/town/bath)
 "qxB" = (
 /obj/structure/closet/crate/roguecloset/lord,
-/obj/item/clothing/head/roguetown/helmet/heavy/blkknight,
-/obj/item/clothing/suit/roguetown/armor/plate/blkknight,
+/obj/item/storage/belt/rogue/leather/noblesash,
+/obj/item/clothing/suit/roguetown/armor/plate/cataphract,
+/obj/item/clothing/head/roguetown/helmet/heavy/cataphract,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town/manor)
 "qxK" = (
@@ -18089,9 +18122,9 @@
 /area/rogue/indoors/town/church)
 "qRX" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/suit/roguetown/armor/leather/magos,
-/obj/item/clothing/under/roguetown/tights/black,
-/obj/item/clothing/head/roguetown/wizhat/black,
+/obj/item/storage/belt/rogue/leather/jafar,
+/obj/item/clothing/suit/roguetown/shirt/jafar,
+/obj/item/clothing/head/roguetown/jafar,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/magician)
 "qRY" = (
@@ -18172,15 +18205,11 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
 "qTT" = (
-/obj/structure/closet/crate/chest{
-	lockid = "keep_armory"
-	},
-/obj/item/rope/chain,
-/obj/item/rope/chain,
-/obj/item/rope/chain,
-/obj/item/rope/chain,
-/obj/item/rope/chain,
-/turf/open/floor/rogue/darkpath,
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/shield/tower/zybantine,
+/obj/item/rogueweapon/shield/tower/zybantine,
+/obj/item/rogueweapon/shield/tower/zybantine,
+/turf/open/floor/rogue/sandbrick,
 /area/rogue/under/town/basement)
 "qUc" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
@@ -19167,9 +19196,9 @@
 /area/rogue/under/cavewet/bogcaves)
 "rNG" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/suit/roguetown/armor/plate/half,
-/obj/item/clothing/suit/roguetown/armor/plate/half,
-/obj/item/clothing/suit/roguetown/armor/plate/half,
+/obj/item/clothing/suit/roguetown/armor/mamaluke,
+/obj/item/clothing/suit/roguetown/armor/mamaluke,
+/obj/item/clothing/suit/roguetown/armor/mamaluke,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "rNN" = (
@@ -21309,6 +21338,11 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/manor)
+"tPZ" = (
+/obj/structure/mannequin/male/female,
+/turf/open/floor/rogue/cobble,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/shop)
 "tQi" = (
 /turf/open/floor/rogue/dirt/nrich,
 /area/rogue/outdoors/rtfield)
@@ -23761,10 +23795,9 @@
 /area/rogue/indoors/town/church/chapel)
 "vXa" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/shield/wood,
-/obj/item/rogueweapon/shield/wood,
-/obj/item/rogueweapon/shield/wood,
-/obj/item/rogueweapon/shield/wood,
+/obj/item/storage/belt/rogue/leather/noblesash,
+/obj/item/storage/belt/rogue/leather/noblesash,
+/obj/item/storage/belt/rogue/leather/noblesash,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "vXy" = (
@@ -24655,6 +24688,17 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town)
+"wLJ" = (
+/obj/structure/closet/crate/chest{
+	lockid = "keep_armory"
+	},
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/under/town/basement)
 "wMF" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -217097,7 +217141,7 @@ swl
 xtZ
 xtZ
 xYD
-vAR
+wLJ
 eve
 xtZ
 xtZ
@@ -218001,7 +218045,7 @@ mxD
 fWN
 cDK
 xtZ
-hDo
+uUg
 xtZ
 qTT
 fWN
@@ -218303,7 +218347,7 @@ mxD
 fWN
 ids
 xtZ
-hBF
+hDo
 xtZ
 sAP
 fWN
@@ -218605,7 +218649,7 @@ mxD
 fWN
 ptA
 xtZ
-vcp
+hBF
 xtZ
 lum
 fWN
@@ -218907,7 +218951,7 @@ mxD
 fWN
 rNG
 xtZ
-lIJ
+vcp
 xtZ
 iPF
 fWN
@@ -219207,9 +219251,9 @@ mxD
 mxD
 mxD
 fWN
-uUg
+vXa
 xtZ
-raf
+lIJ
 xtZ
 jCB
 fWN
@@ -219511,7 +219555,7 @@ mxD
 fWN
 rJT
 xtZ
-uHM
+raf
 xtZ
 tjl
 fWN
@@ -219813,7 +219857,7 @@ mxD
 fWN
 cTH
 xtZ
-jCj
+uHM
 xtZ
 dMa
 fWN
@@ -220115,7 +220159,7 @@ mxD
 fWN
 aOH
 xtZ
-dCH
+jCj
 vAR
 tRT
 fWN
@@ -220415,9 +220459,9 @@ mxD
 mxD
 mxD
 fWN
-vXa
-vAR
 xvh
+vAR
+dCH
 fhX
 ovz
 fWN
@@ -328602,7 +328646,7 @@ wgb
 wgb
 qzQ
 dAM
-uDE
+tPZ
 mKF
 uQX
 mKF
@@ -339109,7 +339153,7 @@ lYG
 gWU
 ghJ
 kYn
-lYG
+ens
 qDj
 evx
 sco
@@ -459930,7 +459974,7 @@ foZ
 gOQ
 qxB
 cwV
-aqJ
+lIg
 qDj
 hYV
 hYV
@@ -461439,7 +461483,7 @@ xuJ
 foZ
 hRs
 tTs
-aqJ
+ggB
 bpc
 qDj
 hYV
@@ -571067,7 +571111,7 @@ qDj
 uyw
 sco
 sco
-ndr
+jql
 qDj
 qDj
 lTf
