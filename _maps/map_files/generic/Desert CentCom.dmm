@@ -2967,6 +2967,10 @@
 "Af" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/goblin)
+"Ag" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/camel/tame,
+/turf/open/floor/rogue/hay,
+/area/rogue/outdoors/woods)
 "Ai" = (
 /obj/structure/rack/rogue,
 /obj/item/gun/ballistic/revolver/grenadelauncher/bow,
@@ -3383,6 +3387,11 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/sandbrick,
 /area/rogue/indoors/banditcamp)
+"FN" = (
+/obj/structure/fluff/nest,
+/mob/living/simple_animal/hostile/retaliate/rogue/camel/tame,
+/turf/open/floor/rogue/hay,
+/area/rogue/outdoors/woods)
 "FP" = (
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/under/town/goblin)
@@ -7758,7 +7767,7 @@ Oc
 lM
 Tw
 Rw
-Wb
+Ag
 Wp
 OL
 OL
@@ -8218,7 +8227,7 @@ Oc
 lM
 Yv
 Wb
-sR
+FN
 Wp
 OL
 OL
@@ -9138,7 +9147,7 @@ Oc
 lM
 Tw
 sR
-Wb
+Ag
 Wp
 OL
 OL
@@ -9598,7 +9607,7 @@ Oc
 lM
 Yv
 Wb
-Wb
+Ag
 Wp
 OL
 OL
