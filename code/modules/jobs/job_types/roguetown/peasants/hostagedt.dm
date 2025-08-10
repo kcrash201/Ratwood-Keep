@@ -17,7 +17,8 @@
 	min_pq = -14
 	max_pq = null
 	can_random = FALSE
-
+	allowed_maps = list("Desert Town")
+	
 /datum/outfit/job/roguetown/hostagedt/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/clothing/neck/roguetown/collar/leather/cursed

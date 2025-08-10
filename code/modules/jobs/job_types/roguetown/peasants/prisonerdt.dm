@@ -18,7 +18,8 @@
 	min_pq = -14
 	max_pq = null
 	can_random = FALSE
-
+	allowed_maps = list("Desert Town")
+	
 	cmode_music = 'sound/music/combat_bum.ogg'
 
 /datum/outfit/job/roguetown/prisonerrdt/pre_equip(mob/living/carbon/human/H)
