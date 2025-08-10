@@ -289,6 +289,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/licensed-infraredbaron/onmob/easternclothes.dmi'
 	icon_state = "greythawb"
 	item_state = "greythawb"
+	color = null
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|VITALS
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
@@ -339,3 +340,4 @@
 	desc = "An open robe, made from luxurious silks."
 	icon_state = "merbisht"
 	item_state = "merbisht"
+	color = null
