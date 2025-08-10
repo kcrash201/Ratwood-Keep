@@ -11859,7 +11859,7 @@
 /turf/open/floor/rogue/dunes,
 /area/rogue/outdoors/bog)
 "kIW" = (
-/obj/effect/landmark/start/templardt,
+/obj/effect/landmark/start/templar,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/church/chapel)
 "kJx" = (
@@ -18802,7 +18802,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/druidgrove)
 "rcp" = (
-/obj/effect/landmark/start/templardt,
+/obj/effect/landmark/start/templar,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/church/chapel)
 "rcB" = (
@@ -312036,7 +312036,7 @@ beB
 kqn
 kqn
 kqn
-rcp
+kqn
 jXF
 kqn
 jgC
@@ -312338,7 +312338,7 @@ grB
 kqn
 kqn
 kqn
-kqn
+rcp
 jXF
 kqn
 jgC
@@ -314150,7 +314150,7 @@ grB
 kqn
 kqn
 kqn
-kqn
+rcp
 jXF
 kqn
 jgC
@@ -314452,7 +314452,7 @@ sPR
 kqn
 kqn
 kqn
-rcp
+kqn
 jXF
 kqn
 jgC

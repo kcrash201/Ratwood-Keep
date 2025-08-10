@@ -1394,7 +1394,6 @@
 #include "code\modules\jobs\job_types\roguetown\church\priest.dm"
 #include "code\modules\jobs\job_types\roguetown\church\priestdt.dm"
 #include "code\modules\jobs\job_types\roguetown\church\templar.dm"
-#include "code\modules\jobs\job_types\roguetown\church\templardt.dm"
 #include "code\modules\jobs\job_types\roguetown\courtier\butler.dm"
 #include "code\modules\jobs\job_types\roguetown\courtier\butlerdt.dm"
 #include "code\modules\jobs\job_types\roguetown\courtier\councillor.dm"
