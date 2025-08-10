@@ -45,20 +45,13 @@
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", 1)
 
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
+	shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/random
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/key/farm
 	backr = /obj/item/storage/backpack/rogue/satchel
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife)
 	if(H.gender == MALE)
-		head = /obj/item/clothing/head/roguetown/roguehood/random
-		if(prob(50))
-			head = /obj/item/clothing/head/roguetown/strawhat
-		pants = /obj/item/clothing/under/roguetown/tights/random
-		armor = /obj/item/clothing/suit/roguetown/armor/workervest
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	else
-		head = /obj/item/clothing/head/roguetown/armingcap
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		head = /obj/item/clothing/head/roguetown/turban/random

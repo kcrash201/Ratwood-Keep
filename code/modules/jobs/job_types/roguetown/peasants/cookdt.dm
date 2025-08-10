@@ -35,20 +35,25 @@
 	beltl = /obj/item/key/tavern
 	beltr = /obj/item/rogueweapon/huntingknife
 	backl = /obj/item/storage/backpack/rogue/satchel
+	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 	backpack_contents = list(/obj/item/flint,/obj/item/natural/cloth/,/obj/item/key/nightman)
 	if(H.gender == MALE)
-
-		pants = /obj/item/clothing/under/roguetown/tights/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		cloak = /obj/item/clothing/cloak/apron/cook
-		head = /obj/item/clothing/head/roguetown/cookhat
-		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-		H.change_stat("constitution", 2)
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+		head = /obj/item/clothing/head/roguetown/turban/random
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		cloak = /obj/item/clothing/cloak/apron/cook
-		head = /obj/item/clothing/head/roguetown/cookhat
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-		H.change_stat("constitution", 2)
+		if(prob(25))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+			if(prob(50))
+				pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+			else
+				pants = /obj/item/clothing/under/roguetown/skirt/random
+		if(prob(25))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/green
+			if(prob(50))
+				pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+			else
+				pants = /obj/item/clothing/under/roguetown/skirt/random
+		else
+			shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb/random
+	H.change_stat("constitution", 2)

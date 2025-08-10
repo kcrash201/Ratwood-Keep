@@ -23,16 +23,21 @@
 	
 /datum/outfit/job/roguetown/nightmandt/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	if(H.gender == MALE)
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		pants = /obj/item/clothing/under/roguetown/sirwal/black
 	else
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
-		shirt = /obj/item/clothing/suit/roguetown/armor/corset //At time of writing this has no actual armor
+		if(prob(50))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/dress/amiradress
+		else
+			pants = /obj/item/clothing/under/roguetown/sirwal/black
+			shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
+
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	beltr = /obj/item/storage/keyring/nightman
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
 	beltl = /obj/item/ammo_holder/quiver/bolts
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1)

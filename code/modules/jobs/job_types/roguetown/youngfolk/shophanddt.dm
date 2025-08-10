@@ -25,22 +25,25 @@
 /datum/outfit/job/roguetown/shophanddt/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
+	pants = /obj/item/clothing/under/roguetown/sirwal/fancy/random
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
+	backl = /obj/item/storage/backpack/rogue/satchel
+	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/open/random
+	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+	beltl = /obj/item/storage/keyring/shophand
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-		beltl = /obj/item/storage/keyring/shophand
-		backr = /obj/item/storage/backpack/rogue/satchel
-	if(H.gender == FEMALE)
-		pants = /obj/item/clothing/under/roguetown/tights/stockings/random
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/blue
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-		beltl = /obj/item/storage/keyring/shophand
-		backr = /obj/item/storage/backpack/rogue/satchel
+		head = /obj/item/clothing/head/roguetown/turban/random
+	else
+		if(prob(33))
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask
+		if(prob(33))
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/green
+		else
+			mask = /obj/item/clothing/mask/rogue/exoticsilkmask/red
+
 	if(H.mind)
 		//basically orphan+ skills
 		H.grant_language(/datum/language/zybantine)

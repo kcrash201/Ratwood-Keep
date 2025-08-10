@@ -1,6 +1,6 @@
 /datum/job/roguetown/servantdt
-	title = "Palace Servant"
-	f_title = "Maid"
+	title = "Palace Slave"
+	f_title = "Palace Slave"
 	flag = SERVANT
 	department_flag = YOUNGFOLK
 	faction = "Station"
@@ -11,7 +11,7 @@
 	allowed_ages = ALL_AGES_LIST
 	subclass_cat_rolls = list(CTAG_SERVANT = 20)
 
-	tutorial = "Granted a life of comfortable servitute in the Sultan's manor, you follow the Head Butler/Maid's commands and spend your day performing necessary but menial tasks."
+	tutorial = "Whether you were once a free soul or were born into chattel servitude, you're one of the many abused and mistreated slaves whipped by the Task Master to keep the Sultan's palace running smooth. Each day is marked by a scar on your back, and it is your back that carries the dirty, menial work required to keep the royal family content and decadent."
 	seelie_tutorial = "Though once you were a mischievous fae, you've now accepted the comfort and security of service in the manor instead. Your spells may come in handy, but you've allowed the more chaotic ones to fade to memory."
 
 	outfit = /datum/outfit/job/roguetown/servantdt
@@ -31,15 +31,11 @@
 
 /datum/outfit/job/roguetown/servantdt/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	if(H.gender == FEMALE)
-		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/black
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/black
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		cloak = /obj/item/clothing/cloak/apron/waist
+	if(prob(50))
+		pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+	else
+		pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/storage/keyring/servant
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor

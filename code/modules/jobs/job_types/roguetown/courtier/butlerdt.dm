@@ -1,6 +1,6 @@
 /datum/job/roguetown/butlerdt
-	title = "Head Butler"
-	f_title = "Head Maid"
+	title = "Task Master"
+	f_title = "Task Mistress"
 	flag = BUTLER
 	department_flag = COURTIERS
 	selection_color = JCOLOR_COURTIER
@@ -11,7 +11,7 @@
 	allowed_races = RACES_SHUNNED_UP
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 
-	tutorial = "Servitude unto death; That is your motto. Having nurtured royalty for years, you are nothing short of the Sultan's majordomo, commanding over the rest of the house staff."
+	tutorial = "You're a farmer, so to speak. You put livestock to work and put such fear into them that disobedience is a distant, half-remembered concept. Your cattle are sapient, living people, however - the many dozens of starved slaves needed to run your Sultan's palace. Armed with a whip and ruthless resolve, it is a job you take quiet satisfaction in."
 
 	outfit = /datum/outfit/job/roguetown/butlerdt
 	display_order = JDO_BUTLER
@@ -36,30 +36,13 @@
 		H.change_stat("constitution", -1)
 		H.change_stat("intelligence", 2)
 		H.change_stat("perception", 2)
-
+	pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	shoes = /obj/item/clothing/shoes/roguetown/sandals
+	belt = /obj/item/storage/belt/rogue/leather/cloth/sash/random
+	beltr = /obj/item/storage/keyring/servant
+	beltl = /obj/item/rogueweapon/whip/antique
+	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/bisht/bluegrey
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/storage/keyring/servant
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-		head = /obj/item/clothing/head/roguetown/fancyhat
-	else
-		switch(H.patron?.type)
-			if(/datum/patron/divine/eora) //Eoran loadouts
-				armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/black
-				pants = pick(/obj/item/clothing/under/roguetown/tights/stockings/silk/black, /obj/item/clothing/under/roguetown/tights/stockings/fishnet/black)
-			else
-				armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
-				pants = pick(/obj/item/clothing/under/roguetown/tights/stockings/black, /obj/item/clothing/under/roguetown/tights/stockings/white) //Added stockings for the maids
-
-		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/white
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/black
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		cloak = /obj/item/clothing/cloak/apron/waist
-		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/storage/keyring/servant
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-
+		head = /obj/item/clothing/head/roguetown/turban/dark
