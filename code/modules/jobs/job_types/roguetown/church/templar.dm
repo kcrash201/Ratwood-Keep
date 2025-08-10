@@ -15,7 +15,6 @@
 	spawn_positions = 3
 	display_order = JDO_TEMPLAR
 	give_bank_account = TRUE
-	allowed_maps = list("Rockhill", "Build Your Settlement")
 
 	cmode_music = 'sound/music/combat_clergy.ogg'
 
