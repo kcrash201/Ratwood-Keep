@@ -41,16 +41,16 @@
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backr = /obj/item/storage/backpack/rogue/satchel
 
-/datum/subclass/servantdt/groundkeeper
+/datum/subclass/servantdt/groundkeeperdt
 	name = "Groundkeeper"
 	tutorial = "Cleaning, repairs, chores... The manor must always look great and presentable for the unexpected guests. \
 	It is within your responsibility to make sure the keep stays in decent condition."
-	outfit = /datum/outfit/job/roguetown/servantdt/groundkeeper
+	outfit = /datum/outfit/job/roguetown/servantdt/groundkeeperdt
 	category_tags = list(CTAG_SERVANT)
 	allowed_races = RACES_SHUNNED_UP_PLUS_SEELIE
 	maximum_possible_slots = 3
 
-/datum/outfit/job/roguetown/servantdt/groundkeeper/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/servantdt/groundkeeperdt/pre_equip(mob/living/carbon/human/H)
 	backpack_contents = list(/obj/item/needle = 1, /obj/item/soap = 1)
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
@@ -82,16 +82,16 @@
 			H.mind.AddSpell(new SPELL_REPLENISH)			//Replenish was a cut spell now being added for Seelie maids, will replenish EMPTY bushes with more berries
 			H.mind.AddSpell(new SPELL_SATE_CROP)			//Different from Dendor spell, will satisfy crop hunger but not bless it
 
-/datum/subclass/servantdt/chef
+/datum/subclass/servantdt/chefdt
 	name = "Chef"
 	tutorial = "You are Their Lordship's favorite cook. Your task is simple: prepare feasts, feed the nobles and the retinue. \
 	Why wouldnt you brew a barrel full of wine or something else as well? And remember... Do NOT put bad berries into your meals."
-	outfit = /datum/outfit/job/roguetown/servantdt/chef
+	outfit = /datum/outfit/job/roguetown/servantdt/chefdt
 	category_tags = list(CTAG_SERVANT)
 	allowed_races = RACES_SHUNNED_UP_PLUS_SEELIE
 	maximum_possible_slots = 3
 
-/datum/outfit/job/roguetown/servantdt/chef/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/servantdt/chefdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife = 1)
 	if(H.mind)
@@ -122,17 +122,17 @@
 			H.mind.AddSpell(new SPELL_SATE_CROP)
 	ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
 
-/datum/subclass/servantdt/bankrupt
+/datum/subclass/servantdt/bankruptdt
 	name = "Bankrupt Aristocrat"
 	tutorial = "You were born into low nobility, but unfortunately for you your family has gone bankrupt. \
 	The crown of Rockhill agreed to pay your debts off in return for your service, but you didnt expect them to make you a literal servant. \
 	Now you must find your way back into the high society, as well as hide your shame of lowlife work."
-	outfit = /datum/outfit/job/roguetown/servantdt/bankrupt
+	outfit = /datum/outfit/job/roguetown/servantdt/bankruptdt
 	category_tags = list(CTAG_SERVANT)
 	allowed_races = RACES_TOLERATED_UP
 	maximum_possible_slots = 1
 
-/datum/outfit/job/roguetown/servantdt/bankrupt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/servantdt/bankruptdt/pre_equip(mob/living/carbon/human/H)
 	..()
 	id = /obj/item/clothing/ring/silver
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1)
