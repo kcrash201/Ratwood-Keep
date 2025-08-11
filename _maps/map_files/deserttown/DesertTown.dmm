@@ -10352,6 +10352,9 @@
 /obj/structure/rack/rogue/shelf/big,
 /obj/item/storage/fancy/pilltin/wake,
 /obj/item/reagent_containers/hypospray/medipen/sty/snekbt,
+/obj/item/reagent_containers/glass/bottle/rogue/emberwine{
+	name = "Marital aid"
+	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
 "jut" = (
@@ -11268,11 +11271,9 @@
 /area/rogue/indoors)
 "kfd" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/woodstaff,
-/obj/item/rogueweapon/woodstaff,
-/obj/item/rogueweapon/woodstaff,
-/obj/item/rogueweapon/woodstaff,
-/obj/item/rogueweapon/woodstaff,
+/obj/item/rogueweapon/whip,
+/obj/item/rogueweapon/whip,
+/obj/item/rogueweapon/whip,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors)
 "kff" = (
@@ -15665,8 +15666,8 @@
 /area/rogue/indoors/town/manor)
 "ovz" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/flail/sflail,
-/obj/item/rogueweapon/flail/sflail,
+/obj/item/rogueweapon/whip,
+/obj/item/rogueweapon/whip,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "owc" = (
@@ -465562,9 +465563,9 @@ mFF
 wuS
 rhG
 wuS
-aYJ
-wuS
 kfd
+wuS
+aYJ
 bUU
 wuS
 wuS
