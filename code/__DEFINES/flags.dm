@@ -146,3 +146,8 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 //alternate appearance flags
 #define AA_TARGET_SEE_APPEARANCE (1<<0)
 #define AA_MATCH_TARGET_OVERLAYS (1<<1)
+
+#define COMPONENT_CANCEL_ATTACK (1<<0)
+#define COMPONENT_CANCEL_SAY (1<<1)
+#define COMPONENT_ITEM_BLOCK_UNEQUIP (1<<2)
+#define COMPONENT_CANCEL_EMOTE (1<<3)

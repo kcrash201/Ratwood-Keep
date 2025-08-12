@@ -39,6 +39,8 @@
 #define TRAIT_NOSLEEP "Fatal Insomnia"
 #define TRAIT_FASTSLEEP "Fast Sleeper"
 #define TRAIT_GOODLOVER "Fabled Lover"
+#define TRAIT_LOVESTRUCK "lovestruck"
+#define TRAIT_DOMINATED "dominated"
 #define TRAIT_SEEDKNOW "Seed Knower"
 #define TRAIT_GOODRUNNER "Good Runner"
 #define TRAIT_TINY "Tiny"

@@ -240,7 +240,7 @@
 
 /datum/outfit/job/roguetown/gronn/slave/pre_equip(mob/living/carbon/human/H)
 	..()
-	neck = /obj/item/clothing/neck/roguetown/collar/leather/cursed
+	neck = /obj/item/clothing/neck/roguetown/cursed_collar
 	pants = /obj/item/clothing/under/roguetown/trou/nomadpants
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/storage/belt/rogue/pouch

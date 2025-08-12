@@ -1272,6 +1272,8 @@
 #include "code\modules\clothing\rogueclothes\hats\hats.dm"
 #include "code\modules\clothing\rogueclothes\mask\mask.dm"
 #include "code\modules\clothing\rogueclothes\mouth\mouth.dm"
+#include "code\modules\clothing\rogueclothes\neck\collar_master_component.dm"
+#include "code\modules\clothing\rogueclothes\neck\collar_master_verbs.dm"
 #include "code\modules\clothing\rogueclothes\neck\neck.dm"
 #include "code\modules\clothing\rogueclothes\npc\goblin.dm"
 #include "code\modules\clothing\rogueclothes\pants\pants.dm"

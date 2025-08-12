@@ -1517,12 +1517,12 @@
 /area/rogue/indoors/banditcamp)
 "fN" = (
 /obj/structure/closet/crate/chest,
-/obj/item/clothing/neck/roguetown/collar/leather/cursed,
-/obj/item/clothing/neck/roguetown/collar/leather/cursed,
+/obj/item/clothing/neck/roguetown/cursed_collar,
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /obj/item/leash/chain,
 /obj/item/leash/chain,
-/obj/item/clothing/neck/roguetown/collar/leather/cursed,
-/obj/item/clothing/neck/roguetown/collar/leather/cursed,
+/obj/item/clothing/neck/roguetown/cursed_collar,
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /obj/item/leash/chain,
 /obj/item/leash/chain,
 /turf/open/floor/rogue/blocks,

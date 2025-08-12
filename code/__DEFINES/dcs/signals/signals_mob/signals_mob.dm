@@ -4,3 +4,5 @@
 ///from base of /mob/Logout(): ()
 #define COMSIG_MOB_LOGOUT "mob_logout"
 #define COMSIG_MOB_STATCHANGE "mob_statchange"
+#define COMSIG_CARBON_GAIN_COLLAR "carbon_gain_collar"
+#define COMSIG_CARBON_LOSE_COLLAR "carbon_lose_collar"
