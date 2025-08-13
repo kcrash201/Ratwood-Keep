@@ -145,6 +145,8 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	var/crt = FALSE
 
+	var/grain = TRUE
+
 	var/list/customizer_entries = list()
 	var/list/list/body_markings = list()
 	var/update_mutant_colors = TRUE

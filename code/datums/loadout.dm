@@ -303,6 +303,10 @@ GLOBAL_LIST_INIT(loadout_items, init_loadout())
 	name = "Feather"
 	path = /obj/item/natural/feather
 
+/datum/loadout_item/parchment
+	name = "Parchment"
+	path = /obj/item/paper
+
 /datum/loadout_item/bell_collar
 	name = "Bell Collar"
 	path = /obj/item/clothing/neck/roguetown/collar/leather/bell
