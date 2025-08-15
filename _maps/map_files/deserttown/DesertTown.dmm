@@ -5593,6 +5593,13 @@
 /obj/structure/noose/gallows,
 /turf/open/floor/rogue/dunes,
 /area/rogue/outdoors/bog)
+"eUv" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/under/town/basement)
 "eUE" = (
 /obj/structure/mineral_door/wood/towner/generic,
 /turf/open/floor/rogue/wood,
@@ -11060,6 +11067,7 @@
 	},
 /obj/item/rogueweapon/whip,
 /obj/item/needle,
+/obj/item/dildo/wood,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town/bath)
 "jUd" = (
@@ -24109,6 +24117,7 @@
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /turf/open/floor/rogue/sandbrick,
 /area/rogue/under/town/basement)
 "vDC" = (
@@ -212593,7 +212602,7 @@ fWN
 qXR
 xtZ
 lch
-vDz
+eUv
 vDz
 ciz
 fWN
