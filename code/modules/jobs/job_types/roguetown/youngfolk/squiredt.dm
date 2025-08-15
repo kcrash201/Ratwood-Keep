@@ -8,7 +8,7 @@
 	allowed_races = RACES_SHUNNED_UP
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
-	subclass_cat_rolls = list(CTAG_SQUIRE = 20)
+	subclass_cat_rolls = list(CTAG_SQUIREDT = 20)
 
 	tutorial = "You are a little hero bound to your master. Often mistreated, you are still a warrior, yet a young and an inexperienced one. \
 	The dae when you will be proudly charging into the enemy wearing a plate armor will come eventually, but for now... NOT A STEP FROM YOUR MASTER!"
@@ -56,7 +56,7 @@
 	A riddle, little one, who is superior: a noble squire or an unremarkable man-at-arms?"
 	outfit = /datum/outfit/job/roguetown/squiredt/page
 	allowed_races = RACES_TOLERATED_UP
-	category_tags = list(CTAG_SQUIRE)
+	category_tags = list(CTAG_SQUIREDT)
 	maximum_possible_slots = 2
 
 /datum/outfit/job/roguetown/squiredt/page/pre_equip(mob/living/carbon/human/H)
@@ -92,7 +92,7 @@
 	tutorial = "You are a freshly enlisted fellow yet to be ready serve your liege on your own. You knight will take care of your training as well as you shall take care of them. \
 	Thanks to your diligence, you outperform lots of your kins in battle."
 	outfit = /datum/outfit/job/roguetown/squiredt/recruit
-	category_tags = list(CTAG_SQUIRE)
+	category_tags = list(CTAG_SQUIREDT)
 	maximum_possible_slots = 2
 
 /datum/outfit/job/roguetown/squiredt/recruit/pre_equip(mob/living/carbon/human/H)
@@ -127,7 +127,7 @@
 	tutorial = "You were supposed to live a lyfe of a humble farmer, yet the lyfe had other plans for you. Taken away from your parents, you joined the ranks of levies. \
 	Nobody knows how far you could go with your commoner education living among nobles and experienced warriors. But hey, lyfe in the village taught you a lot."
 	outfit = /datum/outfit/job/roguetown/squiredt/levy
-	category_tags = list(CTAG_SQUIRE)
+	category_tags = list(CTAG_SQUIREDT)
 	maximum_possible_slots = 2
 
 /datum/outfit/job/roguetown/squiredt/levy/pre_equip(mob/living/carbon/human/H)

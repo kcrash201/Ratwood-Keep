@@ -9,7 +9,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	allowed_patrons = ALL_NON_INHUMEN_PATRONS
-	subclass_cat_rolls = list(CTAG_KNIGHT = 3)
+	subclass_cat_rolls = list(CTAG_KNIGHTDT = 3)
 	tutorial = "A Cataphract with expert training; \
 	Born into petty nobility and raised as a squire from a young age, now you guard the royal family, answer to their commands, and act as a last beacon of chivalry in these dark times. \
 	You're wholly dedicated to the standing Regent and their safety. Do not fail."
@@ -62,7 +62,7 @@
 	name = "Sentinel"
 	tutorial = "Proud defender of your ducal house. You are a master of the spear, and prefer to don yourself in the heaviest of armors."
 	outfit = /datum/outfit/job/roguetown/knight/sentinel
-	category_tags = list(CTAG_KNIGHT)
+	category_tags = list(CTAG_KNIGHTDT)
 	maximum_possible_slots = 2
 
 /datum/outfit/job/roguetown/cataphract/sentinel/pre_equip(mob/living/carbon/human/H)
@@ -124,7 +124,7 @@
 	name = "Champion"
 	tutorial = "Noble hero and protector. You are practiced in the art of the sword, and prefer lighter armor as to be more nimble."
 	outfit = /datum/outfit/job/roguetown/cataphract/champion
-	category_tags = list(CTAG_KNIGHT)
+	category_tags = list(CTAG_KNIGHTDT)
 	maximum_possible_slots = 2
 
 /datum/outfit/job/roguetown/cataphract/champion/pre_equip(mob/living/carbon/human/H)
@@ -187,7 +187,7 @@
 	name = "Juggernaut"
 	tutorial = "Indomitable. You are hidden beneath so many layers of steel you find it hard to see properly, and have taken up non-traditional weapons in turn."
 	outfit = /datum/outfit/job/roguetown/cataphract/juggernaut
-	category_tags = list(CTAG_KNIGHT)
+	category_tags = list(CTAG_KNIGHTDT)
 	maximum_possible_slots = 1
 
 /datum/outfit/job/roguetown/cataphract/juggernaut/pre_equip(mob/living/carbon/human/H)

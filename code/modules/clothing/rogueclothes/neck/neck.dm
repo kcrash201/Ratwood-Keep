@@ -408,6 +408,13 @@
 	var/datum/mind/collar_master = null
 	var/silenced = FALSE
 	var/applying = FALSE
+	var/restricted_collar = FALSE
+
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave
+	name = "slave collar"
+	desc = "A cursed slave collar. It is said to be based on a darker, more insidious design."
+	restricted_collar = TRUE
+
 
 /obj/item/clothing/neck/roguetown/cursed_collar/attack(mob/living/carbon/human/C, mob/living/user)
 	if(!istype(C))
@@ -447,7 +454,7 @@
 			return
 
 		// Add pet to the master's list before sending collar signals
-		CM.add_pet(C)
+		CM.add_slave(C)
 		log_combat(user, C, "tried to collar", addition="with [src]")
 	applying = FALSE
 
@@ -498,8 +505,8 @@
 	// Find and remove from any collar master's pet list
 	for(var/datum/mind/M in GLOB.collar_masters)
 		var/datum/component/collar_master/CM = M.GetComponent(/datum/component/collar_master)
-		if(CM && (user in CM.my_pets))
-			CM.remove_pet(user)
+		if(CM && (user in CM.my_slaves))
+			CM.remove_slave(user)
 			break
 
 	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
@@ -523,6 +530,7 @@
     . = ..()
     if(istype(user))
         SEND_SIGNAL(user, COMSIG_CARBON_LOSE_COLLAR)
+
 
 /obj/item/clothing/neck/roguetown/collar/leather/bell
 	name = "jingly leather collar"

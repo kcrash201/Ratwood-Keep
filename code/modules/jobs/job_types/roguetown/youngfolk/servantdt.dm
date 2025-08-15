@@ -9,7 +9,7 @@
 
 	allowed_races = RACES_SHUNNED_UP_PLUS_SEELIE
 	allowed_ages = ALL_AGES_LIST
-	subclass_cat_rolls = list(CTAG_SERVANT = 20)
+	subclass_cat_rolls = list(CTAG_SERVANTDT = 20)
 
 	tutorial = "Whether you were once a free soul or were born into chattel servitude, you're one of the many abused and mistreated slaves whipped by the Task Master to keep the Sultan's palace running smooth. Each day is marked by a scar on your back, and it is your back that carries the dirty, menial work required to keep the royal family content and decadent."
 	seelie_tutorial = "Though once you were a mischievous fae, you've now accepted the comfort and security of service in the manor instead. Your spells may come in handy, but you've allowed the more chaotic ones to fade to memory."
@@ -46,7 +46,7 @@
 	tutorial = "Cleaning, repairs, chores... The manor must always look great and presentable for the unexpected guests. \
 	It is within your responsibility to make sure the keep stays in decent condition."
 	outfit = /datum/outfit/job/roguetown/servantdt/groundkeeperdt
-	category_tags = list(CTAG_SERVANT)
+	category_tags = list(CTAG_SERVANTDT)
 	allowed_races = RACES_SHUNNED_UP_PLUS_SEELIE
 	maximum_possible_slots = 3
 
@@ -87,7 +87,7 @@
 	tutorial = "You are Their Lordship's favorite cook. Your task is simple: prepare feasts, feed the nobles and the retinue. \
 	Why wouldnt you brew a barrel full of wine or something else as well? And remember... Do NOT put bad berries into your meals."
 	outfit = /datum/outfit/job/roguetown/servantdt/chefdt
-	category_tags = list(CTAG_SERVANT)
+	category_tags = list(CTAG_SERVANTDT)
 	allowed_races = RACES_SHUNNED_UP_PLUS_SEELIE
 	maximum_possible_slots = 3
 
@@ -128,7 +128,7 @@
 	The crown of Rockhill agreed to pay your debts off in return for your service, but you didnt expect them to make you a literal servant. \
 	Now you must find your way back into the high society, as well as hide your shame of lowlife work."
 	outfit = /datum/outfit/job/roguetown/servantdt/bankruptdt
-	category_tags = list(CTAG_SERVANT)
+	category_tags = list(CTAG_SERVANTDT)
 	allowed_races = RACES_TOLERATED_UP
 	maximum_possible_slots = 1
 

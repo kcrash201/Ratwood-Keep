@@ -9,7 +9,7 @@
 	allowed_races = RACES_TOLERATED_UP 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
-	subclass_cat_rolls = list(CTAG_HEIR = 20)
+	subclass_cat_rolls = list(CTAG_HEIRDT = 20)
 	can_leave_round = FALSE
 
 	tutorial = "You’ve never felt the gnawing of the winter, never known the bite of hunger and certainly have never known what the peasantry call a honest day's work. In your youth you were as free as any bird in the sky, but that is of the past. Your noble duties are fast approaching and you will soon have to choose: Continue to spend life leisurely, or stalwartly shoulder the duties you've been handed."
@@ -71,15 +71,15 @@
 		backpack_contents = list(/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra/red)
 	
 
-/datum/subclass/princedt/sheltered
+/datum/subclass/princedt/sheltereddt
 	name = "Sheltered Successor"
 	tutorial = "Your fate was already defined the moment you were born. One dae you shall inherit the throne and your father's realm. \
 	But for now, you can just enjoy your highborn lyfe."
-	outfit = /datum/outfit/job/roguetown/princedt/sheltered
-	category_tags = list(CTAG_HEIR)
+	outfit = /datum/outfit/job/roguetown/princedt/sheltereddt
+	category_tags = list(CTAG_HEIRDT)
 	maximum_possible_slots = 10
 
-/datum/outfit/job/roguetown/princedt/sheltered/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/princedt/sheltereddt/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
@@ -110,15 +110,15 @@
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, TRAIT_GENERIC)
 
-/datum/subclass/princedt/militant
+/datum/subclass/princedt/militantdt
 	name = "Militant"
 	tutorial = "All this aristocratic haughtiness has never been for you, your heart desired battle instead. \
 	Given the opportunity, you'd lead the retinue into battle personally."
-	outfit = /datum/outfit/job/roguetown/princedt/militant
-	category_tags = list(CTAG_HEIR)
+	outfit = /datum/outfit/job/roguetown/princedt/militantdt
+	category_tags = list(CTAG_HEIRDT)
 	maximum_possible_slots = 1
 
-/datum/outfit/job/roguetown/princedt/militant/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/princedt/militantdt/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
@@ -147,15 +147,15 @@
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
-/datum/subclass/princedt/bookworm
+/datum/subclass/princedt/bookwormdt
 	name = "Bookworm"
 	tutorial = "You have never felt fancy about company of the others. Knowledge however is your desire. \
 	Through the years you studied lots of arts and given the time you'd study a lot more."
-	outfit = /datum/outfit/job/roguetown/princedt/bookworm
-	category_tags = list(CTAG_HEIR)
+	outfit = /datum/outfit/job/roguetown/princedt/bookwormdt
+	category_tags = list(CTAG_HEIRDT)
 	maximum_possible_slots = 1
 
-/datum/outfit/job/roguetown/princedt/bookworm/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/princedt/bookwormdt/pre_equip(mob/living/carbon/human/H)
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
@@ -189,15 +189,15 @@
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
 
-/datum/subclass/princedt/inbred
+/datum/subclass/princedt/inbreddt
 	name = "Inbred"
 	tutorial = "You'd have had a beautiful lyfe without knowing a trouble, yet this world made a not so funny trick on you. \
 	You were doomed to become a disgrace to your family, yet you still live in the manor. For now."
-	outfit = /datum/outfit/job/roguetown/princedt/inbred
-	category_tags = list(CTAG_HEIR)
+	outfit = /datum/outfit/job/roguetown/princedt/inbreddt
+	category_tags = list(CTAG_HEIRDT)
 	maximum_possible_slots = 1
 
-/datum/outfit/job/roguetown/princedt/inbred/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/princedt/inbreddt/pre_equip(mob/living/carbon/human/H)
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)

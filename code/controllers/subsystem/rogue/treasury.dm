@@ -89,7 +89,7 @@ SUBSYSTEM_DEF(treasury)
 		for(var/mob/living/carbon/human/X in GLOB.human_list)
 			if(!(X.mind && X.stat != DEAD))
 				continue
-			if(X.job in list("Sultan", "Steward", "Clerk"))
+			if(X.job in list("Sultan", "Duke", "Steward", "Clerk"))
 				send_ooc_note("Income from wealth horde: +[amt_to_generate]", name = X.real_name)
 
 /proc/num_players_in_round()
