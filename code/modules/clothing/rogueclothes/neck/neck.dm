@@ -392,8 +392,8 @@
 	qdel(src)
 */
 /obj/item/clothing/neck/roguetown/cursed_collar
-	name = "cursed collar"
-	desc = "A sinister looking collar with ruby studs. It seems to radiate a dark energy."
+	name = "Pleasure Slave Collar"
+	desc = "A sinister looking collar with ruby studs. It seems to grant increased control over its victims mind and bodily functions."
 	icon = 'modular/icons/obj/items/leashes_collars.dmi'
 	mob_overlay_icon = 'modular/icons/mob/collars_leashes.dmi'
 	icon_state = "leathercollar"
@@ -411,7 +411,7 @@
 	var/restricted_collar = FALSE
 
 /obj/item/clothing/neck/roguetown/cursed_collar/generic_slave
-	name = "slave collar"
+	name = "Slave Collar"
 	desc = "A cursed slave collar. It is said to be based on a darker, more insidious design."
 	restricted_collar = TRUE
 

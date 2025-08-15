@@ -2137,7 +2137,7 @@
 /obj/structure/fluff/walldeco/customflag{
 	pixel_y = 32
 	},
-/obj/effect/landmark/start/watchman,
+/obj/effect/landmark/start/mamluk,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/garrison)
 "bUU" = (
@@ -3121,9 +3121,9 @@
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
 "cXd" = (
-/obj/effect/landmark/start/wapprentice,
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/cloth,
+/obj/effect/landmark/start/wapprenticedt,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/magician)
 "cXj" = (
@@ -5654,9 +5654,9 @@
 /turf/open/floor/rogue/darkpath,
 /area/rogue/indoors/town/magician)
 "eWz" = (
-/obj/effect/landmark/start/wapprentice,
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/wool,
+/obj/effect/landmark/start/wapprenticedt,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/magician)
 "eWM" = (
@@ -8580,7 +8580,7 @@
 /area/rogue/indoors/town/bath)
 "hHm" = (
 /obj/structure/chair/wood/rogue,
-/obj/effect/landmark/start/watchman,
+/obj/effect/landmark/start/mamluk,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/garrison)
 "hHq" = (
@@ -10024,6 +10024,7 @@
 /area/rogue/indoors/town/bath)
 "jcA" = (
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/indoors/town/bath)
 "jcD" = (
@@ -13534,6 +13535,7 @@
 /obj/item/storage/keyring,
 /obj/item/storage/keyring,
 /obj/item/storage/keyring,
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/shop)
 "mlS" = (
@@ -17351,7 +17353,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/town)
 "pIa" = (
-/obj/effect/landmark/start/magician,
+/obj/effect/landmark/start/magiciandt,
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town/magician)
 "pIm" = (
@@ -17942,6 +17944,7 @@
 /obj/effect/decal/cleanable/cobweb{
 	icon_state = "cobweb2"
 	},
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
 "qks" = (
@@ -18743,6 +18746,7 @@
 /obj/item/storage/belt/rogue/leather/jafar,
 /obj/item/clothing/suit/roguetown/shirt/jafar,
 /obj/item/clothing/head/roguetown/jafar,
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/magician)
 "qRY" = (
@@ -19875,6 +19879,10 @@
 	lockid = "town_barracks"
 	},
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
+/obj/item/clothing/neck/roguetown/cursed_collar,
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/under/town/basement)
 "rOI" = (
@@ -26246,6 +26254,7 @@
 "xuJ" = (
 /obj/structure/closet/crate/chest/gold,
 /obj/item/roguegem/blue,
+/obj/item/clothing/neck/roguetown/cursed_collar,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/indoors/town/manor)
 "xva" = (
