@@ -22,7 +22,7 @@
 	backl = /obj/item/storage/backpack/rogue/backpack
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/rogueweapon/whip/antique
-	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/lesserhealthpot = 2, /obj/item/rope/chain = 1, /obj/item/flint = 1, /obj/item/clothing/neck/roguetown/cursed_collar = 2, /obj/item/leash/chain = 3, /obj/item/license/rogue/slaverlicense)
+	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/lesserhealthpot = 2, /obj/item/rope/chain = 1, /obj/item/flint = 1, /obj/item/clothing/neck/roguetown/cursed_collar/generic_slave = 2, /obj/item/leash/chain = 3, /obj/item/license/rogue/slaverlicense)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 5, TRUE)
@@ -222,7 +222,7 @@
 /datum/outfit/job/roguetown/slaver/slavez/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
-	neck = /obj/item/clothing/neck/roguetown/cursed_collar
+	neck = /obj/item/clothing/neck/roguetown/cursed_collar/generic_slave
 	belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt
 	beltl = /obj/item/storage/belt/rogue/pouch
 	beltr = /obj/item/flint

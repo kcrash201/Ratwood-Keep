@@ -24,7 +24,7 @@
 
 /datum/outfit/job/roguetown/prisonerrdt/pre_equip(mob/living/carbon/human/H)
 	..()
-	neck = /obj/item/clothing/neck/roguetown/cursed_collar
+	neck = /obj/item/clothing/neck/roguetown/cursed_collar/generic_slave
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	if(H.mind)
 		H.grant_language(/datum/language/zybantine)

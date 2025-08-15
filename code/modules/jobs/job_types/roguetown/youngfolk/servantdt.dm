@@ -36,6 +36,7 @@
 	else
 		pants = /obj/item/clothing/under/roguetown/sirwal/plainrandom
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/thawb
+	neck = /obj/item/clothing/neck/roguetown/cursed_collar/generic_slave
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/storage/keyring/servant
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
