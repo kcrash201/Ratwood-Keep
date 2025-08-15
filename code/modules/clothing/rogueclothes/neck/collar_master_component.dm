@@ -87,8 +87,8 @@ GLOBAL_LIST_EMPTY(collar_masters)
         collar.collar_master = mindparent?.current
         if(!collar.collar_master)
             return FALSE
-
-        if(collar.restricted_collar)
+		//If our collar is NOT a restricted collar, add the slave to special slaves
+        if(!collar.restricted_collar)
             my_special_slaves += slave
         
         // Send signal first

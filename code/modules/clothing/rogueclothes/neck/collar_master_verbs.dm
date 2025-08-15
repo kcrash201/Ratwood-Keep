@@ -12,13 +12,13 @@
 		if(!slave || !slave.mind || !slave.client)
 			continue
 		valid_slaves[slave.real_name] = slave
-		var/obj/item/clothing/neck/roguetown/cursed_collar/collar = slave.get_item_by_slot(SLOT_NECK)
-		if(!collar.restricted_collar)
-			unrestricted = TRUE
 
 	if(!length(valid_slaves))
 		to_chat(src, span_warning("No valid slaves available!"))
 		return
+
+	if(length(CM.my_special_slaves))
+		unrestricted = TRUE
 
 	var/list/selected = input(src, "Select slaves to command:", "slave Selection") as null|anything in valid_slaves
 	if(!selected || !CM)
@@ -41,7 +41,7 @@
 		"Forbid/permit Clothing" = /mob/proc/collar_master_clothing,
 		"Force Action" = /mob/proc/collar_master_force_action,
 		"Force Love" = /mob/proc/collar_master_force_love,
-		"Toggle Arousal" = /mob/proc/collar_master_force_arousal,
+		//"Toggle Arousal" = /mob/proc/collar_master_force_arousal,
 		"Toggle Orgasm Denial" = /mob/proc/collar_master_toggle_denial,
 		"Toggle slave Hallucinations" = /mob/proc/collar_master_toggle_hallucinate,
 		"Impose Will" = /mob/proc/collar_master_illusion,
@@ -165,7 +165,7 @@
 	var/surrendered_count = 0
 
 	for(var/mob/living/carbon/human/slave in CM.temp_selected_slaves)
-		if(!slave || !slave.mind || !slave.client || !(slave in CM.my_slaves) || !(slave in CM.my_special_slaves))
+		if((!slave || !slave.mind || !slave.client || !(slave in CM.my_slaves)) || !(slave in CM.my_special_slaves))
 			continue
 
 		if(slave.stat >= UNCONSCIOUS)
