@@ -35,7 +35,7 @@
 		return
 	if(leaning_mob.GetComponent(/datum/component/leaning))
 		return
-	if(leaning_mob.pixelshifted)
+	if(leaning_mob.is_shifted)
 		return
 	if(leaning_mob.buckled)
 		return

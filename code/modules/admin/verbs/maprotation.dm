@@ -51,7 +51,7 @@
 			to_chat(src, span_warning("Filename must end in '.dmm': [map_file]"))
 			return
 
-		if(!fcopy(map_file, "_maps/custom/[map_file]"))
+		if(!fcopy(map_file, "data/custom_maps/[map_file]"))
 			return
 
 		// This is to make sure the map works so the server does not start without a map.

@@ -511,6 +511,10 @@
 #define SKIN_COLOR_FLORA "6afc74"
 #define SKIN_COLOR_ELECTRIC "faec8e"
 
+// Pixel shifting
+#define PIXEL_SHIFT_MAXIMUM 16
+#define PIXEL_SHIFT_PASSABLE_THRESHOLD 8
+
 /// Humans are slowed by the difference between bodytemp and BODYTEMP_COLD_DAMAGE_LIMIT divided by this
 #define COLD_SLOWDOWN_FACTOR				20
 

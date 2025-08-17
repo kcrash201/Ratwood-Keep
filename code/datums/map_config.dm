@@ -67,7 +67,10 @@
 
 	map_file = json["map_file"]
 	// "map_file": "BoxStation.dmm"
-	if (istext(map_file))
+	if (map_path == "custom")
+		if(!fexists("data/custom_maps/[map_file]"))
+			log_world("Map file (data/custom_maps/[map_file]) does not exist!")
+	else if (istext(map_file))
 		if (!fexists("_maps/[map_path]/[map_file]"))
 			log_world("Map file ([map_path]/[map_file]) does not exist!")
 			return
@@ -113,6 +116,8 @@
 #undef CHECK_EXISTS
 
 /datum/map_config/proc/GetFullMapPaths()
+	if (map_path == "custom")
+		return list("data/custom_maps/[map_file]")
 	if (istext(map_file))
 		return list("_maps/[map_path]/[map_file]")
 	. = list()

@@ -1,5 +1,3 @@
-
-
 //IMPORTANT: Multiple animate() calls do not stack well, so try to do them all at once if you can.
 /mob/living/carbon/update_transform(forcepixel)
 	var/matrix/ntransform = matrix(transform) //aka transform.Copy()
@@ -26,14 +24,17 @@
 	if(changed)
 //		animate(src, transform = ntransform, time = (lying_prev == 0 || !lying) ? 2 : 0, pixel_y = final_pixel_y, dir = final_dir, easing = (EASE_IN|EASE_OUT))
 		transform = ntransform
-		pixel_x = get_standard_pixel_x_offset()
-		pixel_y = final_pixel_y
+		// Only reset pixel_x if we're not in a custom pixel shift
+		if(!is_shifted)
+			pixel_x = get_standard_pixel_x_offset()
+			pixel_y = final_pixel_y
 		dir = final_dir
 		setMovetype(movement_type & ~FLOATING)  // If we were without gravity, the bouncing animation got stopped, so we make sure we restart it in next life().
 		update_vision_cone()
 	else
-		pixel_x = get_standard_pixel_x_offset()
-		pixel_y = get_standard_pixel_y_offset(lying)
+		if(!is_shifted)
+			pixel_x = get_standard_pixel_x_offset()
+			pixel_y = get_standard_pixel_y_offset(lying)
 
 /mob/living
 	var/list/overlays_standing[TOTAL_LAYERS]

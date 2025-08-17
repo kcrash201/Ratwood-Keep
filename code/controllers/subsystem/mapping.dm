@@ -164,6 +164,8 @@ SUBSYSTEM_DEF(mapping)
 	var/list/parsed_maps = list()
 	for (var/file in files)
 		var/full_path = "_maps/[path]/[file]"
+		if(path == "custom")
+			full_path = "data/custom_maps/[file]"
 		var/datum/parsed_map/pm = new(file(full_path))
 		var/bounds = pm?.bounds
 		if (!bounds)
@@ -256,7 +258,7 @@ SUBSYSTEM_DEF(mapping)
 
 	// Custom maps are removed after station loading so the map files does not persist for no reason.
 	if(config.map_path == "custom")
-		fdel("_maps/custom/[config.map_file]")
+		fdel("data/custom_maps/[config.map_file]")
 		// And as the file is now removed set the next map to default.
 		next_map_config = load_map_config(default_to_box = TRUE)
 
