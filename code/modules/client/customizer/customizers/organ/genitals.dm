@@ -131,7 +131,7 @@
 
 /datum/customizer_choice/organ/penis/tapered_double
 	name = "Hemi Tapered Penis"
-	organ_type = /obj/item/organ/penis/tapered
+	organ_type = /obj/item/organ/penis/tapered_double
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemi,
 		)
@@ -145,7 +145,7 @@
 
 /datum/customizer_choice/organ/penis/tapered_double_knot
 	name = "Knotted Hemi Tapered Penis"
-	organ_type = /obj/item/organ/penis/tapered
+	organ_type = /obj/item/organ/penis/tapered_double_knotted
 	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemiknot,
 		)
