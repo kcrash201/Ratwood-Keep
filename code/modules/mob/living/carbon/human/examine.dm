@@ -355,6 +355,9 @@
 
 	if(has_status_effect(/datum/status_effect/leash_pet))
 		. += "<A href='?src=[REF(src)];'><span class='warning'>[m3] \a leash hooked to [m2] collar!</span></A>"
+// Knotted effect message
+		if(has_status_effect(/datum/status_effect/knot_tied))
+			. += span_warning("A knot is locked inside them. They're being pulled around like a pet.")
 
 	//Gets encapsulated with a warning span
 	var/list/msg = list()

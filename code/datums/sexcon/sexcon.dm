@@ -1,3 +1,7 @@
+#define KNOTTED_NULL 0
+#define KNOTTED_AS_TOP 1
+#define KNOTTED_AS_BTM 2
+
 /datum/sex_controller
 	/// The user and the owner of the controller
 	var/mob/living/carbon/human/user
@@ -27,13 +31,27 @@
 	var/msg_signature = ""
 	var/last_msg_signature = 0
 	var/aphrodisiac = 1
+	var/knotted_status = KNOTTED_NULL // knotted state and used to prevent multiple knottings when we do not handle that case
+	var/tugging_knot = FALSE
+	var/mob/living/carbon/knotted_owner = null // whom has the knot
+	var/mob/living/carbon/knotted_recipient = null // whom took the knot
 
 /datum/sex_controller/New(mob/living/carbon/human/owner)
 	user = owner
+	knotted_owner = null
+	knotted_recipient = null
+	knotted_status = KNOTTED_NULL
+	tugging_knot = FALSE
 
 /datum/sex_controller/Destroy()
 	user = null
 	target = null
+	if(knotted_status)
+		knot_remove(notify = FALSE)
+	knotted_owner = null
+	knotted_recipient = null
+	knotted_status = KNOTTED_NULL
+	tugging_knot = FALSE
 	. = ..()
 
 /proc/do_thrust_animate(atom/movable/user, atom/movable/target, pixels = 4, time = 2.7)
@@ -200,9 +218,277 @@
 		playsound(target, pick(list('sound/misc/mat/mouthend (1).ogg','sound/misc/mat/mouthend (2).ogg')), 100, FALSE, ignore_walls = FALSE)
 	else
 		playsound(target, 'sound/misc/mat/endin.ogg', 50, TRUE, ignore_walls = FALSE)
+	if(user != target)
+		knot_try()
 	target.reagents.add_reagent(/datum/reagent/erpjuice/cum, 3)
 	after_ejaculation()
 	after_intimate_climax()
+
+/datum/sex_controller/proc/knot_penis_type()
+	var/obj/item/organ/penis/penis = user.getorganslot(ORGAN_SLOT_PENIS)
+	if(!penis)
+		return FALSE
+	switch(penis.penis_type)
+		if(PENIS_TYPE_KNOTTED)
+			return TRUE
+		if(PENIS_TYPE_TAPERED_DOUBLE_KNOTTED)
+			return TRUE
+		if(PENIS_TYPE_BARBED_KNOTTED)
+			return TRUE
+	return FALSE
+
+/datum/sex_controller/proc/knot_try()
+	if(!user.sexcon.can_use_penis())
+		return
+	if(!user.sexcon.knot_penis_type()) // don't have that dog in 'em
+		return
+	if(!user.sexcon.current_action)
+		return
+	var/datum/sex_action/action = SEX_ACTION(user.sexcon.current_action)
+	if(!action.knot_on_finish) // the current action does not support knot climaxing, abort
+		return
+	if(user.sexcon.considered_limp())
+		if(!user.sexcon.knotted_status)
+			to_chat(user, span_notice("My knot was too soft to tie."))
+		if(!target.sexcon.knotted_status)
+			to_chat(target, span_notice("I feel their deflated knot slip out."))
+		return
+	if(target.sexcon.knotted_status) // only one knot at a time, you slut
+		var/repeated_customer = target.sexcon.knotted_owner == user ? TRUE : FALSE // we're knotting the same character we were already knotted to, don't remove the status effects (this fixes a weird perma stat debuff if we try to remove/apply the same effect in the same tick)
+		var/target_is_a_bottom = target.sexcon.knotted_status == KNOTTED_AS_BTM // keep the same status effect in place, they're still getting topped
+		target.sexcon.knot_remove(keep_btm_status = target_is_a_bottom, keep_top_status = repeated_customer)
+	if(user.sexcon.knotted_status)
+		var/top_still_topping = user.sexcon.knotted_status == KNOTTED_AS_TOP // top just reknotted a different character, don't retrigger the same status (this fixes a weird perma stat debuff if we try to remove/apply the same effect in the same tick)
+		user.sexcon.knot_remove(keep_top_status = top_still_topping)
+	user.sexcon.knotted_owner = user
+	user.sexcon.knotted_recipient = target
+	user.sexcon.knotted_status = KNOTTED_AS_TOP
+	target.sexcon.knotted_owner = user
+	target.sexcon.knotted_recipient = target
+	target.sexcon.knotted_status = KNOTTED_AS_BTM
+	log_combat(user, target, "Started knot tugging")
+	if(force > SEX_FORCE_MID) // if using force above default
+		if(force == SEX_FORCE_EXTREME) // damage if set to max force
+			target.apply_damage(30, BRUTE, BODY_ZONE_CHEST)
+			target.sexcon.try_do_pain_effect(PAIN_HIGH_EFFECT, FALSE)
+		else
+			target.sexcon.try_do_pain_effect(PAIN_MILD_EFFECT, FALSE)
+		target.Stun(80) // stun for dramatic effect
+	user.visible_message(span_notice("[user] ties their knot inside of [target]!"), span_notice("I tie my knot inside of [target]."))
+	if(target.stat != DEAD)
+		to_chat(target, span_userdanger("You have been knotted!"))
+	if(!target.has_status_effect(/datum/status_effect/knot_tied)) // only apply status if we don't have it already
+		target.apply_status_effect(/datum/status_effect/knot_tied)
+	if(!user.has_status_effect(/datum/status_effect/knotted)) // only apply status if we don't have it already
+		user.apply_status_effect(/datum/status_effect/knotted)
+	target.remove_status_effect(/datum/status_effect/knot_gaped)
+	RegisterSignal(user.sexcon.knotted_owner, COMSIG_MOVABLE_MOVED, PROC_REF(knot_movement))
+	RegisterSignal(user.sexcon.knotted_recipient, COMSIG_MOVABLE_MOVED, PROC_REF(knot_movement))
+
+/datum/sex_controller/proc/knot_movement(atom/movable/mover, atom/oldloc, direction)
+	SIGNAL_HANDLER
+	if(QDELETED(mover))
+		return
+	if(!ishuman(mover)) // this should never hit, but if it does remove callback
+		UnregisterSignal(mover, COMSIG_MOVABLE_MOVED)
+		return
+	var/mob/living/carbon/human/user = mover
+	switch(user.sexcon.knotted_status)
+		if(KNOTTED_AS_TOP)
+			knot_movement_top()
+		if(KNOTTED_AS_BTM)
+			if(user.sexcon.tugging_knot) // we're currently moving the bottom back to the top, don't run proc until we've finished
+				return
+			knot_movement_btm()
+		if(KNOTTED_NULL) // this should never hit, but if it does remove callback
+			UnregisterSignal(user.sexcon.user, COMSIG_MOVABLE_MOVED)
+
+/datum/sex_controller/proc/knot_movement_top()
+	var/mob/living/carbon/human/top = knotted_owner
+	var/mob/living/carbon/human/btm = knotted_recipient
+	if(!btm || !ishuman(btm) || QDELETED(btm) || !top || !ishuman(top) || QDELETED(top))
+		knot_remove(notify = FALSE)
+		return
+	if(prob(10) && top.m_intent == MOVE_INTENT_WALK && btm in top.buckled_mobs) // if the two characters are being held in a fireman carry, let them muturally get pleasure from it
+		var/obj/item/organ/penis/penis = user.getorganslot(ORGAN_SLOT_PENIS)
+		top.sexcon.perform_sex_action(btm, penis?.penis_size > DEFAULT_PENIS_SIZE ? 6.0 : 3.0, 2, FALSE)
+		btm.sexcon.handle_passive_ejaculation()
+		if(prob(50))
+			to_chat(top, span_love("I feel [btm] tightening over my knot."))
+			to_chat(btm, span_love("I feel [top] rubbing inside."))
+		return
+	if(btm.pulling == top || top.pulling == btm)
+		return
+	if(top.sexcon.considered_limp())
+		knot_remove()
+		return
+	var/lupineisop = top.STASTR > (btm.STACON + 3) // if the stat difference is too great, don't attempt to disconnect on run
+	if(!lupineisop && top.m_intent == MOVE_INTENT_RUN && (top.mobility_flags & MOBILITY_STAND)) // pop it
+		knot_remove(forceful_removal = TRUE)
+		return
+	var/dist = get_dist(top, btm)
+	if(dist > 1) // attempt to move the knot recipient to a minimum of 1 tiles away from the knot owner, so they trail behind
+		btm.sexcon.tugging_knot = TRUE
+		for(var/i in 1 to 3) // try moving three times
+			step_towards(btm, top)
+			dist = get_dist(top, btm)
+			if(dist <= 1)
+				break
+		btm.sexcon.tugging_knot = FALSE
+	if(dist > 1) // if we couldn't move them closer, force the knot out
+		knot_remove(forceful_removal = TRUE)
+		return
+	addtimer(CALLBACK(src, PROC_REF(knot_movement_top_after)), 0.1 SECONDS)
+
+/datum/sex_controller/proc/knot_movement_top_after()
+	var/mob/living/carbon/human/top = knotted_owner
+	var/mob/living/carbon/human/btm = knotted_recipient
+	if(!btm || !ishuman(btm) || QDELETED(btm) || !top || !ishuman(top) || QDELETED(top))
+		return
+	btm.face_atom(top)
+	top.set_pull_offsets(btm, GRAB_AGGRESSIVE)
+
+/datum/sex_controller/proc/knot_movement_btm()
+	var/mob/living/carbon/human/top = knotted_owner
+	var/mob/living/carbon/human/btm = knotted_recipient
+	if(!btm || !ishuman(btm) || QDELETED(btm) || !top || !ishuman(top) || QDELETED(top))
+		knot_remove(notify = FALSE)
+		return
+	if(top.stat >= SOFT_CRIT) // only removed if the knot owner is injured/asleep/dead
+		knot_remove()
+		return
+	if(btm.pulling == top || top.pulling == btm)
+		return
+	if(top.sexcon.considered_limp())
+		knot_remove()
+		return
+	if(get_dist(top, btm) > 2)
+		knot_remove(forceful_removal = TRUE)
+		return
+	for(var/i in 2 to get_dist(top, btm)) // Move the knot recipient to a minimum of 1 tiles away from the knot owner, so they trail behind
+		step_towards(btm, top)
+	top.set_pull_offsets(btm, GRAB_AGGRESSIVE)
+	if(btm.mobility_flags & MOBILITY_STAND)
+		if(btm.m_intent == MOVE_INTENT_RUN) // running only makes this worse, darling
+			btm.Knockdown(10)
+			btm.Stun(30)
+			btm.emote("groan", forced = TRUE)
+			return
+	if(btm.IsStun())
+		addtimer(CALLBACK(src, PROC_REF(knot_movement_btm_after)), 0.1 SECONDS)
+		return
+	if(prob(5))
+		btm.emote("groan")
+		btm.sexcon.try_do_pain_effect(PAIN_MED_EFFECT, FALSE)
+		btm.Stun(15)
+	else if(prob(2))
+		btm.emote("painmoan")
+	addtimer(CALLBACK(src, PROC_REF(knot_movement_btm_after)), 0.1 SECONDS)
+
+/datum/sex_controller/proc/knot_movement_btm_after()
+	var/mob/living/carbon/human/top = knotted_owner
+	var/mob/living/carbon/human/btm = knotted_recipient
+	if(!btm || !ishuman(btm) || QDELETED(btm) || !top || !ishuman(top) || QDELETED(top))
+		return
+	btm.face_atom(top)
+
+/datum/sex_controller/proc/knot_remove(forceful_removal = FALSE, notify = TRUE, keep_top_status = FALSE, keep_btm_status = FALSE)
+	var/mob/living/carbon/human/top = knotted_owner
+	var/mob/living/carbon/human/btm = knotted_recipient
+	if(btm && ishuman(btm) && !QDELETED(btm) && top && ishuman(top) && !QDELETED(top))
+		if(forceful_removal)
+			var/damage = 40
+			if (top.sexcon.arousal > MAX_AROUSAL / 2) // still hard, let it rip like a beyblade
+				damage += 30
+				btm.Knockdown(10)
+				if(notify && !keep_btm_status && !btm.has_status_effect(/datum/status_effect/knot_gaped)) // apply gaped status if extra forceful pull (only if we're not reknotting target)
+					btm.apply_status_effect(/datum/status_effect/knot_gaped)
+			btm.apply_damage(damage, BRUTE, BODY_ZONE_CHEST)
+			btm.Stun(80)
+			playsound(btm, 'sound/misc/mat/pop.ogg', 100, TRUE, -2, ignore_walls = FALSE)
+			playsound(top, 'sound/misc/mat/segso.ogg', 50, TRUE, -2, ignore_walls = FALSE)
+			btm.emote("paincrit", forced = TRUE)
+			if(notify)
+				top.visible_message(span_notice("[top] yanks their knot out of [btm]!"), span_notice("I yank my knot out from [btm]."))
+				btm.sexcon.try_do_pain_effect(PAIN_HIGH_EFFECT, FALSE)
+		else if(notify)
+			playsound(btm, 'sound/misc/mat/insert (1).ogg', 50, TRUE, -2, ignore_walls = FALSE)
+			top.visible_message(span_notice("[top] slips their knot out of [btm]!"), span_notice("I slip my knot out from [btm]."))
+			btm.emote("painmoan", forced = TRUE)
+			btm.sexcon.try_do_pain_effect(PAIN_MILD_EFFECT, FALSE)
+		add_cum_floor(get_turf(btm))
+	if(top && top.sexcon.knotted_status)
+		if(!keep_top_status) // only keep the status if we're reapplying the knot
+			top.remove_status_effect(/datum/status_effect/knotted)
+		UnregisterSignal(top.sexcon.user, COMSIG_MOVABLE_MOVED)
+		top.sexcon.knotted_owner = null
+		top.sexcon.knotted_recipient = null
+		top.sexcon.knotted_status = KNOTTED_NULL
+		log_combat(top, top, "Stopped knot tugging")
+	if(btm && btm.sexcon.knotted_status)
+		if(!keep_btm_status) // only keep the status if we're reapplying the knot
+			btm.remove_status_effect(/datum/status_effect/knot_tied)
+		UnregisterSignal(btm.sexcon.user, COMSIG_MOVABLE_MOVED)
+		btm.sexcon.knotted_owner = null
+		btm.sexcon.knotted_recipient = null
+		btm.sexcon.knotted_status = KNOTTED_NULL
+		log_combat(btm, btm, "Stopped knot tugging")
+	if(knotted_status) // this should never trigger, but if it does clear up the invalid state
+		UnregisterSignal(src.user, COMSIG_MOVABLE_MOVED)
+		knotted_owner = null
+		knotted_recipient = null
+		knotted_status = KNOTTED_NULL
+
+/mob/living/carbon/human/werewolf_transform() // needed to ensure that we safely remove the tie before transitioning
+	if(src.sexcon.knotted_status)
+		src.sexcon.knot_remove()
+	return ..()
+
+/mob/living/carbon/human/werewolf_untransform(dead,gibbed) // needed to ensure that we safely remove the tie after transitioning
+	if(src.sexcon.knotted_status)
+		src.sexcon.knot_remove()
+	return ..()
+
+/datum/status_effect/knot_tied
+	id = "knot_tied"
+	status_type = STATUS_EFFECT_UNIQUE
+	alert_type = /atom/movable/screen/alert/status_effect/knot_tied
+	effectedstats = list("strength" = -1, "endurance" = -2, "speed" = -2, "intelligence" = -3)
+
+/atom/movable/screen/alert/status_effect/knot_tied
+	name = "Knotted"
+
+/datum/status_effect/knot_gaped
+	id = "knot_gaped"
+	duration = 60 SECONDS
+	tick_interval = 100 // every 10 seconds
+	status_type = STATUS_EFFECT_UNIQUE
+	alert_type = /atom/movable/screen/alert/status_effect/knot_gaped
+	effectedstats = list("strength" = -1, "speed" = -2, "intelligence" = -1)
+	var/last_loc
+
+/datum/status_effect/knot_gaped/on_apply()
+	last_loc = get_turf(owner)
+	return ..()
+
+/datum/status_effect/knot_gaped/tick()
+	var/cur_loc = get_turf(owner)
+	if(get_dist(cur_loc, last_loc) > 5) // too close, don't spawn puddle
+		add_cum_floor(get_turf(owner))
+		playsound(owner, pick('sound/misc/bleed (1).ogg', 'sound/misc/bleed (2).ogg', 'sound/misc/bleed (3).ogg'), 50, TRUE, -2, ignore_walls = FALSE)
+	last_loc = cur_loc
+
+/atom/movable/screen/alert/status_effect/knot_gaped
+	name = "Gaped"
+	desc = "You were forcefully withdrawn from. Warmth runs freely down your thighs..."
+
+/datum/status_effect/knotted
+	id = "knotted"
+	status_type = STATUS_EFFECT_UNIQUE
+	alert_type = /atom/movable/screen/alert/status_effect/knotted
+
+/atom/movable/screen/alert/status_effect/knotted
+	name = "Knotted"
 
 /datum/sex_controller/proc/ejaculate()
 	log_combat(user, user, "Ejaculated")
@@ -585,7 +871,8 @@
 	if(!current_action)
 		return
 	var/datum/sex_action/action = SEX_ACTION(current_action)
-	action.on_finish(user, target)
+	if (!user.sexcon.knotted_status) // never show the remove message, unless unknotted
+		action.on_finish(user, target)
 	desire_stop = FALSE
 	user.doing = FALSE
 	current_action = null
@@ -601,6 +888,8 @@
 		return
 	if(!can_perform_action(action_type))
 		return
+	if(knotted_status)
+		knot_remove()
 //	if(need_to_be_violated(target) && !can_violate_victim(target))
 //		violate_victim(target) - Commented out to disable the pop up and just disable all defiant ZAPE
 	if(need_to_be_violated(target) && !can_violate_victim(target))
@@ -802,3 +1091,7 @@
 			if(prob(10))
 				var/obj/item/bodypart/groin = target.get_bodypart(check_zone(BODY_ZONE_PRECISE_GROIN))
 				groin.add_wound(/datum/wound/fracture)
+
+#undef KNOTTED_NOT
+#undef KNOTTED_AS_TOP
+#undef KNOTTED_AS_BTM
