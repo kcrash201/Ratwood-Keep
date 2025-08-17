@@ -3262,6 +3262,10 @@
 	lockid = "bandit";
 	name = "old key"
 	},
+/obj/item/clothing/neck/roguetown/cursed_collar,
+/obj/item/clothing/neck/roguetown/cursed_collar,
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
+/obj/item/clothing/neck/roguetown/cursed_collar/generic_slave,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/indoors/banditcamp)
 "EF" = (
