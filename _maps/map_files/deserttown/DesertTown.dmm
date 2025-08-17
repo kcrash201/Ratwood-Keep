@@ -7082,10 +7082,6 @@
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
-"gmb" = (
-/obj/structure/mineral_door/wood/towner/generic,
-/turf/open/dark_filler,
-/area/rogue/indoors)
 "gmK" = (
 /obj/structure/fermenting_barrel/sandpot/water,
 /turf/open/floor/rogue/darkpath,
@@ -10911,11 +10907,6 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
-"jKA" = (
-/obj/effect/decal/cleanable/cobweb,
-/obj/item/cushion/desert1,
-/turf/open/floor/rogue/wood,
-/area/rogue/indoors)
 "jKT" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -15034,11 +15025,9 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
 "nEE" = (
-/obj/machinery/light/rogue/hearth,
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
-/turf/open/floor/rogue/concrete,
+/obj/effect/decal/cleanable/cobweb,
+/obj/item/cushion/desert1,
+/turf/open/floor/rogue/wood,
 /area/rogue/indoors)
 "nEP" = (
 /obj/machinery/light/rogue/wallfire/candle{
@@ -18212,6 +18201,10 @@
 "qtU" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/indoors/town/academy)
+"que" = (
+/obj/structure/mineral_door/wood/towner/generic,
+/turf/open/dark_filler,
+/area/rogue/indoors)
 "quB" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/water/sewer,
@@ -20803,6 +20796,13 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/woodturned,
+/area/rogue/indoors)
+"sHH" = (
+/obj/machinery/light/rogue/hearth,
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors)
 "sIi" = (
 /obj/structure/table/wood{
@@ -340990,7 +340990,7 @@ wgb
 wgb
 wgb
 qzQ
-qzQ
+eml
 ato
 ato
 ato
@@ -343732,7 +343732,7 @@ ato
 sBZ
 sBZ
 ato
-jKA
+nEE
 nLP
 pad
 ato
@@ -346153,7 +346153,7 @@ sBZ
 ato
 qzQ
 ato
-gmb
+que
 ato
 nzZ
 ato
@@ -346448,7 +346448,7 @@ wgb
 wgb
 ato
 dAR
-nEE
+sHH
 ato
 fHt
 rpw
