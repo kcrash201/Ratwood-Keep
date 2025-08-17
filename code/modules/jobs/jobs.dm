@@ -108,6 +108,7 @@ GLOBAL_LIST_INIT(inquisition_positions, list(
 ))
 
 GLOBAL_LIST_INIT(yeoman_positions, list(
+	"Merchant",
 	"Mayor",
 	"Merchant",
 	"Scholar",
