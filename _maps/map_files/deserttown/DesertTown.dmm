@@ -7082,6 +7082,10 @@
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/darkpath,
 /area/rogue/under/town/basement)
+"gmb" = (
+/obj/structure/mineral_door/wood/towner/generic,
+/turf/open/dark_filler,
+/area/rogue/indoors)
 "gmK" = (
 /obj/structure/fermenting_barrel/sandpot/water,
 /turf/open/floor/rogue/darkpath,
@@ -10907,6 +10911,11 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
+"jKA" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/item/cushion/desert1,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors)
 "jKT" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -15025,11 +15034,11 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
 "nEE" = (
-/obj/structure/table/wood{
-	icon_state = "tablewood1"
+/obj/machinery/light/rogue/hearth,
+/obj/structure/fluff/railing/border{
+	dir = 8
 	},
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/rogue/wood,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors)
 "nEP" = (
 /obj/machinery/light/rogue/wallfire/candle{
@@ -16529,7 +16538,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
-/turf/open/floor/rogue/concrete,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "paM" = (
 /obj/structure/fermenting_barrel/sandpot,
@@ -342813,12 +342822,12 @@ qzx
 qzQ
 wgb
 wgb
-wgb
 qzQ
 qzQ
 qzQ
 qzQ
 ktM
+wgb
 wgb
 qzQ
 idA
@@ -343114,12 +343123,12 @@ iQv
 qGb
 qzQ
 wgb
-wgb
 qzQ
 ato
 ato
 ato
 ato
+qzQ
 qzQ
 wgb
 wgb
@@ -343416,11 +343425,11 @@ iQv
 qzx
 qzQ
 wgb
-wgb
 qzQ
 ato
 oqm
 jax
+ato
 ato
 ato
 ato
@@ -343718,13 +343727,13 @@ iQv
 ato
 qzQ
 wgb
-wgb
 qzQ
 ato
 sBZ
 sBZ
 ato
-nEE
+jKA
+nLP
 pad
 ato
 wgb
@@ -344020,14 +344029,14 @@ euh
 ato
 qzQ
 wgb
-wgb
 qzQ
 tRk
 sBZ
 sBZ
 gQs
-iFG
 sBZ
+sOv
+sOv
 ato
 wgb
 ato
@@ -344322,14 +344331,14 @@ nsf
 ato
 qzQ
 wgb
-wgb
 qzQ
 ato
 hsO
 sBZ
 sBZ
 sBZ
-sBZ
+sOv
+sOv
 ato
 wgb
 ato
@@ -344624,11 +344633,11 @@ iQv
 ato
 qzQ
 wgb
-wgb
 qzQ
 ato
 ato
 eUE
+ato
 ato
 ato
 ato
@@ -344927,8 +344936,8 @@ qzx
 qzQ
 wgb
 wgb
-wgb
 kYG
+wgb
 wgb
 wgb
 wgb
@@ -345236,7 +345245,7 @@ qzQ
 qzQ
 qzQ
 qzQ
-qzQ
+wgb
 wgb
 wgb
 qzQ
@@ -345531,14 +345540,14 @@ qzx
 qzQ
 wgb
 wgb
-wgb
 ato
 ato
 nzZ
 ato
+ato
 eUE
 ato
-ato
+qzQ
 wgb
 wgb
 cGk
@@ -345833,7 +345842,6 @@ ato
 qzQ
 wgb
 wgb
-wgb
 ato
 ipM
 sOv
@@ -345841,8 +345849,9 @@ sOv
 sBZ
 sBZ
 ato
-wgb
+qzQ
 mtI
+wgb
 wgb
 wgb
 wgb
@@ -346135,7 +346144,6 @@ ato
 cLQ
 cLQ
 cLQ
-eml
 ato
 sOv
 sOv
@@ -346143,8 +346151,9 @@ nLP
 sBZ
 sBZ
 ato
-wgb
+qzQ
 ato
+gmb
 ato
 nzZ
 ato
@@ -346437,16 +346446,16 @@ qzQ
 wgb
 wgb
 wgb
-wgb
 ato
 dAR
-epM
+nEE
 ato
 fHt
 rpw
 ato
-qzQ
-eUE
+ato
+ato
+sBZ
 sBZ
 sBZ
 ato
@@ -346739,7 +346748,6 @@ qzQ
 wgb
 wgb
 wgb
-wgb
 ato
 ato
 ato
@@ -346747,9 +346755,10 @@ ato
 sBZ
 cnF
 ato
-ato
-ato
-fSZ
+sBZ
+sBZ
+sBZ
+sBZ
 sBZ
 cmY
 sBZ
@@ -347041,7 +347050,6 @@ wgb
 wgb
 wgb
 wgb
-wgb
 ato
 jax
 sBZ
@@ -347051,8 +347059,9 @@ rpw
 ato
 iFG
 sBZ
-sBZ
-sBZ
+fHt
+nLP
+sOv
 ato
 ato
 ato
@@ -347343,7 +347352,6 @@ ktM
 wgb
 wgb
 wgb
-wgb
 ato
 dZz
 vgj
@@ -347352,11 +347360,12 @@ sBZ
 paM
 ato
 aVb
-fSn
-fHt
 sBZ
+fSn
+nLP
+sOv
 vHL
-eml
+ato
 lsR
 wgb
 wgb
@@ -347645,7 +347654,6 @@ wgb
 wgb
 wgb
 wgb
-wgb
 ato
 ato
 ato
@@ -347658,7 +347666,8 @@ ato
 ato
 ato
 ato
-eml
+ato
+ato
 jWe
 ktM
 wgb
@@ -463916,7 +463925,7 @@ hZD
 hYV
 hYV
 hYV
-hYV
+hZD
 hZD
 hZD
 hZD
@@ -464218,8 +464227,8 @@ hZD
 hYV
 hYV
 hYV
-hYV
 hZD
+aJD
 aJD
 aJD
 hZD
@@ -464520,8 +464529,8 @@ hZD
 hYV
 hYV
 hYV
-hYV
 hZD
+aJD
 aJD
 aJD
 aJD
@@ -464822,8 +464831,8 @@ hZD
 hYV
 hYV
 hYV
-hYV
 hZD
+aJD
 aJD
 aJD
 aJD
@@ -465124,8 +465133,8 @@ hZD
 hYV
 hYV
 hYV
-hYV
 hZD
+aJD
 aJD
 aJD
 aJD
@@ -465426,7 +465435,7 @@ hZD
 hYV
 hYV
 hYV
-hYV
+hZD
 hZD
 hZD
 hZD
@@ -466332,14 +466341,14 @@ hZD
 hYV
 hYV
 hYV
+hZD
+hZD
+hZD
+hZD
+hZD
+hZD
+hZD
 hYV
-hZD
-hZD
-hZD
-hZD
-hZD
-hZD
-hZD
 hYV
 hYV
 hYV
@@ -466634,14 +466643,14 @@ hZD
 hYV
 hYV
 hYV
+hZD
+aJD
+aJD
+aJD
+aJD
+aJD
+hZD
 hYV
-hZD
-aJD
-aJD
-aJD
-aJD
-aJD
-hZD
 hYV
 hYV
 hYV
@@ -466936,7 +466945,6 @@ hZD
 hYV
 hYV
 hYV
-hYV
 hZD
 aJD
 aJD
@@ -466945,6 +466953,7 @@ aJD
 aJD
 hZD
 hYV
+hZD
 hZD
 hZD
 hZD
@@ -467238,7 +467247,6 @@ hYV
 hYV
 hYV
 hYV
-hYV
 hZD
 aJD
 aJD
@@ -467246,8 +467254,9 @@ aJD
 aJD
 aJD
 hZD
-hYV
 hZD
+hZD
+aJD
 aJD
 aJD
 aJD
@@ -467540,16 +467549,16 @@ hYV
 hYV
 hYV
 hYV
-hYV
 hZD
 aJD
 aJD
 aJD
 aJD
 aJD
-hZD
-hZD
-hZD
+aJD
+aJD
+aJD
+aJD
 aJD
 aJD
 aJD
@@ -467842,8 +467851,8 @@ hYV
 hYV
 hYV
 hYV
-hYV
 hZD
+aJD
 aJD
 aJD
 aJD
@@ -468144,8 +468153,8 @@ hYV
 hYV
 hYV
 hYV
-hYV
 hZD
+aJD
 aJD
 aJD
 aJD
@@ -468446,7 +468455,7 @@ hYV
 hYV
 hYV
 hYV
-hYV
+hZD
 hZD
 hZD
 hZD
