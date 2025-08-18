@@ -8238,7 +8238,7 @@
 "hlV" = (
 /obj/structure/mineral_door/wood/donjon{
 	locked = 1;
-	lockid = "nightmaiden";
+	lockid = "nightman";
 	name = "Private Room 03";
 	dir = 4
 	},
@@ -16178,7 +16178,7 @@
 "oEV" = (
 /obj/structure/mineral_door/wood/donjon{
 	locked = 1;
-	lockid = "nightmaiden";
+	lockid = "nightman";
 	name = "Private Room 02";
 	dir = 4
 	},
@@ -22555,7 +22555,7 @@
 "udN" = (
 /obj/structure/mineral_door/wood/donjon{
 	locked = 1;
-	lockid = "nightmaiden";
+	lockid = "nightman";
 	dir = 8;
 	name = "Private Room 01"
 	},
