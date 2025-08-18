@@ -8881,6 +8881,10 @@
 /obj/structure/fluff/walldeco/customflag,
 /turf/closed/wall/mineral/rogue/sandstone,
 /area/rogue/indoors)
+"hUR" = (
+/obj/structure/flora/roguetree,
+/turf/open/floor/rogue/desert_grass,
+/area/rogue/outdoors/bog)
 "hVy" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/structure/stairs/stone{
@@ -16884,6 +16888,10 @@
 /obj/structure/closet/dirthole/grave,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cavewet/bogcaves)
+"pkc" = (
+/obj/structure/flora/roguetree,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/bog)
 "pku" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/rogue/darkpath,
@@ -19298,6 +19306,10 @@
 /obj/structure/stairs/desert,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
+"rix" = (
+/obj/structure/flora/roguetree,
+/turf/open/floor/rogue/desert_grass,
+/area/rogue/outdoors/rtfield)
 "riJ" = (
 /turf/closed/wall/mineral/rogue/tent{
 	dir = 8
@@ -24694,6 +24706,10 @@
 /obj/effect/decal/cleanable/sigil/zizo/SW,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
+"vRW" = (
+/obj/structure/flora/roguetree,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/rtfield)
 "vRX" = (
 /obj/machinery/light/rogue/firebowl,
 /obj/structure/fluff/walldeco/customflag{
@@ -277075,7 +277091,7 @@ bke
 mhJ
 bke
 rAa
-rAa
+pkc
 rAa
 mhJ
 bke
@@ -279467,7 +279483,7 @@ bke
 mhJ
 qJG
 bke
-rAa
+pkc
 bke
 bke
 bke
@@ -288553,7 +288569,7 @@ mhJ
 vcv
 bke
 bke
-mhJ
+hUR
 bke
 bke
 bke
@@ -291246,7 +291262,7 @@ cZe
 bke
 bke
 bke
-mhJ
+hUR
 bke
 bke
 bke
@@ -294860,7 +294876,7 @@ mfq
 mfq
 mfq
 rAa
-bke
+hUR
 bke
 bke
 bke
@@ -324671,7 +324687,7 @@ gUs
 gUs
 vye
 asG
-iBG
+vRW
 gUs
 gUs
 gUs
@@ -353076,7 +353092,7 @@ qxK
 pXj
 gUs
 asG
-asG
+rix
 gUs
 gUs
 gUs
@@ -360648,7 +360664,7 @@ vye
 asG
 asG
 asG
-pXj
+rix
 asG
 asG
 fGD
@@ -363004,7 +363020,7 @@ gUs
 pXj
 qSS
 asG
-iBG
+vRW
 gUs
 gUs
 pmY
@@ -366068,7 +366084,7 @@ pXj
 gUs
 asG
 asG
-pXj
+rix
 asG
 wTL
 vye
@@ -375463,7 +375479,7 @@ bke
 mfq
 mfq
 qJG
-mhJ
+hUR
 mfq
 mfq
 mfq
@@ -379025,7 +379041,7 @@ hQx
 pmY
 hQx
 hQx
-asG
+rix
 asG
 wKi
 asG
@@ -386304,7 +386320,7 @@ lmv
 lmv
 bke
 bke
-mhJ
+hUR
 bke
 bke
 mfq
