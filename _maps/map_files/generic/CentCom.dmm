@@ -1467,6 +1467,10 @@
 	},
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/under/town/goblin)
+"eT" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/dunes,
+/area/rogue/outdoors/banditcamp)
 "eU" = (
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/banditcamp)
@@ -1498,6 +1502,10 @@
 /obj/item/candle/skull,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"fw" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/darkpath,
+/area/rogue/indoors/banditcamp)
 "fD" = (
 /obj/structure/bed/rogue/inn/pileofshit,
 /turf/open/floor/rogue/cobble,
@@ -2110,6 +2118,10 @@
 /obj/structure/flora/roguegrass/water,
 /turf/open/water/swamp/deep,
 /area/rogue/under/town/goblin)
+"nv" = (
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/outdoors/woods)
 "nB" = (
 /obj/structure/flora/roguegrass/water,
 /obj/structure/fluff/railing/border{
@@ -2184,10 +2196,6 @@
 /obj/structure/fluff/nest,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/goblin)
-"ou" = (
-/obj/item/natural/stone,
-/turf/open/floor/rogue/sandbrick,
-/area/rogue/outdoors/banditcamp)
 "oB" = (
 /turf/closed/mineral/random/rogue,
 /area/rogue/indoors/banditcamp)
@@ -2412,10 +2420,6 @@
 "rI" = (
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/town/goblin)
-"rM" = (
-/obj/item/natural/rock,
-/turf/open/floor/rogue/dunes,
-/area/rogue/outdoors/banditcamp)
 "rQ" = (
 /turf/closed,
 /area/rogue)
@@ -2537,6 +2541,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"ta" = (
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/dunes,
+/area/rogue/outdoors/woods)
 "tc" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/reagent_containers/food/snacks/smallrat,
@@ -2563,10 +2571,6 @@
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/sandbrick,
 /area/rogue/indoors/banditcamp)
-"tn" = (
-/obj/item/natural/stone,
-/turf/open/floor/rogue/dunes,
-/area/rogue/outdoors/banditcamp)
 "tq" = (
 /turf/open/floor/carpet/red,
 /area/rogue/under/town/goblin)
@@ -3246,10 +3250,10 @@
 "Dw" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"DE" = (
-/obj/item/natural/rock,
+"DC" = (
+/obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/lightpath,
-/area/rogue/outdoors/banditcamp)
+/area/rogue/outdoors/woods)
 "DK" = (
 /turf/open/floor/rogue/blocks{
 	icon_state = "paving"
@@ -3399,6 +3403,10 @@
 "FP" = (
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/under/town/goblin)
+"FY" = (
+/obj/item/natural/rock,
+/turf/open/floor/rogue/dunes,
+/area/rogue/outdoors/banditcamp)
 "Gh" = (
 /turf/open/floor/rogue/lightpath,
 /area/rogue/outdoors/banditcamp)
@@ -3479,10 +3487,6 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/town/goblin)
-"Hr" = (
-/obj/item/natural/stone,
-/turf/open/floor/rogue/darkpath,
-/area/rogue/indoors/banditcamp)
 "Hv" = (
 /turf/open/floor/rogue/blocks/green,
 /area/rogue/under/town/goblin)
@@ -4066,6 +4070,10 @@
 	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/banditcamp)
+"PN" = (
+/obj/item/natural/rock,
+/turf/open/floor/rogue/lightpath,
+/area/rogue/outdoors/banditcamp)
 "PX" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -4092,6 +4100,10 @@
 /obj/item/rogueweapon/hammer/iron,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/goblin)
+"Qs" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/sandbrick,
+/area/rogue/outdoors/banditcamp)
 "Qy" = (
 /obj/structure/pillory/double,
 /turf/open/floor/rogue/naturalstone,
@@ -6175,7 +6187,7 @@ JS
 JS
 JS
 JS
-Kl
+DC
 kB
 "}
 (7,1,1) = {"
@@ -7281,7 +7293,7 @@ mp
 mp
 mp
 mp
-rM
+FY
 mp
 mp
 Gh
@@ -7316,7 +7328,7 @@ JS
 JS
 JS
 JS
-YA
+DC
 Kl
 Kl
 Kl
@@ -7512,7 +7524,7 @@ Oc
 Gh
 mp
 mp
-ou
+Qs
 Oc
 Gh
 Gh
@@ -7546,7 +7558,7 @@ JS
 JS
 JS
 JS
-Kl
+YA
 Kl
 Kl
 JS
@@ -7785,7 +7797,7 @@ JS
 JS
 JS
 JS
-Kl
+DC
 kB
 "}
 (14,1,1) = {"
@@ -8211,7 +8223,7 @@ Oc
 mp
 mp
 mp
-DE
+PN
 Dm
 Gh
 Gh
@@ -8931,7 +8943,7 @@ JS
 Kl
 Kl
 Kl
-Kl
+DC
 JS
 JS
 JS
@@ -10527,7 +10539,7 @@ Kl
 Kl
 Kl
 lM
-OL
+ta
 JS
 JS
 JS
@@ -10979,7 +10991,7 @@ js
 js
 js
 js
-lM
+nv
 lM
 Kl
 Kl
@@ -10994,7 +11006,7 @@ JS
 JS
 JS
 JS
-Kl
+DC
 Kl
 JS
 JS
@@ -11899,7 +11911,7 @@ js
 js
 js
 js
-lM
+nv
 Kl
 lM
 lM
@@ -12568,7 +12580,7 @@ jW
 mb
 iY
 pg
-Hr
+fw
 vT
 js
 pg
@@ -12583,7 +12595,7 @@ Dm
 UI
 mp
 mp
-tn
+eT
 Dm
 js
 PG
@@ -12803,7 +12815,7 @@ jW
 js
 pg
 pg
-Hr
+fw
 vT
 pg
 pg
@@ -12812,7 +12824,7 @@ UI
 UI
 UI
 Dm
-rM
+FY
 UI
 UI
 js
